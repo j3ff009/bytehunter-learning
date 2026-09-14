@@ -1,0 +1,97 @@
+{
+  "id": "esp32-introduction",
+  "title": "Introduction to ESP32",
+  "subject": "ECE / CPE",
+  "category": "IoT / Embedded Systems",
+  "description": "Learn the ESP32 development board, processor, memory, GPIO, wireless features, and a safe first LED program.",
+  "estimatedMinutes": 22,
+  "pdf": "lesson.pdf",
+  "reviewer": "reviewer.html",
+  "quiz": "quiz.html",
+  "activity": "activity.html",
+  "learningObjectives": [
+    "Describe the ESP32 and its development board",
+    "Explain CPU, memory, GPIO, and digital input/output",
+    "Distinguish Wi-Fi and Bluetooth use cases",
+    "Prepare Arduino IDE and reason through a safe LED circuit"
+  ],
+  "pages": [
+    {
+      "id": "what-is-esp32",
+      "title": "What is ESP32?",
+      "type": "definition",
+      "showAdAfter": false,
+      "content": "<p>The <strong>ESP32</strong> is a family of microcontrollers from Espressif Systems. A microcontroller is a compact computer designed to run a focused program and interact directly with hardware.</p><p>ESP32 devices combine processing, memory, timers, communication peripherals, and integrated wireless radios. This makes them useful for sensor nodes, automation, connected controls, data logging, and rapid prototypes.</p><div class=\"notice\"><strong>Microcontroller, not desktop computer:</strong> An ESP32 normally runs one embedded application repeatedly rather than a full desktop operating system.</div>"
+    },
+    {
+      "id": "development-board",
+      "title": "ESP32 Development Board",
+      "type": "diagram",
+      "showAdAfter": false,
+      "content": "<p>The ESP32 chip or module is commonly mounted on a development board. The board makes power, programming, reset, and pin access easier during prototyping.</p><div class=\"diagram\" aria-label=\"ESP32 development board building blocks\"><div>USB connector</div><div>USB-to-serial interface</div><div>Voltage regulator</div><div>ESP32 module</div><div>GPIO headers</div></div><h3>Common board features</h3><ul><li>A USB connector for power and data</li><li>Reset and boot buttons</li><li>A 3.3 V voltage regulator</li><li>Header pins labeled with GPIO numbers</li><li>One or more status LEDs</li></ul><p>Board layouts vary. Always use the pinout and schematic for the exact model in front of you.</p>"
+    },
+    {
+      "id": "cpu-memory",
+      "title": "CPU and Memory",
+      "type": "comparison",
+      "showAdAfter": true,
+      "content": "<p>The CPU executes program instructions. Depending on the ESP32 variant, the device may contain one or more processor cores and hardware features for real-time embedded work.</p><div class=\"table-scroll\"><table><thead><tr><th>Resource</th><th>Role</th><th>What it holds</th></tr></thead><tbody><tr><td>Flash memory</td><td>Non-volatile storage</td><td>Program code and saved data</td></tr><tr><td>RAM</td><td>Working memory</td><td>Variables, buffers, and active program state</td></tr><tr><td>ROM</td><td>Built-in code</td><td>Low-level startup and boot support</td></tr></tbody></table></div><p>Flash keeps its contents when power is removed. RAM is faster working space but loses its current contents when the board powers off.</p>"
+    },
+    {
+      "id": "gpio-pins",
+      "title": "GPIO Pins",
+      "type": "definition",
+      "showAdAfter": false,
+      "content": "<p><strong>GPIO</strong> means General-Purpose Input/Output. Software can configure a supported pin as a digital input, digital output, or signal for a peripheral.</p><h3>Pin capabilities vary</h3><p>Some GPIOs can also support analog input, PWM, touch sensing, UART, SPI, or I2C. Other pins may be connected to onboard flash or influence how the chip boots.</p><div class=\"notice\"><strong>Electrical limit:</strong> ESP32 GPIO normally uses 3.3 V logic and is not generally 5 V tolerant. Check the exact board documentation before applying a voltage.</div>"
+    },
+    {
+      "id": "digital-input-output",
+      "title": "Digital Input and Output",
+      "type": "comparison",
+      "showAdAfter": false,
+      "content": "<p>A digital signal is interpreted as one of two states: LOW or HIGH. The voltage ranges that count as each state come from the device's electrical specifications.</p><div class=\"table-scroll\"><table><thead><tr><th>Mode</th><th>Direction</th><th>Example</th></tr></thead><tbody><tr><td>Digital input</td><td>Signal enters ESP32</td><td>Read a push button or digital sensor</td></tr><tr><td>Digital output</td><td>Signal leaves ESP32</td><td>Control an LED or transistor</td></tr></tbody></table></div><p>In Arduino-style code, <code>pinMode()</code> configures a pin, <code>digitalRead()</code> reads a state, and <code>digitalWrite()</code> sets an output HIGH or LOW.</p>"
+    },
+    {
+      "id": "wifi",
+      "title": "Wi-Fi",
+      "type": "content",
+      "showAdAfter": true,
+      "content": "<p>Built-in Wi-Fi lets an ESP32 communicate through an IP network. A project can join an existing access point, create its own access point, or combine both modes when supported.</p><h3>Typical uses</h3><ul><li>Send sensor readings to an HTTP or MQTT service</li><li>Receive commands from a local dashboard</li><li>Serve a small configuration page</li><li>Synchronize time from a network source</li></ul><div class=\"notice\"><strong>Security habit:</strong> Do not hard-code real production passwords in a public repository. Use a local configuration process appropriate for the final project.</div>"
+    },
+    {
+      "id": "bluetooth",
+      "title": "Bluetooth",
+      "type": "comparison",
+      "showAdAfter": false,
+      "content": "<p>Bluetooth supports short-range communication with phones, computers, sensors, and other embedded devices. Supported capabilities depend on the exact ESP32 variant.</p><div class=\"table-scroll\"><table><thead><tr><th>Approach</th><th>Strength</th><th>Example</th></tr></thead><tbody><tr><td>Bluetooth Classic</td><td>Continuous device links and legacy profiles</td><td>Serial-style data on supported variants</td></tr><tr><td>Bluetooth Low Energy</td><td>Low-power, small data exchanges</td><td>Sensor status or phone configuration</td></tr></tbody></table></div><p>Bluetooth Low Energy organizes data into services and characteristics. A client can discover, read, write, or subscribe to those characteristics.</p>"
+    },
+    {
+      "id": "arduino-ide",
+      "title": "Arduino IDE",
+      "type": "example",
+      "showAdAfter": false,
+      "content": "<p>Arduino IDE provides an editor, compiler workflow, board configuration, serial monitor, and uploader suitable for a first ESP32 project.</p><ol><li>Install the current Arduino IDE from its official source.</li><li>Add Espressif ESP32 board support using the Boards Manager instructions.</li><li>Connect a data-capable USB cable.</li><li>Select the exact board model and serial port.</li><li>Verify the sketch, then upload it.</li></ol><p>If the board receives power but no port appears, test with a known data cable. Many charge-only cables omit the conductors required for USB communication.</p>"
+    },
+    {
+      "id": "basic-led-example",
+      "title": "Basic LED Example",
+      "type": "code",
+      "showAdAfter": true,
+      "content": "<p>This sketch configures a GPIO as an output and alternates it between HIGH and LOW. Use the LED pin specified for your exact board.</p><pre><code>const int ledPin = 2;\n\nvoid setup() {\n  pinMode(ledPin, OUTPUT);\n}\n\nvoid loop() {\n  digitalWrite(ledPin, HIGH);\n  delay(500);\n  digitalWrite(ledPin, LOW);\n  delay(500);\n}</code></pre><h3>Before applying power</h3><ul><li>Confirm the selected GPIO is safe for output.</li><li>Check LED polarity.</li><li>Place a suitable current-limiting resistor in series.</li><li>Connect the circuit ground to the ESP32 ground.</li></ul>"
+    },
+    {
+      "id": "iot-applications",
+      "title": "IoT Applications",
+      "type": "example",
+      "showAdAfter": false,
+      "content": "<p>IoT systems combine sensing, local decisions, communication, and an action or useful record. The ESP32 can handle several of these roles in one small device.</p><div class=\"grid grid-2\"><article class=\"card\"><h3>Environmental monitor</h3><p>Read temperature and humidity, show a local status, and periodically send measurements.</p></article><article class=\"card\"><h3>Smart control</h3><p>Read a switch or network command and safely control a relay interface.</p></article><article class=\"card\"><h3>Asset beacon</h3><p>Advertise a short Bluetooth Low Energy identifier for nearby scanning.</p></article><article class=\"card\"><h3>Classroom data logger</h3><p>Collect sensor readings and export them for later analysis.</p></article></div><p>A responsible design also considers power, network failure, data privacy, electrical safety, and what the device should do when a sensor produces an impossible value.</p>"
+    },
+    {
+      "id": "summary",
+      "title": "Lesson Summary",
+      "type": "summary",
+      "showAdAfter": false,
+      "content": "<p>You built a foundation for working with the ESP32 platform.</p><h3>Key concepts</h3><ul class=\"summary-checks\"><li>A development board makes the ESP32 easier to power, program, and connect.</li><li>Flash stores code while RAM holds active program data.</li><li>GPIO pins connect software to digital and peripheral signals.</li><li>Wi-Fi supports IP networking; Bluetooth supports nearby device communication.</li><li>Arduino IDE can compile and upload beginner ESP32 sketches.</li><li>A safe LED circuit uses the correct GPIO, polarity, ground, and current-limiting resistor.</li></ul><div class=\"notice\"><strong>Remember:</strong> Board variants differ. Confirm the exact pinout and voltage limits before wiring.</div><p><strong>Suggested next action:</strong> Download the lesson, complete the reviewer, and plan the LED activity before taking the quiz.</p>"
+    }
+  ]
+}

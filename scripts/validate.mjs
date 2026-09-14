@@ -27,10 +27,39 @@ for (const file of files.filter((path) => extname(path) === ".json")) {
 }
 
 const lessons = JSON.parse(await readFile(join(root, "data", "lessons.json"), "utf8"));
+const allowedPageTypes = new Set(["content", "definition", "comparison", "diagram", "example", "code", "summary"]);
 for (const lesson of lessons) {
   const dir = join(root, "lessons", lesson.slug);
-  for (const required of ["index.html", "lesson-data.json"]) {
+  for (const required of ["index.html", "lesson.json", "lesson-data.json"]) {
     if (!await exists(join(dir, required))) errors.push(`${lesson.id}: missing ${required}`);
+  }
+
+  const lessonPath = join(dir, "lesson.json");
+  if (await exists(lessonPath)) {
+    try {
+      const readerLesson = JSON.parse(await readFile(lessonPath, "utf8"));
+      if (readerLesson.id !== lesson.id) errors.push(`${lesson.id}: lesson.json id must match the catalog id`);
+      if (!Number.isFinite(readerLesson.estimatedMinutes) || readerLesson.estimatedMinutes < 1) errors.push(`${lesson.id}: estimatedMinutes must be a positive number`);
+      if (!Array.isArray(readerLesson.pages) || !readerLesson.pages.length) {
+        errors.push(`${lesson.id}: lesson.json must contain at least one page`);
+      } else {
+        const pageIds = new Set();
+        for (const [index, page] of readerLesson.pages.entries()) {
+          const prefix = `${lesson.id}: page ${index + 1}`;
+          if (!/^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(page.id || "")) errors.push(`${prefix} has an invalid id`);
+          if (pageIds.has(page.id)) errors.push(`${lesson.id}: duplicate page id ${page.id}`);
+          pageIds.add(page.id);
+          if (!page.title || !page.content) errors.push(`${prefix} requires title and content`);
+          if (!allowedPageTypes.has(page.type)) errors.push(`${prefix} has unsupported type ${page.type}`);
+          if (page.showAdAfter !== undefined && typeof page.showAdAfter !== "boolean") errors.push(`${prefix} showAdAfter must be true or false`);
+          if (page.image && !page.imageAlt) errors.push(`${prefix} has an image but no imageAlt`);
+          if (page.image && !/^(?:https?:|data:)/i.test(page.image) && !await exists(normalize(join(dir, page.image)))) errors.push(`${prefix} has a missing image ${page.image}`);
+        }
+        if (readerLesson.pages.at(-1)?.type !== "summary") errors.push(`${lesson.id}: the final lesson page must use type summary`);
+      }
+    } catch (error) {
+      errors.push(`${lesson.id}: could not validate lesson.json (${error.message})`);
+    }
   }
   const fileFor = { pdf: lesson.resources.pdf?.file || "lesson.pdf", reviewer: "reviewer.html", quiz: "quiz.html", activity: "activity.html" };
   for (const [type, resource] of Object.entries(lesson.resources)) {
@@ -57,4 +86,4 @@ if (errors.length) {
   console.error(`Validation failed with ${errors.length} issue(s):\n- ${errors.join("\n- ")}`);
   process.exit(1);
 }
-console.log(`Validated ${files.length} files, ${lessons.length} lessons, JSON syntax, published resources, and local HTML references.`);
+console.log(`Validated ${files.length} files, ${lessons.length} page-by-page lessons, JSON schemas, published resources, images, and local HTML references.`);

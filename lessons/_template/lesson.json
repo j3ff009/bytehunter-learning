@@ -1,0 +1,47 @@
+{
+  "id": "LESSON_ID",
+  "title": "LESSON_TITLE",
+  "subject": "SUBJECT_NAME",
+  "category": "CATEGORY_NAME",
+  "description": "Replace this with a clear one-sentence lesson description.",
+  "estimatedMinutes": 20,
+  "pdf": "lesson.pdf",
+  "reviewer": "reviewer.html",
+  "quiz": "quiz.html",
+  "activity": "activity.html",
+  "learningObjectives": [
+    "Replace this with a measurable objective",
+    "Add a second objective",
+    "Connect the lesson to its reviewer and activity"
+  ],
+  "pages": [
+    {
+      "id": "introduction",
+      "title": "Introduction",
+      "type": "content",
+      "showAdAfter": false,
+      "content": "<p>Introduce the lesson with a meaningful explanation.</p><div class=\"notice\"><strong>Key idea:</strong> Add the main idea students should retain.</div>"
+    },
+    {
+      "id": "comparison",
+      "title": "Core Comparison",
+      "type": "comparison",
+      "showAdAfter": true,
+      "content": "<p>Explain the comparison before the table.</p><div class=\"table-scroll\"><table><thead><tr><th>Concept</th><th>Meaning</th></tr></thead><tbody><tr><td>First concept</td><td>Concise explanation</td></tr><tr><td>Second concept</td><td>Concise explanation</td></tr></tbody></table></div>"
+    },
+    {
+      "id": "example",
+      "title": "Worked Example",
+      "type": "code",
+      "showAdAfter": false,
+      "content": "<p>Give students enough context to understand the example.</p><pre><code>// Replace with a useful code example\nconst lessonReady = true;</code></pre>"
+    },
+    {
+      "id": "summary",
+      "title": "Lesson Summary",
+      "type": "summary",
+      "showAdAfter": false,
+      "content": "<p>Summarize what students learned.</p><ul class=\"summary-checks\"><li>First key concept</li><li>Second key concept</li><li>Practical skill to remember</li></ul><p><strong>Suggested next action:</strong> Download the PDF, open the reviewer, and take the quiz.</p>"
+    }
+  ]
+}

@@ -15,8 +15,8 @@ The main learning flow is:
 |-- index.html                      Homepage, search, latest and popular content
 |-- subjects/                       JSON-powered subject pages
 |-- lessons/
-|   |-- windows-booting-process/    Complete sample path
-|   |-- esp32-introduction/         Complete sample path
+|   |-- windows-booting-process/    12-page sample lesson
+|   |-- esp32-introduction/         11-page sample lesson
 |   `-- _template/                  Copy-ready lesson template
 |-- data/                           Central lesson, subject, product and site settings
 |-- css/                            Shared, lesson and quiz styles
@@ -52,14 +52,15 @@ The same validation runs automatically on GitHub pushes and pull requests.
 
 1. Copy `lessons/_template/`.
 2. Rename the copied folder to a lowercase, hyphenated slug such as `windows-safe-mode`.
-3. Replace the placeholders and write the lesson in `index.html`.
-4. Add a valid `lesson.pdf`.
-5. Edit `lesson-data.json` with reviewer and quiz questions.
-6. Write the activity in `activity.html`.
-7. Add one lesson entry to `data/lessons.json`.
-8. Set resource visibility and confirm the dates.
-9. Run `node scripts/validate.mjs` and test locally.
-10. Commit and push. A connected Cloudflare Pages project redeploys automatically.
+3. Replace the metadata placeholders in the folder's HTML files.
+4. Write the ordered page content in `lesson.json`.
+5. Add a valid `lesson.pdf`.
+6. Edit `lesson-data.json` with reviewer and quiz questions.
+7. Write the activity in `activity.html`.
+8. Add one lesson entry to `data/lessons.json`.
+9. Set resource visibility and confirm the dates.
+10. Run `node scripts/validate.mjs` and test locally.
+11. Commit and push. A connected Cloudflare Pages project redeploys automatically.
 
 Example:
 
@@ -70,6 +71,38 @@ git push
 ```
 
 The homepage, search, latest lessons, popular lessons, reviewer list, quiz list, related lessons, next lesson, and subject pages all read from `data/lessons.json`. Adding a lesson normally requires only its folder plus one catalog entry.
+
+## Page-by-page lesson system
+
+Every lesson uses the same lightweight reader in `js/lesson-reader.js`. Its `index.html` is only the SEO metadata and reader shell; the lesson's title, objectives, timing, resource filenames, and ordered pages live in `lesson.json`.
+
+One page is visible at a time. The reader automatically creates the overview, page count, progress bar, desktop contents panel, mobile contents drawer, Previous/Next controls, keyboard-arrow navigation, swipe navigation, summary resources, and print layout. A page URL such as `?page=uefi` is shareable and works with refresh and browser Back/Forward.
+
+To add a page, insert an object in the lesson's `pages` array:
+
+```json
+{
+  "id": "secure-boot",
+  "title": "Secure Boot",
+  "type": "content",
+  "showAdAfter": false,
+  "content": "<p>Secure Boot verifies trusted boot components before they run.</p>"
+}
+```
+
+Array order controls page numbers and navigation, so reordering pages requires no HTML or JavaScript edits. Page IDs must be unique, lowercase, and hyphenated. Supported types are `content`, `definition`, `comparison`, `diagram`, `example`, `code`, and `summary`; keep `summary` last. Code inside `<pre><code>` receives a Copy button.
+
+Optional responsive images use fields beside `content`:
+
+```json
+"image": "../../assets/images/secure-boot.webp",
+"imageAlt": "Secure Boot verification flow",
+"imageCaption": "Firmware verifies the next trusted component before execution."
+```
+
+Set `showAdAfter` to `true` only on selected substantial pages. It creates a labeled placeholder after the lesson content, away from navigation and assessment controls.
+
+Progress is stored only in the visitor's browser under `bytehunter_lesson_<lesson-id>`. The overview offers Resume and Start From Beginning when saved progress exists. Starting over clears that lesson's local record. The summary marks completion and shows only PDF, reviewer, quiz, activity, affiliate products, related lessons, and next lessons allowed by `data/lessons.json` visibility settings.
 
 ## Lesson catalog
 
