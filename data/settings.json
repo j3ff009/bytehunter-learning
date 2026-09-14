@@ -1,0 +1,9 @@
+{
+  "siteName": "ByteHunter Learning",
+  "tagline": "Learn. Practice. Level Up.",
+  "showPopularLessons": true,
+  "showAffiliateProducts": true,
+  "showAds": true,
+  "defaultTheme": "dark",
+  "quizFeedbackMode": "immediate"
+}

@@ -1,0 +1,8 @@
+[
+  {"id":"cpe","code":"CPE 22","name":"Computer Engineering","description":"Computer systems, operating systems, and embedded hardware.","icon":"CPU"},
+  {"id":"cs","code":"CS","name":"Computer Science","description":"Algorithms, programming, software design, and computation.","icon":"{ }"},
+  {"id":"it","code":"IT","name":"Information Technology","description":"Practical systems, applications, support, and infrastructure.","icon":"IT"},
+  {"id":"business","code":"BA","name":"Business Applications","description":"Digital tools, productivity, data, and business workflows.","icon":"BA"},
+  {"id":"electronics","code":"ECE","name":"Electronics & IoT","description":"Circuits, microcontrollers, sensors, and connected devices.","icon":"IoT"},
+  {"id":"networking","code":"NET","name":"Networking & System Administration","description":"Networks, services, security, and reliable system operations.","icon":"NET"}
+]

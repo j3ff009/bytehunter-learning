@@ -1,0 +1,8 @@
+[
+  {"id":"esp32-board","name":"ESP32 Development Board","category":"ESP32","description":"A beginner-friendly dual-core board with Wi-Fi and Bluetooth.","icon":"▦","affiliateUrl":"#"},
+  {"id":"breadboard","name":"Solderless Breadboard","category":"ESP32","description":"Build and change circuits without soldering.","icon":"▥","affiliateUrl":"#"},
+  {"id":"jumper-wires","name":"Jumper Wire Set","category":"ESP32","description":"Male and female leads for board-to-breadboard connections.","icon":"⌁","affiliateUrl":"#"},
+  {"id":"led-pack","name":"LED Assortment","category":"ESP32","description":"Color LEDs for output and indicator exercises.","icon":"◉","affiliateUrl":"#"},
+  {"id":"resistor-kit","name":"Resistor Kit","category":"ESP32","description":"Common resistor values for safe prototyping.","icon":"━","affiliateUrl":"#"},
+  {"id":"usb-cable","name":"Data-Capable USB Cable","category":"ESP32","description":"Power the board and upload programs from your computer.","icon":"⌇","affiliateUrl":"#"}
+]

@@ -1,0 +1,13 @@
+{
+  "reviewer": {
+    "quickReview": [{"term":"Key term","summary":"A concise explanation."}],
+    "flashcards": [{"front":"Question","back":"Answer"}],
+    "identification": [{"question":"Type the key term:","acceptedAnswers":["Key term"]}],
+    "trueFalse": [{"question":"A clear statement.","answer":true,"explanation":"Explain why."}]
+  },
+  "quiz": [
+    {"type":"multiple-choice","question":"Question text","choices":["Choice A","Choice B","Choice C","Choice D"],"answer":"Choice A","explanation":"Explain the correct answer."},
+    {"type":"identification","question":"Identification prompt","acceptedAnswers":["Accepted answer"],"explanation":"Explain the answer."},
+    {"type":"true-false","question":"True or false statement","answer":true,"explanation":"Explain why."}
+  ]
+}
