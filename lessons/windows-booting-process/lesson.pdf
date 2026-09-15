@@ -1,112 +1,600 @@
-%PDF-1.4
-%“Œ‹ž ReportLab Generated PDF document (opensource)
+%PDF-1.3
+%âãÏÓ
 1 0 obj
 <<
-/F1 2 0 R /F2 3 0 R
+/PageMode /UseNone
+/Pages 2 0 R
+/Type /Catalog
 >>
 endobj
 2 0 obj
 <<
-/BaseFont /Helvetica /Encoding /WinAnsiEncoding /Name /F1 /Subtype /Type1 /Type /Font
+/Count 3
+/Kids [ 3 0 R 8 0 R 10 0 R ]
+/Type /Pages
 >>
 endobj
 3 0 obj
 <<
-/BaseFont /Helvetica-Bold /Encoding /WinAnsiEncoding /Name /F2 /Subtype /Type1 /Type /Font
+/Contents 4 0 R
+/MediaBox [ 0 0 595.2756 841.8898 ]
+/Parent 2 0 R
+/Resources <<
+/Font 5 0 R
+/ProcSet [ /PDF /Text /ImageB /ImageC /ImageI ]
+>>
+/Rotate 0
+/Trans <<
+>>
+/Type /Page
 >>
 endobj
 4 0 obj
 <<
-/Contents 10 0 R /MediaBox [ 0 0 595.2756 841.8898 ] /Parent 9 0 R /Resources <<
-/Font 1 0 R /ProcSet [ /PDF /Text /ImageB /ImageC /ImageI ]
->> /Rotate 0 /Trans <<
-
->> 
-  /Type /Page
+/Length 1503
 >>
+stream
+1 0 0 1 0 0 cm  BT /F1 12 Tf 14.4 TL ET
+q
+.027451 .078431 .14902 rg
+n 0 0 595.2756 36.85039 re f*
+1 1 1 rg
+BT /F1 7.5 Tf 9 TL ET
+BT 1 0 0 1 51.02362 14.17323 Tm (ByteSmith  |  Learn. Build. Level Up.) Tj T* ET
+BT 1 0 0 1 520.4845 14.17323 Tm (Page 1) Tj T* ET
+Q
+q
+1 0 0 1 57.02362 705.4961 cm
+Q
+q
+1 0 0 1 51.02362 494.7559 cm
+q
+.027451 .078431 .14902 rg
+n 0 210.7402 493.2283 -210.7402 re f*
+0 0 0 rg
+BT /F1 10 Tf 12 TL ET
+q
+1 0 0 1 39.68504 184.7323 cm
+q
+.737255 .937255 .988235 rg
+BT 1 0 0 1 0 6 Tm /F1 12 Tf 18 TL 133.9211 0 Td (BYTESMITH) Tj T* -133.9211 0 Td ET
+Q
+Q
+q
+1 0 0 1 39.68504 156.3858 cm
+Q
+q
+1 0 0 1 39.68504 108.7087 cm
+q
+1 1 1 rg
+BT 1 0 0 1 0 4 Tm /F2 30 Tf 34 TL 17.73413 0 Td (Windows Booting Process) Tj T* -17.73413 0 Td ET
+Q
+Q
+q
+1 0 0 1 39.68504 68.0315 cm
+q
+.737255 .937255 .988235 rg
+BT 1 0 0 1 0 6 Tm /F1 12 Tf 18 TL 70.22513 0 Td (From firmware initialization to the Windows desktop) Tj T* -70.22513 0 Td ET
+Q
+Q
+q
+1 0 0 1 39.68504 36.35433 cm
+Q
+q
+1 0 0 1 39.68504 8.007874 cm
+q
+.737255 .937255 .988235 rg
+BT 1 0 0 1 0 6 Tm /F1 12 Tf 18 TL 121.2371 0 Td (CPE 22 - System Administration) Tj T* -121.2371 0 Td ET
+Q
+Q
+q
+1 J
+1 j
+.070588 .658824 .780392 RG
+1 w
+n 0 210.7402 m 493.2283 210.7402 l S
+n 0 0 m 493.2283 0 l S
+n 0 0 m 0 210.7402 l S
+n 493.2283 0 m 493.2283 210.7402 l S
+Q
+Q
+Q
+q
+1 0 0 1 57.02362 443.7323 cm
+Q
+q
+1 0 0 1 57.02362 426.7323 cm
+q
+.317647 .419608 .494118 rg
+BT 1 0 0 1 0 3 Tm /F1 8 Tf 11 TL (Printable lesson edition - Updated September 14, 2026) Tj T* ET
+Q
+Q
+ 
+
+endstream
 endobj
 5 0 obj
 <<
-/Contents 11 0 R /MediaBox [ 0 0 595.2756 841.8898 ] /Parent 9 0 R /Resources <<
-/Font 1 0 R /ProcSet [ /PDF /Text /ImageB /ImageC /ImageI ]
->> /Rotate 0 /Trans <<
-
->> 
-  /Type /Page
+/F1 6 0 R
+/F2 7 0 R
 >>
 endobj
 6 0 obj
 <<
-/Contents 12 0 R /MediaBox [ 0 0 595.2756 841.8898 ] /Parent 9 0 R /Resources <<
-/Font 1 0 R /ProcSet [ /PDF /Text /ImageB /ImageC /ImageI ]
->> /Rotate 0 /Trans <<
-
->> 
-  /Type /Page
+/BaseFont /Helvetica
+/Encoding /WinAnsiEncoding
+/Name /F1
+/Subtype /Type1
+/Type /Font
 >>
 endobj
 7 0 obj
 <<
-/PageMode /UseNone /Pages 9 0 R /Type /Catalog
+/BaseFont /Helvetica-Bold
+/Encoding /WinAnsiEncoding
+/Name /F2
+/Subtype /Type1
+/Type /Font
 >>
 endobj
 8 0 obj
 <<
-/Author (ByteHunter Learning) /CreationDate (D:20260914232814+08'00') /Creator (\(unspecified\)) /Keywords () /ModDate (D:20260914232814+08'00') /Producer (ReportLab PDF Library - \(opensource\)) 
-  /Subject (CPE 22 - System Administration) /Title (Windows Booting Process) /Trapped /False
+/Contents 9 0 R
+/MediaBox [ 0 0 595.2756 841.8898 ]
+/Parent 2 0 R
+/Resources <<
+/Font 5 0 R
+/ProcSet [ /PDF /Text /ImageB /ImageC /ImageI ]
+>>
+/Rotate 0
+/Trans <<
+>>
+/Type /Page
 >>
 endobj
 9 0 obj
 <<
-/Count 3 /Kids [ 4 0 R 5 0 R 6 0 R ] /Type /Pages
+/Length 4973
 >>
+stream
+1 0 0 1 0 0 cm  BT /F1 12 Tf 14.4 TL ET
+q
+.027451 .078431 .14902 rg
+n 0 0 595.2756 36.85039 re f*
+1 1 1 rg
+BT /F1 7.5 Tf 9 TL ET
+BT 1 0 0 1 51.02362 14.17323 Tm (ByteSmith  |  Learn. Build. Level Up.) Tj T* ET
+BT 1 0 0 1 520.4845 14.17323 Tm (Page 2) Tj T* ET
+Q
+q
+1 0 0 1 51.02362 637.8661 cm
+q
+.917647 .968627 .984314 rg
+n 0 147 493.2283 -147 re f*
+0 0 0 rg
+BT /F1 10 Tf 12 TL ET
+q
+1 0 0 1 9 125 cm
+q
+.05098 .470588 .627451 rg
+BT 1 0 0 1 0 4 Tm /F2 13 Tf 17 TL (LEARNING OBJECTIVES) Tj T* ET
+Q
+Q
+q
+1 0 0 1 9 101 cm
+q
+.070588 .137255 .2 rg
+BT 1 0 0 1 0 4.5 Tm /F1 9.5 Tf 14 TL (- Explain the Windows boot sequence) Tj T* ET
+Q
+Q
+q
+1 0 0 1 9 77 cm
+q
+.070588 .137255 .2 rg
+BT 1 0 0 1 0 4.5 Tm /F1 9.5 Tf 14 TL (- Compare BIOS and UEFI) Tj T* ET
+Q
+Q
+q
+1 0 0 1 9 53 cm
+q
+.070588 .137255 .2 rg
+BT 1 0 0 1 0 4.5 Tm /F1 9.5 Tf 14 TL (- Compare MBR and GPT) Tj T* ET
+Q
+Q
+q
+1 0 0 1 9 29 cm
+q
+.070588 .137255 .2 rg
+BT 1 0 0 1 0 4.5 Tm /F1 9.5 Tf 14 TL (- Explain Boot Manager, BCD, the OS loader, and the kernel) Tj T* ET
+Q
+Q
+q
+1 0 0 1 9 5 cm
+q
+.070588 .137255 .2 rg
+BT 1 0 0 1 0 4.5 Tm /F1 9.5 Tf 14 TL (- Identify common boot failures) Tj T* ET
+Q
+Q
+q
+1 J
+1 j
+.070588 .658824 .780392 RG
+.75 w
+n 0 147 m 493.2283 147 l S
+n 0 0 m 493.2283 0 l S
+n 0 0 m 0 147 l S
+n 493.2283 0 m 493.2283 147 l S
+Q
+Q
+Q
+q
+1 0 0 1 57.02362 629.8661 cm
+Q
+q
+1 0 0 1 57.02362 595.8661 cm
+q
+.027451 .078431 .14902 rg
+BT 1 0 0 1 0 4 Tm /F2 20 Tf 24 TL (1. Firmware begins the chain) Tj T* ET
+Q
+Q
+q
+1 0 0 1 57.02362 559.8661 cm
+q
+.070588 .137255 .2 rg
+BT 1 0 0 1 0 18.5 Tm /F1 9.5 Tf 14 TL (Booting is a controlled handoff. Firmware tests essential hardware, examines its boot order, and selects a boot) Tj T* (device.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 57.02362 524.8661 cm
+q
+.070588 .137255 .2 rg
+BT 1 0 0 1 0 18.5 Tm /F1 9.5 Tf 14 TL (Legacy BIOS reads boot code from the Master Boot Record. UEFI can read a filesystem and launch an EFI) Tj T* (application directly from the EFI System Partition. UEFI also provides the framework for Secure Boot.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 57.02362 490.8661 cm
+q
+.027451 .078431 .14902 rg
+BT 1 0 0 1 0 4 Tm /F2 20 Tf 24 TL (2. MBR and GPT) Tj T* ET
+Q
+Q
+q
+1 0 0 1 57.02362 454.8661 cm
+q
+.070588 .137255 .2 rg
+BT 1 0 0 1 0 18.5 Tm /F1 9.5 Tf 14 TL (MBR combines a legacy partition table and first-stage boot code in sector zero. It has practical disk-size and) Tj T* (partition-count limits.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 57.02362 419.8661 cm
+q
+.070588 .137255 .2 rg
+BT 1 0 0 1 0 18.5 Tm /F1 9.5 Tf 14 TL (GPT stores modern partition metadata with redundancy, supports large disks, and is the normal choice for native) Tj T* (UEFI Windows installations.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 57.02362 385.8661 cm
+q
+.027451 .078431 .14902 rg
+BT 1 0 0 1 0 4 Tm /F2 20 Tf 24 TL (3. Windows Boot Manager and BCD) Tj T* ET
+Q
+Q
+q
+1 0 0 1 57.02362 335.8661 cm
+q
+.070588 .137255 .2 rg
+BT 1 0 0 1 0 32.5 Tm /F1 9.5 Tf 14 TL (Windows Boot Manager reads the Boot Configuration Data store. BCD entries point to Windows installations,) Tj T* (recovery tools, devices, and loader options. Boot Manager chooses an entry and launches the associated OS) Tj T* (loader.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 57.02362 301.8661 cm
+q
+.027451 .078431 .14902 rg
+BT 1 0 0 1 0 4 Tm /F2 20 Tf 24 TL (4. OS Loader and kernel) Tj T* ET
+Q
+Q
+q
+1 0 0 1 57.02362 265.8661 cm
+q
+.070588 .137255 .2 rg
+BT 1 0 0 1 0 18.5 Tm /F1 9.5 Tf 14 TL (Winload loads the Windows kernel, Hardware Abstraction Layer, SYSTEM registry hive, and boot-critical drivers.) Tj T* (The kernel then initializes memory, scheduling, security structures, and device coordination.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 57.02362 231.8661 cm
+q
+.027451 .078431 .14902 rg
+BT 1 0 0 1 0 4 Tm /F2 20 Tf 24 TL (5. Services, sign-in, and desktop) Tj T* ET
+Q
+Q
+q
+1 0 0 1 57.02362 195.8661 cm
+q
+.070588 .137255 .2 rg
+BT 1 0 0 1 0 18.5 Tm /F1 9.5 Tf 14 TL (User-mode system processes and services start after the kernel. Windows presents the sign-in experience, loads) Tj T* (the selected user profile, and launches the shell that displays the taskbar and desktop.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 57.02362 161.8661 cm
+q
+.027451 .078431 .14902 rg
+BT 1 0 0 1 0 4 Tm /F2 20 Tf 24 TL (6. Troubleshooting by stage) Tj T* ET
+Q
+Q
+q
+1 0 0 1 57.02362 97.86614 cm
+q
+.070588 .137255 .2 rg
+BT 1 0 0 1 0 46.5 Tm /F1 9.5 Tf 14 TL (No firmware display suggests power, memory, display, or board-level issues. A no-boot-device message points to) Tj T* (firmware mode, disk detection, or boot order. BCD errors point to startup configuration. A crash during the logo) Tj T* (stage may involve a boot-critical driver or kernel component. A blank desktop after sign-in points later in the chain,) Tj T* (often to the profile or shell.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 57.02362 62.86614 cm
+q
+.070588 .137255 .2 rg
+BT 1 0 0 1 0 18.5 Tm /F1 9.5 Tf 14 TL (Prefer safe, reversible checks. Record changes, use Windows Recovery Environment where appropriate, and) Tj T* (verify current official guidance before destructive repair commands.) Tj T* ET
+Q
+Q
+ 
+
+endstream
 endobj
 10 0 obj
 <<
-/Filter [ /ASCII85Decode /FlateDecode ] /Length 779
+/Contents 11 0 R
+/MediaBox [ 0 0 595.2756 841.8898 ]
+/Parent 2 0 R
+/Resources <<
+/Font 5 0 R
+/ProcSet [ /PDF /Text /ImageB /ImageC /ImageI ]
 >>
-stream
-Gatm89i'M/&A@7.b`SW3]<gBYOt&^IKG#u=H8P/HR`77.[RF0npl6BLYp5uLO;2!QSU'hhbm+<J#FkH;#FNL"ko9^-`+qWW'Z=',O!h[hN!l[C!oqi\8RGF/(Jm7gMT/jjRL-#(8Agt[14mZdqK,&3oT32`D4.Q3UDB4lZ/qX@@Rqa/\7h_#&Ee!fHO9]BG7f3+=$EU@XEX_iL#!gTM^hk`CulNTr:(`9HX\'>IY@Lg&7'7PSC1p>7Io@;#9HN1[<Jl-+j2`AO[5.DCsXn;O^_AWW&FFC<!#(dMUtUd$/m.'qkK]m]Res5L:jL?k\JSbQOu$L[/tFa^WpO0hb#E+"r;>gkCh>:,5*<A[02,&]/fpaaWc</I@QJuhrFOoh/tipJZJV"c1RFhMb^D=fX)6/q'J1?Quq%&b-s=fN`kf:NrH7mp12^6X8pqP+e-bF9=ZO:/_P&FOd=<tR$D6]qd`Qh/&0p.$'3;k'/kkjM>A7B[%'aiH\1E\RDV(do&kZuSJ>;KP"kX/$!CCr-mANXcm=hNmE\Tmp#O.ia2ug.8ZedNW\u.nNG6pi1lFUGV!XW4o3r1r^_CZn[__-GQKFFl2H3D&q_F,C#+9k8h]n*kc'rdi%)%>rAf[ue!B1g:rB-[FHp:'uf`l?KSM[k<ULSad4g7!P\NCG9h[W9#Ie_bX&8!nm'!5"HR)6p`8s>PGP+7;Zb>*$.k`*",-]9H)6?9j2YbB(6VX\BO1s_CE?^_+i_QA;3mI+arUA>.I$Stt)b6^lA!GVF2[f~>endstream
+/Rotate 0
+/Trans <<
+>>
+/Type /Page
+>>
 endobj
 11 0 obj
 <<
-/Filter [ /ASCII85Decode /FlateDecode ] /Length 2055
+/Length 3742
 >>
 stream
-Gatm<gN)"=&:O:SoHTh,72I5cA*i-l.6DNcZ<R2c8-;PIAs=/>LX^eNG0^EpnVpLFP`:f[^7E`N>7SHh=($Mj-,B<jhHgBtKJ8ra0_C)R]nXZ$m)POWLZpK&_"6%&0Z*Ql3;,_dM_f(^*KO\`9]H8M`#H[E1^;35roOWKi<t^SVGf,pgZ-j=?4GU*iW+Bp8P";_1^YIpQI%_NeGNf$CTcWb1G+;c!;m)iK*SlSA[TUhLDSOSJ8^_I(JMT]oZcjU6f/iCL@Lu1>INH$mX=+GVYV^6,YGaIOp"l2Wl-kfP@4gT3#O"c]i.4OgJS0!CH.?e0H<M8TMM^%^9tO&7,Zf<LL#VCDT?uVDI*(C59>A79`93hmtnrt)$r@jL6Tm99<;B/D5LjMG<L4qp\F+G#P`?=BlYrAqKm74OQb:`TDg`3^NC;[Bc+nKKoc0EL8E.(m,/:';0i>3r2^5P,h,Hsrs5$n#6QcYC,#QU_e$hp#U)o<&]'/N.u#?7^\Vs]9]kh]Ed@>0f/Pgff:2@nlh&*^oEClGplr0MVu#7(M-SV[359^q\)k[&$cR.t7M4%E("\Tb0,<L]EF%[2emc@E9U2H;%f\O&7AID=_YGSWq7cHgi9tUj?91Cf$/t<iR?tq_co"n8CG5Nd^jR_!HT1kTbPpA7]d$;iqYFDbicH[OiOG)%-P)=<m:jMFCADu3L/n^L=2D\)9;0N6imWi>KJXIWCl)OaMqp"IG^L(DX%3GikFa)0OkpEI%)J19<^jiG=<aBeI(gD/btW&*)ah]Q!`/$MDY/M[A>PCCJ>cZu:qG\_i<@PBZ;,VP\b1!W-:pEGf5Pu7>d*sTAK.NcR^9X92H)W9[oT>Zi.`*f7(2(BG_VW2<aHnYdXDQ[R>ZZd%A#(eM?Rd+[_tC=:PO1sWX=ln>$u^<6=UUbc-?c$]QY]?RB?]6CE9[s.&aLVMjuk4bV^pHK@29;.h258CIn@W_B\?$Uc]B+6glGjgUW>?"s*M.WL6nX0dn$)e[BKpZWY+]A94G=4YS`fr>iO!T`u+ElM]^GH#Qb.IgoH3Xqo+@>aX'WLgS_(LLK@RO==F2TF`Dir0XJh-gOS[2&M8l'/)'T/bd[GH-LA11O'K('%r[311rAsoYE@aV)7mO_),2EdPJ$LL#\Cs]#;7fV8>F']TU@dFZ6s[QAaMnNWN4eU9JGt-N@b$19$5F/rKTVBQM!UGXO)[r+B,"iH&*`)2OIhWi<[ZU#]H0)XTTc4eZBEo-dd-n^IW6XHYt6e`uB+pH''c2q4;^%3ALQ,3X-TL!n4p:mH[p0J#Um)<quOSSn.sWg+<2N62:(;=;2@HXkA>4U,C\3#0G#O&hZaQO_"1aqiIF&12m_mIPa\5Z$aSW9.KuFi!_/@ls5=h9=AL3=t+a[\6QBs6oo.Ee@V!#XcR;@OjI#8;%28(9Pkq]V0O$e=1VC)u5`>"$tr^PmI8XQV(14,@l'ui105!N&>9bK;?pi<n"eEr&A;]gu6<eddlT-&B!^B+N>I_-Jd,!LkQfS\IHfbC/qqg9e\aKSDOb,!tn:@-T+ZKN4'POXsG\u/0h/DYW30kh>Y(9S-fX_rSnaBAq_1"`NbEm=f:``d_TWnfp)fSW^/<!QhH.4j8Li-?4cD'-@Nm&J)d]`bcGDMn!EGJ,_P/g81#BO[;'ZVRUs)QcA6G</$HuJFq<$=iu^(?k:lh8BUl^-Z`OcK[`-+$U6U%t`nU2XHbYWR-ak"<lCbB]/J,oY*4>;W::u/F`O8W9,QfV)<f+*NWl)(48bB9R=,95gD8Wgm[S(M=l<5^O-gI!s9goH_DAH%WR:^%;3Hd+-Pcudi@cuB\/L>!XjB<:6hJUTQb6NaJC'H:ZQ'+[7Z9Be+>\tq=EdCC32GG/FGd2[C[uVK?=ekHoP/=,D/T&Upjlm?c9Ys"^rqYuqeU1-.ZT/)[3D$*@%1de5>9TGQ1T(B:K&d+tXm=WOmDtg=[EqO3=<2WgEWd)#Eigfc1Tu;4ki$ga1tu\<Vt%l!AFttiBETndoT4eX&uXGefgQT/XGR=$T7G>=UTFgIrWgL`7TK~>endstream
+1 0 0 1 0 0 cm  BT /F1 12 Tf 14.4 TL ET
+q
+.027451 .078431 .14902 rg
+n 0 0 595.2756 36.85039 re f*
+1 1 1 rg
+BT /F1 7.5 Tf 9 TL ET
+BT 1 0 0 1 51.02362 14.17323 Tm (ByteSmith  |  Learn. Build. Level Up.) Tj T* ET
+BT 1 0 0 1 520.4845 14.17323 Tm (Page 3) Tj T* ET
+Q
+q
+1 0 0 1 57.02362 760.8661 cm
+q
+.027451 .078431 .14902 rg
+BT 1 0 0 1 0 4 Tm /F2 20 Tf 24 TL (Quick reference) Tj T* ET
+Q
+Q
+q
+1 0 0 1 51.02362 515.8661 cm
+q
+.027451 .078431 .14902 rg
+n 0 237 493.2283 -29 re f*
+1 1 1 rg
+n 0 208 493.2283 -26 re f*
+.917647 .968627 .984314 rg
+n 0 182 493.2283 -26 re f*
+1 1 1 rg
+n 0 156 493.2283 -26 re f*
+.917647 .968627 .984314 rg
+n 0 130 493.2283 -26 re f*
+1 1 1 rg
+n 0 104 493.2283 -26 re f*
+.917647 .968627 .984314 rg
+n 0 78 493.2283 -26 re f*
+1 1 1 rg
+n 0 52 493.2283 -26 re f*
+.917647 .968627 .984314 rg
+n 0 26 493.2283 -26 re f*
+1 1 1 rg
+BT /F1 10 Tf 12 TL ET
+q
+1 0 0 1 6 214 cm
+q
+.05098 .470588 .627451 rg
+BT 1 0 0 1 0 4 Tm /F2 13 Tf 17 TL (Concept) Tj T* ET
+Q
+Q
+q
+1 0 0 1 142.063 214 cm
+q
+.05098 .470588 .627451 rg
+BT 1 0 0 1 0 4 Tm /F2 13 Tf 17 TL (Meaning) Tj T* ET
+Q
+Q
+0 0 0 rg
+q
+1 0 0 1 6 188 cm
+q
+.070588 .137255 .2 rg
+BT 1 0 0 1 0 4.5 Tm /F1 9.5 Tf 14 TL (BIOS) Tj T* ET
+Q
+Q
+q
+1 0 0 1 142.063 188 cm
+q
+.070588 .137255 .2 rg
+BT 1 0 0 1 0 4.5 Tm /F1 9.5 Tf 14 TL (Legacy firmware that starts boot code from a selected device.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 6 162 cm
+q
+.070588 .137255 .2 rg
+BT 1 0 0 1 0 4.5 Tm /F1 9.5 Tf 14 TL (UEFI) Tj T* ET
+Q
+Q
+q
+1 0 0 1 142.063 162 cm
+q
+.070588 .137255 .2 rg
+BT 1 0 0 1 0 4.5 Tm /F1 9.5 Tf 14 TL (Modern firmware that can launch EFI files and support Secure Boot.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 6 136 cm
+q
+.070588 .137255 .2 rg
+BT 1 0 0 1 0 4.5 Tm /F1 9.5 Tf 14 TL (MBR) Tj T* ET
+Q
+Q
+q
+1 0 0 1 142.063 136 cm
+q
+.070588 .137255 .2 rg
+BT 1 0 0 1 0 4.5 Tm /F1 9.5 Tf 14 TL (Legacy partition and boot-record format.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 6 110 cm
+q
+.070588 .137255 .2 rg
+BT 1 0 0 1 0 4.5 Tm /F1 9.5 Tf 14 TL (GPT) Tj T* ET
+Q
+Q
+q
+1 0 0 1 142.063 110 cm
+q
+.070588 .137255 .2 rg
+BT 1 0 0 1 0 4.5 Tm /F1 9.5 Tf 14 TL (Modern, redundant partition table normally used with UEFI.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 6 84 cm
+q
+.070588 .137255 .2 rg
+BT 1 0 0 1 0 4.5 Tm /F1 9.5 Tf 14 TL (Boot Manager) Tj T* ET
+Q
+Q
+q
+1 0 0 1 142.063 84 cm
+q
+.070588 .137255 .2 rg
+BT 1 0 0 1 0 4.5 Tm /F1 9.5 Tf 14 TL (Reads BCD and selects the Windows startup entry.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 6 58 cm
+q
+.070588 .137255 .2 rg
+BT 1 0 0 1 0 4.5 Tm /F1 9.5 Tf 14 TL (BCD) Tj T* ET
+Q
+Q
+q
+1 0 0 1 142.063 58 cm
+q
+.070588 .137255 .2 rg
+BT 1 0 0 1 0 4.5 Tm /F1 9.5 Tf 14 TL (Boot Configuration Data store.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 6 32 cm
+q
+.070588 .137255 .2 rg
+BT 1 0 0 1 0 4.5 Tm /F1 9.5 Tf 14 TL (OS Loader) Tj T* ET
+Q
+Q
+q
+1 0 0 1 142.063 32 cm
+q
+.070588 .137255 .2 rg
+BT 1 0 0 1 0 4.5 Tm /F1 9.5 Tf 14 TL (Loads the kernel, HAL, registry hive, and critical drivers.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 6 6 cm
+q
+.070588 .137255 .2 rg
+BT 1 0 0 1 0 4.5 Tm /F1 9.5 Tf 14 TL (Kernel) Tj T* ET
+Q
+Q
+q
+1 0 0 1 142.063 6 cm
+q
+.070588 .137255 .2 rg
+BT 1 0 0 1 0 4.5 Tm /F1 9.5 Tf 14 TL (Initializes core operating-system resource management.) Tj T* ET
+Q
+Q
+q
+1 J
+1 j
+.713725 .811765 .854902 RG
+.5 w
+n 0 237 m 493.2283 237 l S
+n 0 0 m 493.2283 0 l S
+n 0 0 m 0 237 l S
+n 493.2283 0 m 493.2283 237 l S
+n 0 208 m 493.2283 208 l S
+n 0 182 m 493.2283 182 l S
+n 0 156 m 493.2283 156 l S
+n 0 130 m 493.2283 130 l S
+n 0 104 m 493.2283 104 l S
+n 0 78 m 493.2283 78 l S
+n 0 52 m 493.2283 52 l S
+n 0 26 m 493.2283 26 l S
+n 136.063 0 m 136.063 237 l S
+Q
+Q
+Q
+q
+1 0 0 1 57.02362 505.8661 cm
+Q
+q
+1 0 0 1 57.02362 485.8661 cm
+q
+.070588 .137255 .2 rg
+BT 1 0 0 1 0 4.5 Tm /F1 9.5 Tf 14 TL (Continue online for flashcards, practice questions, the interactive quiz, and the next lesson.) Tj T* ET
+Q
+Q
+ 
+
+endstream
 endobj
 12 0 obj
 <<
-/Filter [ /ASCII85Decode /FlateDecode ] /Length 1235
+/Author (ByteSmith)
+/CreationDate (D\07220260914232814\05308\04700\047)
+/Creator (\050unspecified\051)
+/Keywords ()
+/ModDate (D\07220260914232814\05308\04700\047)
+/Producer (ReportLab PDF Library \055 \050opensource\051)
+/Subject (CPE 22 \055 System Administration)
+/Title (Windows Booting Process)
+/Trapped (\057False)
 >>
-stream
-Gatm;>BALX'Ro4HSB#Lp;'jodj`*k\2S3Lg$_;]HD#nNkREBPJ3r@t3aOnFC$$9&U"%G?"q9F2%Q5EHrYi[kn!2ag^GK#)PQnO!c`/"-shTmS,-\V';(CUQY,N$Bdo4,qZ/18$^/Rh"j-j&l>&ddjB?kb0K:/DgWE*95&,f8f+>K&SF=rRT3$npNKQ\?LT?s^X<l,K`a[C45n9M)!8]`e*H[K?T?7OC#d'Z#VrQ,DcBq#fbd@K(FW4/^#XHnj-"/!gUUhMs[n]%[k+#)*((;%PF'd8<^3i$e@1i8#+Q:*!d"\FRmMSL*1?2%*u[:=K8hJDE4Q0_%fg/dgAA_2garH/ue%s'H&#2)OU%$/.6^AmsVQ5iNmn\9g:8I^b5(r6VTtAqn-OKk?C;ekH$DBFYOc*@M[.=e3p_&(97ZF4Nb8'iJ7$?"=&qW2koTTQ(+Q&#kBS)/Os&@O<h5d2=j1FAZNHXR1o``-b<ni/ND5USKER4Z(mZ64J?h%$e;P/J@YA/d.7<7H1mEd5W]62?pUlPNhb<LQg4W6(4dL9K',r9^sA_Q?FQ+<)soA_3_I7OH_1`fTZP1W)To4X&;L=U['roRYYjsir*`S5/4kD54+(ZOD^/Vd<fb%UkW.*3`uJ%K#1bm+E\#k]j@&F_LkHq>WbG>*VG+&N*tW:rj42q!,=<!N@BtBXOI\hQO;nF-)F1A;49fm-d:fCg[X6GI[]aC5hjq`@4+]`SP!aGgo^L;/'s;rSo::)0_q=r])n=fa'92O,BNrfIlC9c>M>Th`>F."8u<=s0.s_:hGeiU[@lHM9W-uN[I"Cq)O.[BF,[jNUC1C5StnLVNq5'@:_q`i2R82:V6nnCCh\nf3H'SroB?9fV+c@^_IK6!W,4r;@EtqO$pOYNF/cpu.Z>dWZ:B&g6pED.!K##D2)o6K@t#8glhoS+F4(:<+C/b.-M-RO2KS4t$Hfbs;:j"_C/\88TJrmV2Mm$[WP&@sr=Jk@nG@>p_Sud&&]8[RH]$r^HN.E*YYVlpC%6ReEl/k<g8dS:5R5cF\$3@&"\%iigDAhQ'=m.=:ZR6l&Y<2'+rp#=h>k_.G9T/3p-gt-7,bq=nC\(%YX(C@^]tYEc2`6Y2%b%%FT4G:GPg!Gm]%Jpo6'$M!^@U[-XNE7fInpkC.o_?B3MjT+tRb;XV,?rl3u82eI91DWcC6+k?QhSmP<rnO%tr<gfBo.B_B7E*\jZmn#%*urWB4p?aB~>endstream
 endobj
 xref
 0 13
 0000000000 65535 f 
-0000000061 00000 n 
-0000000102 00000 n 
-0000000209 00000 n 
-0000000321 00000 n 
-0000000525 00000 n 
-0000000729 00000 n 
-0000000933 00000 n 
-0000001001 00000 n 
-0000001312 00000 n 
-0000001383 00000 n 
-0000002253 00000 n 
-0000004400 00000 n 
+0000000015 00000 n 
+0000000083 00000 n 
+0000000155 00000 n 
+0000000354 00000 n 
+0000001909 00000 n 
+0000001950 00000 n 
+0000002057 00000 n 
+0000002169 00000 n 
+0000002368 00000 n 
+0000007393 00000 n 
+0000007594 00000 n 
+0000011389 00000 n 
 trailer
 <<
-/ID 
-[<1b60c05d5533441f1ba7d20c7423d726><1b60c05d5533441f1ba7d20c7423d726>]
-% ReportLab generated PDF document -- digest (opensource)
-
-/Info 8 0 R
-/Root 7 0 R
 /Size 13
+/Root 1 0 R
+/Info 12 0 R
+/ID [ (\033\140\300\135U3D\037\033\247\322\014t\043\327\046) (\033\140\300\135U3D\037\033\247\322\014t\043\327\046) ]
 >>
 startxref
-5727
+11731
 %%EOF

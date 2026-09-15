@@ -1,118 +1,614 @@
-%PDF-1.4
-%“Œ‹ž ReportLab Generated PDF document (opensource)
+%PDF-1.3
+%âãÏÓ
 1 0 obj
 <<
-/F1 2 0 R /F2 3 0 R /F3 5 0 R
+/PageMode /UseNone
+/Pages 2 0 R
+/Type /Catalog
 >>
 endobj
 2 0 obj
 <<
-/BaseFont /Helvetica /Encoding /WinAnsiEncoding /Name /F1 /Subtype /Type1 /Type /Font
+/Count 3
+/Kids [ 3 0 R 9 0 R 11 0 R ]
+/Type /Pages
 >>
 endobj
 3 0 obj
 <<
-/BaseFont /Helvetica-Bold /Encoding /WinAnsiEncoding /Name /F2 /Subtype /Type1 /Type /Font
+/Contents 4 0 R
+/MediaBox [ 0 0 595.2756 841.8898 ]
+/Parent 2 0 R
+/Resources <<
+/Font 5 0 R
+/ProcSet [ /PDF /Text /ImageB /ImageC /ImageI ]
+>>
+/Rotate 0
+/Trans <<
+>>
+/Type /Page
 >>
 endobj
 4 0 obj
 <<
-/Contents 11 0 R /MediaBox [ 0 0 595.2756 841.8898 ] /Parent 10 0 R /Resources <<
-/Font 1 0 R /ProcSet [ /PDF /Text /ImageB /ImageC /ImageI ]
->> /Rotate 0 /Trans <<
-
->> 
-  /Type /Page
+/Length 1497
 >>
+stream
+1 0 0 1 0 0 cm  BT /F1 12 Tf 14.4 TL ET
+q
+.027451 .078431 .14902 rg
+n 0 0 595.2756 36.85039 re f*
+1 1 1 rg
+BT /F1 7.5 Tf 9 TL ET
+BT 1 0 0 1 51.02362 14.17323 Tm (ByteSmith  |  Learn. Build. Level Up.) Tj T* ET
+BT 1 0 0 1 520.4845 14.17323 Tm (Page 1) Tj T* ET
+Q
+q
+1 0 0 1 57.02362 705.4961 cm
+Q
+q
+1 0 0 1 51.02362 494.7559 cm
+q
+.027451 .078431 .14902 rg
+n 0 210.7402 493.2283 -210.7402 re f*
+0 0 0 rg
+BT /F1 10 Tf 12 TL ET
+q
+1 0 0 1 39.68504 184.7323 cm
+q
+.737255 .937255 .988235 rg
+BT 1 0 0 1 0 6 Tm /F1 12 Tf 18 TL 133.9211 0 Td (BYTESMITH) Tj T* -133.9211 0 Td ET
+Q
+Q
+q
+1 0 0 1 39.68504 156.3858 cm
+Q
+q
+1 0 0 1 39.68504 108.7087 cm
+q
+1 1 1 rg
+BT 1 0 0 1 0 4 Tm /F2 30 Tf 34 TL 50.23913 0 Td (Introduction to ESP32) Tj T* -50.23913 0 Td ET
+Q
+Q
+q
+1 0 0 1 39.68504 68.0315 cm
+q
+.737255 .937255 .988235 rg
+BT 1 0 0 1 0 6 Tm /F1 12 Tf 18 TL 68.53913 0 Td (GPIO, wireless connectivity, and a first digital output) Tj T* -68.53913 0 Td ET
+Q
+Q
+q
+1 0 0 1 39.68504 36.35433 cm
+Q
+q
+1 0 0 1 39.68504 8.007874 cm
+q
+.737255 .937255 .988235 rg
+BT 1 0 0 1 0 6 Tm /F1 12 Tf 18 TL 139.5671 0 Td (IoT / Embedded Systems) Tj T* -139.5671 0 Td ET
+Q
+Q
+q
+1 J
+1 j
+.070588 .658824 .780392 RG
+1 w
+n 0 210.7402 m 493.2283 210.7402 l S
+n 0 0 m 493.2283 0 l S
+n 0 0 m 0 210.7402 l S
+n 493.2283 0 m 493.2283 210.7402 l S
+Q
+Q
+Q
+q
+1 0 0 1 57.02362 443.7323 cm
+Q
+q
+1 0 0 1 57.02362 426.7323 cm
+q
+.317647 .419608 .494118 rg
+BT 1 0 0 1 0 3 Tm /F1 8 Tf 11 TL (Printable lesson edition - Updated September 14, 2026) Tj T* ET
+Q
+Q
+ 
+
+endstream
 endobj
 5 0 obj
 <<
-/BaseFont /Courier /Encoding /WinAnsiEncoding /Name /F3 /Subtype /Type1 /Type /Font
+/F1 6 0 R
+/F2 7 0 R
+/F3 8 0 R
 >>
 endobj
 6 0 obj
 <<
-/Contents 12 0 R /MediaBox [ 0 0 595.2756 841.8898 ] /Parent 10 0 R /Resources <<
-/Font 1 0 R /ProcSet [ /PDF /Text /ImageB /ImageC /ImageI ]
->> /Rotate 0 /Trans <<
-
->> 
-  /Type /Page
+/BaseFont /Helvetica
+/Encoding /WinAnsiEncoding
+/Name /F1
+/Subtype /Type1
+/Type /Font
 >>
 endobj
 7 0 obj
 <<
-/Contents 13 0 R /MediaBox [ 0 0 595.2756 841.8898 ] /Parent 10 0 R /Resources <<
-/Font 1 0 R /ProcSet [ /PDF /Text /ImageB /ImageC /ImageI ]
->> /Rotate 0 /Trans <<
-
->> 
-  /Type /Page
+/BaseFont /Helvetica-Bold
+/Encoding /WinAnsiEncoding
+/Name /F2
+/Subtype /Type1
+/Type /Font
 >>
 endobj
 8 0 obj
 <<
-/PageMode /UseNone /Pages 10 0 R /Type /Catalog
+/BaseFont /Courier
+/Encoding /WinAnsiEncoding
+/Name /F3
+/Subtype /Type1
+/Type /Font
 >>
 endobj
 9 0 obj
 <<
-/Author (ByteHunter Learning) /CreationDate (D:20260914232814+08'00') /Creator (\(unspecified\)) /Keywords () /ModDate (D:20260914232814+08'00') /Producer (ReportLab PDF Library - \(opensource\)) 
-  /Subject (IoT / Embedded Systems) /Title (Introduction to ESP32) /Trapped /False
+/Contents 10 0 R
+/MediaBox [ 0 0 595.2756 841.8898 ]
+/Parent 2 0 R
+/Resources <<
+/Font 5 0 R
+/ProcSet [ /PDF /Text /ImageB /ImageC /ImageI ]
+>>
+/Rotate 0
+/Trans <<
+>>
+/Type /Page
 >>
 endobj
 10 0 obj
 <<
-/Count 3 /Kids [ 4 0 R 6 0 R 7 0 R ] /Type /Pages
+/Length 4516
 >>
+stream
+1 0 0 1 0 0 cm  BT /F1 12 Tf 14.4 TL ET
+q
+.027451 .078431 .14902 rg
+n 0 0 595.2756 36.85039 re f*
+1 1 1 rg
+BT /F1 7.5 Tf 9 TL ET
+BT 1 0 0 1 51.02362 14.17323 Tm (ByteSmith  |  Learn. Build. Level Up.) Tj T* ET
+BT 1 0 0 1 520.4845 14.17323 Tm (Page 2) Tj T* ET
+Q
+q
+1 0 0 1 51.02362 637.8661 cm
+q
+.917647 .968627 .984314 rg
+n 0 147 493.2283 -147 re f*
+0 0 0 rg
+BT /F1 10 Tf 12 TL ET
+q
+1 0 0 1 9 125 cm
+q
+.05098 .470588 .627451 rg
+BT 1 0 0 1 0 4 Tm /F2 13 Tf 17 TL (LEARNING OBJECTIVES) Tj T* ET
+Q
+Q
+q
+1 0 0 1 9 101 cm
+q
+.070588 .137255 .2 rg
+BT 1 0 0 1 0 4.5 Tm /F1 9.5 Tf 14 TL (- Describe an ESP32 and its development board) Tj T* ET
+Q
+Q
+q
+1 0 0 1 9 77 cm
+q
+.070588 .137255 .2 rg
+BT 1 0 0 1 0 4.5 Tm /F1 9.5 Tf 14 TL (- Explain GPIO and digital I/O) Tj T* ET
+Q
+Q
+q
+1 0 0 1 9 53 cm
+q
+.070588 .137255 .2 rg
+BT 1 0 0 1 0 4.5 Tm /F1 9.5 Tf 14 TL (- Identify the roles of Wi-Fi and Bluetooth) Tj T* ET
+Q
+Q
+q
+1 0 0 1 9 29 cm
+q
+.070588 .137255 .2 rg
+BT 1 0 0 1 0 4.5 Tm /F1 9.5 Tf 14 TL (- Prepare Arduino IDE for an ESP32 board) Tj T* ET
+Q
+Q
+q
+1 0 0 1 9 5 cm
+q
+.070588 .137255 .2 rg
+BT 1 0 0 1 0 4.5 Tm /F1 9.5 Tf 14 TL (- Reason through a safe LED blink circuit) Tj T* ET
+Q
+Q
+q
+1 J
+1 j
+.070588 .658824 .780392 RG
+.75 w
+n 0 147 m 493.2283 147 l S
+n 0 0 m 493.2283 0 l S
+n 0 0 m 0 147 l S
+n 493.2283 0 m 493.2283 147 l S
+Q
+Q
+Q
+q
+1 0 0 1 57.02362 629.8661 cm
+Q
+q
+1 0 0 1 57.02362 595.8661 cm
+q
+.027451 .078431 .14902 rg
+BT 1 0 0 1 0 4 Tm /F2 20 Tf 24 TL (1. The ESP32 platform) Tj T* ET
+Q
+Q
+q
+1 0 0 1 57.02362 559.8661 cm
+q
+.070588 .137255 .2 rg
+BT 1 0 0 1 0 18.5 Tm /F1 9.5 Tf 14 TL (ESP32 refers to a family of microcontrollers used in embedded and connected projects. Devices combine) Tj T* (processing, memory, timers, communication peripherals, Wi-Fi, and Bluetooth.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 57.02362 524.8661 cm
+q
+.070588 .137255 .2 rg
+BT 1 0 0 1 0 18.5 Tm /F1 9.5 Tf 14 TL (A development board makes the chip easier to use by adding USB connectivity, voltage regulation, reset and boot) Tj T* (controls, and accessible header pins.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 57.02362 490.8661 cm
+q
+.027451 .078431 .14902 rg
+BT 1 0 0 1 0 4 Tm /F2 20 Tf 24 TL (2. GPIO and voltage) Tj T* ET
+Q
+Q
+q
+1 0 0 1 57.02362 454.8661 cm
+q
+.070588 .137255 .2 rg
+BT 1 0 0 1 0 18.5 Tm /F1 9.5 Tf 14 TL -0.082362 Tw (GPIO means General-Purpose Input/Output. A supported pin can read a digital state, drive a digital output, or carry) Tj T* 0 Tw (a peripheral signal such as UART, SPI, or I2C.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 57.02362 419.8661 cm
+q
+.070588 .137255 .2 rg
+BT 1 0 0 1 0 18.5 Tm /F1 9.5 Tf 14 TL (ESP32 GPIO normally uses 3.3 V logic and is not generally 5 V tolerant. Pin capabilities vary. Always check the) Tj T* (exact board pinout before wiring.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 57.02362 385.8661 cm
+q
+.027451 .078431 .14902 rg
+BT 1 0 0 1 0 4 Tm /F2 20 Tf 24 TL (3. Wi-Fi and Bluetooth) Tj T* ET
+Q
+Q
+q
+1 0 0 1 57.02362 349.8661 cm
+q
+.070588 .137255 .2 rg
+BT 1 0 0 1 0 18.5 Tm /F1 9.5 Tf 14 TL (Wi-Fi lets an ESP32 join an IP network, exchange data with services, or provide a local web interface. Bluetooth) Tj T* (supports short-range device communication, including low-energy use cases on supported chips.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 57.02362 315.8661 cm
+q
+.027451 .078431 .14902 rg
+BT 1 0 0 1 0 4 Tm /F2 20 Tf 24 TL (4. Arduino IDE workflow) Tj T* ET
+Q
+Q
+q
+1 0 0 1 57.02362 265.8661 cm
+q
+.070588 .137255 .2 rg
+BT 1 0 0 1 0 32.5 Tm /F1 9.5 Tf 14 TL (Install the current Arduino IDE and Espressif board support, connect a data-capable USB cable, then select the) Tj T* (exact board and serial port. Verify the sketch before upload. A charge-only cable can power a board without) Tj T* (providing the data path required for uploads.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 57.02362 231.8661 cm
+q
+.027451 .078431 .14902 rg
+BT 1 0 0 1 0 4 Tm /F2 20 Tf 24 TL (5. Basic LED example) Tj T* ET
+Q
+Q
+q
+1 0 0 1 57.02362 195.8661 cm
+q
+.070588 .137255 .2 rg
+BT 1 0 0 1 0 18.5 Tm /F1 9.5 Tf 14 TL (The program configures a pin as an output. It drives the pin HIGH, waits, drives it LOW, and waits again. An) Tj T* (external LED needs correct polarity and a suitable current-limiting resistor.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 57.02362 100.8661 cm
+q
+.917647 .968627 .984314 rg
+n 28 -8 461.2283 104 re f*
+Q
+q
+BT 1 0 0 1 36 80 Tm 11 TL /F3 8 Tf 0 0 0 rg (const int ledPin = 2;) Tj  T*  T* (void setup\(\) { pinMode\(ledPin, OUTPUT\); }) Tj  T*  T* (void loop\(\) {) Tj  T* (digitalWrite\(ledPin, HIGH\); delay\(500\);) Tj  T* (digitalWrite\(ledPin, LOW\); delay\(500\);) Tj  T* (}) Tj T* ET
+Q
+Q
+ 
+
+endstream
 endobj
 11 0 obj
 <<
-/Filter [ /ASCII85Decode /FlateDecode ] /Length 776
+/Contents 12 0 R
+/MediaBox [ 0 0 595.2756 841.8898 ]
+/Parent 2 0 R
+/Resources <<
+/Font 5 0 R
+/ProcSet [ /PDF /Text /ImageB /ImageC /ImageI ]
 >>
-stream
-Gatm89lK#F&A@Zck1He>YO1lCE@\;Y<Rh8A*qks6K2P#!#1KU#rqN%;&/%sl9,3QpHi3$No:$?-kn3T8^';)=i;6:N6:.sXTpUGm%Yi*`msoClPnq0FFUI@`Pii\%je/PJCTj/5g&N&R1e/'fJApW#_!%Jr#21h<@J^7r<^jnl$d+#i<dBBfM3+gtioWCYgKbCY$$ROEMnE-nr.Fqi#*Ug5a*\pF/\HfQ4MJ%<O?>mNH&=47;blR@qBT>N&=jJ5.^_EK)a]j+VS!Kd;*X!S=F%lef"MLd9I_JNZ\hh>O@e[JY1oedAA!X]8g\e2)m[/86[n[OOOablU\n+dqtq53e/F]=I%?J")ar([\Z$k<>dpaH#XmgOW:lF6jStDPD]eG3i=,./5A'ZMqp@^3l[EM!hXj0Yg+[X&S]Z-bi/Ut.m%/[X0h8Na:K@PJC1-F&c'^sQYTZ(\@_'U(A;Eq\E<F+6$-JQO5PR?Hitt:[^HbFYdN*Y/anYTF]]E^,L$]Z<S"^2,oehg!=-+18Up.q`D1jHIjtU/XAf"ftYq;UZGJ4(B5h$/2XPQo!=jsB(Z&<8KfRmJL)mV"'f2!R563[thgDJMrNaoZJSI0hnn!P)L3mBZmL>Gf/Z]56HK\;0ihtl0855%da[Xs9H)Kg4KDjd4eGN-n6:/?O\kCQUa[b\t)dWG@!Kf.!S;o0JKA^]3B,iblNGS&TZ3f?VnMb0<Q0n!4/W6@X.%U!-8r0h5(QGuPan3UkSdA.KA$7(t82qXu0)#OX$N)GK~>endstream
+/Rotate 0
+/Trans <<
+>>
+/Type /Page
+>>
 endobj
 12 0 obj
 <<
-/Filter [ /ASCII85Decode /FlateDecode ] /Length 1967
+/Length 4386
 >>
 stream
-Gatm;a`?,q&A@rkqP^28R]D`Hc,!.c7oQ!]Z/t'+$Ud;oCm&0k:l9!7s#pr9A]aJ><2ihT(BE9Nf<8P6*kD&kp4&SESPJDDbTkH3ac*mZ$#+EG_o^;e,KKJ(@H<R2pA/3JWtu7NT@Ece\#Z8ijS6Ee90q1o7rC"'`G,&F#fcAO[)R46M2^gf@i0-t-AKToO.beX^KrS_".EcM3aHP#\]Qd2FMXBf76W*qO6Qt*`eq`=`8&1e,u<d&E8K"'N[F4E\*gk'fFOatf#MUPakp7k'jH)!:cISurGL3h6jAL!fB\/SEX(?Kf/Hb58@X5f_b`;u*8g2ie1j`V&?`FP"i>=4`r6(W)n,p^N#Gc8j:;%IKKV9Zj4^VV:`JpGEYk1X*1m8B^tS,mS#qV-ajla*QZK`#rHn<Z1AWoAI^IM+O+"U/mCA340Bi4/7#q;sT?1MRG;6&Fkujaf3qS8qYnBu1/>qJ"3:LpOOO,:"-9nfWGcka1R7^clVUmmt/An)Kb!]"fj3a\4,8#!j=\>ILb?(3(_',>0&o:Oketa+PPY??oE^nqTk=jN1:=G)9.J;\c8Gp:I+rMn;0Q?ML-'cOtNBRec-Ik"ADe1.S6ki^mPqiR_8lkNe0e1k8e&Cei9iI23;_1mQ$2mO7J)g!8lb/5VIRm5;&!?DHlMS`f7C7B>]kgo$jtW^u7\Ou0gdeR(SV]F,Sh]m12f,5F7Nq]GK0h[^_8tYsKY/_1ce#RC[DK,PoGj<M;g%NDE/eC?0;`Y,5r<g#_4/R=qCcEdG-1OuX-0hX11r-Ol.RgR'=!_*bV_APRdmE=&:g9q2W[M^Hc(;+aEalW<%*$I]@)7P/0X(#`j2Sbq.<,KbeWNW_V_5LB2YkdUdYLBD)4,OEY1)Z5d#\h;(T4d.>DZ<[3+"hZNj0QGUSqSSn]<XllK@fRLh,?5q!(kc3=[X'2@)sP/MIPS*SN47Udf'G.a'=2U+kaH'R+N[W,YpD0ItYmN)@DcnF_0Ze2!29fXdb9Alo`H+=.mT]DdplT8;_DDneUs6*:IkdZZ-[l,TaC=u-5cLR.DH#D9_)-<i"8AHW,.Xc\IBj;W=Ts?-TW@Uc[i#%?N!$V-Okp3*;R^X_C@``h#95C4q:t_3b[GG`N[/mKPU/EH&\[bZo7'WPWPH.9EY/_d!GiXA0-W/`O/))846WI6GU'<DH$ClX\;(C`QXugrd$(C!6J=%'[=JO+iQ34_'Kr\T[OU<\EI`^(XLo)]27YNL?HuFo#J[52$Nc@dM!,CF^;\!*nZk<]LYm1V%s'Q0Q3.KGV[ipD0918/3jZ#4_o]\FD<:Md`;pP&.Wr"^ETCINpd"R-e#-d`O9!57W=p@8TQQe0>9P"X(XnWT>N77EXR7$S0c*\J4QW,SVl)<=GQ0-,%gP27YXfPd(En)m<Qs7!Ao7f"3jDFi4[G+2n!q0N"%%TmY*eW&QJ\E.Whi7UdNIh+-)Fle%,#)jhYEUf%?oKK$Y[LZ_UX6?%rs`Z/9`m)\K&h)k4[I&(D_QBP@hp3YeBE6<S;[hP66Q*DX@(n7d%!bPH`j&(9rV,].Tp5&&"HO=hN9f*gUa]E=3),f#A`ZEY+\U7gGG:0fO-773Yi-G<;]64'I[A7S@+9'Lu8NpTnj82kNK7W4`(7hX@W)!5Mk</=n$GdS)YFFR4FSkUs?ok6H4SPkpjnX\86K:8Cu+^4sQHbc_L*XD-AZA6a\j_6IWp8pU\,o&Rog/kob-E%L5hlVR;dskF<p^A-E0h(kkYO_Ps7n++S<D=uOJ[6T_9gT\@I4U(jGiC6*afY.O-]ZJVQTT>Ib_*3S,%q*[,qG9@@+e9;@rSnDFn4q"<-:u-LjgQPC3NLiEb'@V%%,6*:TeHBYr=A!#sYH-ZkFo.3u244@f'7S]9QaH#JAhq)ggqNYN^ReSs9%g:n(i2'Hr];ghZ""DXX<]o>le>J$\p/O:&^pHsRU<hg:.P<dX2:\r~>endstream
+1 0 0 1 0 0 cm  BT /F1 12 Tf 14.4 TL ET
+q
+.027451 .078431 .14902 rg
+n 0 0 595.2756 36.85039 re f*
+1 1 1 rg
+BT /F1 7.5 Tf 9 TL ET
+BT 1 0 0 1 51.02362 14.17323 Tm (ByteSmith  |  Learn. Build. Level Up.) Tj T* ET
+BT 1 0 0 1 520.4845 14.17323 Tm (Page 3) Tj T* ET
+Q
+q
+1 0 0 1 57.02362 760.8661 cm
+q
+.027451 .078431 .14902 rg
+BT 1 0 0 1 0 4 Tm /F2 20 Tf 24 TL (6. Safe troubleshooting) Tj T* ET
+Q
+Q
+q
+1 0 0 1 57.02362 710.8661 cm
+q
+.070588 .137255 .2 rg
+BT 1 0 0 1 0 32.5 Tm /F1 9.5 Tf 14 TL (Disconnect power before changing wires. If upload fails, check the cable, board selection, serial port, and) Tj T* -0.094656 Tw (board-specific boot procedure. If an LED does not blink, verify the code's pin number, pinout, LED polarity, resistor,) Tj T* 0 Tw (and ground. If the board resets, remove the external circuit and inspect for shorts or unstable power.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 57.02362 676.8661 cm
+q
+.027451 .078431 .14902 rg
+BT 1 0 0 1 0 4 Tm /F2 20 Tf 24 TL (Quick reference) Tj T* ET
+Q
+Q
+q
+1 0 0 1 51.02362 431.8661 cm
+q
+.027451 .078431 .14902 rg
+n 0 237 493.2283 -29 re f*
+1 1 1 rg
+n 0 208 493.2283 -26 re f*
+.917647 .968627 .984314 rg
+n 0 182 493.2283 -26 re f*
+1 1 1 rg
+n 0 156 493.2283 -26 re f*
+.917647 .968627 .984314 rg
+n 0 130 493.2283 -26 re f*
+1 1 1 rg
+n 0 104 493.2283 -26 re f*
+.917647 .968627 .984314 rg
+n 0 78 493.2283 -26 re f*
+1 1 1 rg
+n 0 52 493.2283 -26 re f*
+.917647 .968627 .984314 rg
+n 0 26 493.2283 -26 re f*
+1 1 1 rg
+BT /F1 10 Tf 12 TL ET
+q
+1 0 0 1 6 214 cm
+q
+.05098 .470588 .627451 rg
+BT 1 0 0 1 0 4 Tm /F2 13 Tf 17 TL (Concept) Tj T* ET
+Q
+Q
+q
+1 0 0 1 142.063 214 cm
+q
+.05098 .470588 .627451 rg
+BT 1 0 0 1 0 4 Tm /F2 13 Tf 17 TL (Meaning) Tj T* ET
+Q
+Q
+0 0 0 rg
+q
+1 0 0 1 6 188 cm
+q
+.070588 .137255 .2 rg
+BT 1 0 0 1 0 4.5 Tm /F1 9.5 Tf 14 TL (ESP32) Tj T* ET
+Q
+Q
+q
+1 0 0 1 142.063 188 cm
+q
+.070588 .137255 .2 rg
+BT 1 0 0 1 0 4.5 Tm /F1 9.5 Tf 14 TL (A connected microcontroller family with Wi-Fi and Bluetooth.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 6 162 cm
+q
+.070588 .137255 .2 rg
+BT 1 0 0 1 0 4.5 Tm /F1 9.5 Tf 14 TL (Development board) Tj T* ET
+Q
+Q
+q
+1 0 0 1 142.063 162 cm
+q
+.070588 .137255 .2 rg
+BT 1 0 0 1 0 4.5 Tm /F1 9.5 Tf 14 TL (An ESP32 module plus convenient USB, power, controls, and headers.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 6 136 cm
+q
+.070588 .137255 .2 rg
+BT 1 0 0 1 0 4.5 Tm /F1 9.5 Tf 14 TL (GPIO) Tj T* ET
+Q
+Q
+q
+1 0 0 1 142.063 136 cm
+q
+.070588 .137255 .2 rg
+BT 1 0 0 1 0 4.5 Tm /F1 9.5 Tf 14 TL (Software-configurable general-purpose input/output pins.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 6 110 cm
+q
+.070588 .137255 .2 rg
+BT 1 0 0 1 0 4.5 Tm /F1 9.5 Tf 14 TL (HIGH / LOW) Tj T* ET
+Q
+Q
+q
+1 0 0 1 142.063 110 cm
+q
+.070588 .137255 .2 rg
+BT 1 0 0 1 0 4.5 Tm /F1 9.5 Tf 14 TL (The two logical states of a digital signal.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 6 84 cm
+q
+.070588 .137255 .2 rg
+BT 1 0 0 1 0 4.5 Tm /F1 9.5 Tf 14 TL (pinMode) Tj T* ET
+Q
+Q
+q
+1 0 0 1 142.063 84 cm
+q
+.070588 .137255 .2 rg
+BT 1 0 0 1 0 4.5 Tm /F1 9.5 Tf 14 TL (Configures a pin for input, output, or another supported mode.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 6 58 cm
+q
+.070588 .137255 .2 rg
+BT 1 0 0 1 0 4.5 Tm /F1 9.5 Tf 14 TL (digitalWrite) Tj T* ET
+Q
+Q
+q
+1 0 0 1 142.063 58 cm
+q
+.070588 .137255 .2 rg
+BT 1 0 0 1 0 4.5 Tm /F1 9.5 Tf 14 TL (Sets a digital output HIGH or LOW.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 6 32 cm
+q
+.070588 .137255 .2 rg
+BT 1 0 0 1 0 4.5 Tm /F1 9.5 Tf 14 TL (Resistor) Tj T* ET
+Q
+Q
+q
+1 0 0 1 142.063 32 cm
+q
+.070588 .137255 .2 rg
+BT 1 0 0 1 0 4.5 Tm /F1 9.5 Tf 14 TL (Limits current through the LED and GPIO circuit.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 6 6 cm
+q
+.070588 .137255 .2 rg
+BT 1 0 0 1 0 4.5 Tm /F1 9.5 Tf 14 TL (Data USB cable) Tj T* ET
+Q
+Q
+q
+1 0 0 1 142.063 6 cm
+q
+.070588 .137255 .2 rg
+BT 1 0 0 1 0 4.5 Tm /F1 9.5 Tf 14 TL (Carries both power and the data needed to upload code.) Tj T* ET
+Q
+Q
+q
+1 J
+1 j
+.713725 .811765 .854902 RG
+.5 w
+n 0 237 m 493.2283 237 l S
+n 0 0 m 493.2283 0 l S
+n 0 0 m 0 237 l S
+n 493.2283 0 m 493.2283 237 l S
+n 0 208 m 493.2283 208 l S
+n 0 182 m 493.2283 182 l S
+n 0 156 m 493.2283 156 l S
+n 0 130 m 493.2283 130 l S
+n 0 104 m 493.2283 104 l S
+n 0 78 m 493.2283 78 l S
+n 0 52 m 493.2283 52 l S
+n 0 26 m 493.2283 26 l S
+n 136.063 0 m 136.063 237 l S
+Q
+Q
+Q
+q
+1 0 0 1 57.02362 421.8661 cm
+Q
+q
+1 0 0 1 57.02362 401.8661 cm
+q
+.070588 .137255 .2 rg
+BT 1 0 0 1 0 4.5 Tm /F1 9.5 Tf 14 TL (Continue online for flashcards, practice questions, the interactive quiz, and the next lesson.) Tj T* ET
+Q
+Q
+ 
+
+endstream
 endobj
 13 0 obj
 <<
-/Filter [ /ASCII85Decode /FlateDecode ] /Length 1565
+/Author (ByteSmith)
+/CreationDate (D\07220260914232814\05308\04700\047)
+/Creator (\050unspecified\051)
+/Keywords ()
+/ModDate (D\07220260914232814\05308\04700\047)
+/Producer (ReportLab PDF Library \055 \050opensource\051)
+/Subject (IoT \057 Embedded Systems)
+/Title (Introduction to ESP32)
+/Trapped (\057False)
 >>
-stream
-Gatm<>BcPr&:XAWR((?6?io?Qa6)5Al"O&--dOOR>:l/>&BSP1rqIMUi8DP?DSu"L6&[Ylc%Sq<qr$GR\%gT'i+rUq=$HB^Ad.t')oCqW/n^rO,M+/3)#<*98K%eXotuVV5V5IBY)Xik99L]X+El5T$RVM`'H]fC$pQ_R<LpX^d621Yj&<_3&G]uaLl&D&-NON][Xs^LB?b<4Tp^L:7[;n@!UqbD#;4d\RVA?J(EYcF'#%B6T.p-PZOa7I'@.-:0\Y*,7i)SchMQZ%FgE?-!@>#6VK(s4L^lnKB?l.V(c]2Q5Wn'\Z(X::?'s&lJQB(EQ`OLcWR7Oo"M6D`gDCPV8lN);,UA8_I;;%i-IOC`oZ9/XrYiZXY;7U1b;<2h#m38%Ku@e=9.C](^/&"=g4`<+1fYu=%L(s*mGJ,5r;aOLW>*010UGc#:pUdWE@Dm?<LfAR<bVf;a?./VT'K+f(s?F_"=JBG\?8rR$_F%-M+ElT=PbH<m8<toQPY`V<eE[%]]A(-"-9CpG[;VV3W#S+M@1!?C<i&RmU_#oc,rYE<,qm'?l@P.el"LK(=-GTE3R,'Ltin*.bEP8I&:\cDC$Bm'sPHXqulk]EKrCd)pa$Bj+%=B*FKeNXo[u0;/6i7F_'=gH&\#4W7nh$32T3NJgi$%[bl9&U7m9JZ>JH;&gS#`!gf!*J2)?@HJ:Gdg7K%fF52VE`*i`8,YhiYY"!onXn#DrCXn__+"QM51^DlWc!L/aRZj;&DCLThH?DV/g$.X7%eX\i%8"%iggrAJK"BZP7c"7S,&E)[?70r8-2E,BRFk+mQWQJ;hHN9p86deX#.!rj;=TqS4hD%Yo\K+9q6(E=\<$YBVfr/%lJ!GY5!mH"/;FtdOQ3-%l7Ye@h1DeSq2AjbQghf2=5;6H=kPKgKXfg`*>f!.H/FVK_JGUF=tu`&e9=##6^[g#^a9%^12dRuQ;)4joZ..o:qfZMS2GXScpk(EHO25@c'bRB"t#/`O7<#6e!K+"(rF^#(A`k;2F^1E^1`be3YkCC7E]]$W(PVLGFGPZVms.n`GBRM,N*q;a*%"<q?B^Rp<1AD3"056L7>8nP#0:)cZ#Mq4]LIe0<l+>S1hB1chIRNi'XZFiVSaFGX#\NERaA!Cn8%,7o-+$A5"L^PO6.HgQ#ts-oO=`jGUUK9OD@u";)[^6o4mb[:+R#-L,h4L+kU+Y,doW[bP^G@M#aX%s]-'5YPP>7e*Fd6Q!Gs.usU@NDbN'oFbBU`R8q!VL:=DB5"703"PgK!"W@39b$Wqqtd&g(r5,k<Jk;Fc`sq5;i'tspn&KZK!?:G?-DXAP3o7E^[V,Kj<bWE\>bPfQ+9AmH2W%P6F0IW%X.Nn?C>4.e+WRj'6m`B^#$]aPWamt#M^-SYS3E_[jNrKN<m/N^'KK5;6XWT$o]Bs>l,]bG+rLT7IgL(g;4E75Tj8:8-]-=3Lb!jU:]ml^#+%0$-CAq@eU#Os*n\76PPEukD"O%GX>r,6&UoWb7+7cC`BDJmfE4:YhC'onX6@2DZ3HdU.6Hfs#?M5'6r.34IF_u]Il,[r<K-I*i&~>endstream
 endobj
 xref
 0 14
 0000000000 65535 f 
-0000000061 00000 n 
-0000000112 00000 n 
-0000000219 00000 n 
-0000000331 00000 n 
-0000000536 00000 n 
-0000000641 00000 n 
-0000000846 00000 n 
-0000001051 00000 n 
-0000001120 00000 n 
-0000001421 00000 n 
-0000001493 00000 n 
-0000002360 00000 n 
-0000004419 00000 n 
+0000000015 00000 n 
+0000000083 00000 n 
+0000000155 00000 n 
+0000000354 00000 n 
+0000001903 00000 n 
+0000001954 00000 n 
+0000002061 00000 n 
+0000002173 00000 n 
+0000002278 00000 n 
+0000002478 00000 n 
+0000007047 00000 n 
+0000007248 00000 n 
+0000011687 00000 n 
 trailer
 <<
-/ID 
-[<808f3884ea6c7c648b4ea760aec544b0><808f3884ea6c7c648b4ea760aec544b0>]
-% ReportLab generated PDF document -- digest (opensource)
-
-/Info 9 0 R
-/Root 8 0 R
 /Size 14
+/Root 1 0 R
+/Info 13 0 R
+/ID [ (\200\2178\204\352l\174d\213N\247\140\256\305D\260) (\200\2178\204\352l\174d\213N\247\140\256\305D\260) ]
 >>
 startxref
-6076
+12019
 %%EOF

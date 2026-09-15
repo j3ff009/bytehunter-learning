@@ -41,9 +41,9 @@
     host.innerHTML = `
       <a class="skip-link" href="#main-content">Skip to content</a>
       <div class="nav-wrap">
-        <a class="brand" href="${url("index.html")}" aria-label="ByteHunter Learning home">
-          <span class="brand-mark" aria-hidden="true">BH</span>
-          <span>ByteHunter Learning</span>
+        <a class="brand" href="${url("index.html")}" aria-label="ByteSmith home">
+          <span class="brand-mark" aria-hidden="true">BS</span>
+          <span>ByteSmith</span>
         </a>
         <button class="menu-button" type="button" aria-expanded="false" aria-controls="primary-nav">Menu</button>
         <nav class="nav-links" id="primary-nav" aria-label="Primary navigation">
@@ -85,12 +85,12 @@
     host.className = "site-footer";
     host.innerHTML = `
       <div class="container footer-grid">
-        <div><a class="brand" href="${url("index.html")}"><span class="brand-mark" aria-hidden="true">BH</span><span>ByteHunter Learning</span></a><p class="copyright">Learn concepts, practice actively, and move forward one skill at a time.</p></div>
+        <div><a class="brand" href="${url("index.html")}"><span class="brand-mark" aria-hidden="true">BS</span><span>ByteSmith</span></a><p class="copyright">Learn concepts, build practical skills, and level up one lesson at a time.</p></div>
         <nav class="footer-links" aria-label="Footer navigation">
           <a href="${url("about.html")}">About</a><a href="${url("privacy.html")}">Privacy Policy</a><a href="${url("terms.html")}">Terms</a><a href="${url("affiliate-disclosure.html")}">Affiliate Disclosure</a><a href="${url("contact.html")}">Contact</a>
         </nav>
       </div>
-      <div class="container copyright">© ${new Date().getFullYear()} ByteHunter Learning. Educational content for independent study.</div>`;
+      <div class="container copyright">© ${new Date().getFullYear()} ByteSmith. Educational content for independent study.</div>`;
   }
 
   async function loadSettings() {

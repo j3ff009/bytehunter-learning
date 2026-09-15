@@ -1,8 +1,8 @@
-# ByteHunter Learning
+# ByteSmith
 
-**Learn. Practice. Level Up.**
+**Learn. Build. Level Up.**
 
-ByteHunter Learning is a mobile-first, static educational website for computing and technology students. It uses only HTML, CSS, vanilla JavaScript, JSON, static assets, and PDF files. There is no database, server-side account system, or build framework.
+ByteSmith is a mobile-first, static educational website for computing and technology students. It uses only HTML, CSS, vanilla JavaScript, JSON, static assets, and PDF files. There is no database, server-side account system, or build framework.
 
 The main learning flow is:
 

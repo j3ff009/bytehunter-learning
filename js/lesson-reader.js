@@ -181,7 +181,7 @@
 
     const activeId = currentIndex >= 0 ? lesson.pages[currentIndex].id : "overview";
     if (!options.fromHistory) setPageUrl(activeId, options.replace ? "replace" : "push");
-    document.title = currentIndex >= 0 ? `${lesson.pages[currentIndex].title} | ${lesson.title} | ByteHunter Learning` : `${lesson.title} | ByteHunter Learning`;
+    document.title = currentIndex >= 0 ? `${lesson.pages[currentIndex].title} | ${lesson.title} | ByteSmith` : `${lesson.title} | ByteSmith`;
 
     const finalPdf = visibleResource(catalogLesson?.resources?.pdf)?.status === "published";
     const mainContent = currentIndex < 0

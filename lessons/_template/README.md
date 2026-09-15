@@ -1,6 +1,6 @@
 # Create a page-by-page lesson
 
-This folder is the reusable ByteHunter lesson template. The reader uses one `index.html` and renders every lesson page from `lesson.json`.
+This folder is the reusable ByteSmith lesson template. The reader uses one `index.html` and renders every lesson page from `lesson.json`.
 
 ## Create the lesson
 

@@ -1,93 +1,403 @@
-%PDF-1.4
-%“Œ‹ž ReportLab Generated PDF document (opensource)
+%PDF-1.3
+%âãÏÓ
 1 0 obj
 <<
-/F1 2 0 R /F2 3 0 R
+/PageMode /UseNone
+/Pages 2 0 R
+/Type /Catalog
 >>
 endobj
 2 0 obj
 <<
-/BaseFont /Helvetica /Encoding /WinAnsiEncoding /Name /F1 /Subtype /Type1 /Type /Font
+/Count 2
+/Kids [ 3 0 R 8 0 R ]
+/Type /Pages
 >>
 endobj
 3 0 obj
 <<
-/BaseFont /Helvetica-Bold /Encoding /WinAnsiEncoding /Name /F2 /Subtype /Type1 /Type /Font
+/Contents 4 0 R
+/MediaBox [ 0 0 595.2756 841.8898 ]
+/Parent 2 0 R
+/Resources <<
+/Font 5 0 R
+/ProcSet [ /PDF /Text /ImageB /ImageC /ImageI ]
+>>
+/Rotate 0
+/Trans <<
+>>
+/Type /Page
 >>
 endobj
 4 0 obj
 <<
-/Contents 9 0 R /MediaBox [ 0 0 595.2756 841.8898 ] /Parent 8 0 R /Resources <<
-/Font 1 0 R /ProcSet [ /PDF /Text /ImageB /ImageC /ImageI ]
->> /Rotate 0 /Trans <<
-
->> 
-  /Type /Page
+/Length 1482
 >>
+stream
+1 0 0 1 0 0 cm  BT /F1 12 Tf 14.4 TL ET
+q
+.027451 .078431 .14902 rg
+n 0 0 595.2756 36.85039 re f*
+1 1 1 rg
+BT /F1 7.5 Tf 9 TL ET
+BT 1 0 0 1 51.02362 14.17323 Tm (ByteSmith  |  Learn. Build. Level Up.) Tj T* ET
+BT 1 0 0 1 520.4845 14.17323 Tm (Page 1) Tj T* ET
+Q
+q
+1 0 0 1 57.02362 705.4961 cm
+Q
+q
+1 0 0 1 51.02362 494.7559 cm
+q
+.027451 .078431 .14902 rg
+n 0 210.7402 493.2283 -210.7402 re f*
+0 0 0 rg
+BT /F1 10 Tf 12 TL ET
+q
+1 0 0 1 39.68504 184.7323 cm
+q
+.737255 .937255 .988235 rg
+BT 1 0 0 1 0 6 Tm /F1 12 Tf 18 TL 133.9211 0 Td (BYTESMITH) Tj T* -133.9211 0 Td ET
+Q
+Q
+q
+1 0 0 1 39.68504 156.3858 cm
+Q
+q
+1 0 0 1 39.68504 108.7087 cm
+q
+1 1 1 rg
+BT 1 0 0 1 0 4 Tm /F2 30 Tf 34 TL 95.23913 0 Td (LESSON_TITLE) Tj T* -95.23913 0 Td ET
+Q
+Q
+q
+1 0 0 1 39.68504 68.0315 cm
+q
+.737255 .937255 .988235 rg
+BT 1 0 0 1 0 6 Tm /F1 12 Tf 18 TL 95.88113 0 Td (Replace this subtitle with the lesson focus) Tj T* -95.88113 0 Td ET
+Q
+Q
+q
+1 0 0 1 39.68504 36.35433 cm
+Q
+q
+1 0 0 1 39.68504 8.007874 cm
+q
+.737255 .937255 .988235 rg
+BT 1 0 0 1 0 6 Tm /F1 12 Tf 18 TL 99.24713 0 Td (SUBJECT_NAME - CATEGORY_NAME) Tj T* -99.24713 0 Td ET
+Q
+Q
+q
+1 J
+1 j
+.070588 .658824 .780392 RG
+1 w
+n 0 210.7402 m 493.2283 210.7402 l S
+n 0 0 m 493.2283 0 l S
+n 0 0 m 0 210.7402 l S
+n 493.2283 0 m 493.2283 210.7402 l S
+Q
+Q
+Q
+q
+1 0 0 1 57.02362 443.7323 cm
+Q
+q
+1 0 0 1 57.02362 426.7323 cm
+q
+.317647 .419608 .494118 rg
+BT 1 0 0 1 0 3 Tm /F1 8 Tf 11 TL (Printable lesson edition - Updated September 14, 2026) Tj T* ET
+Q
+Q
+ 
+
+endstream
 endobj
 5 0 obj
 <<
-/Contents 10 0 R /MediaBox [ 0 0 595.2756 841.8898 ] /Parent 8 0 R /Resources <<
-/Font 1 0 R /ProcSet [ /PDF /Text /ImageB /ImageC /ImageI ]
->> /Rotate 0 /Trans <<
-
->> 
-  /Type /Page
+/F1 6 0 R
+/F2 7 0 R
 >>
 endobj
 6 0 obj
 <<
-/PageMode /UseNone /Pages 8 0 R /Type /Catalog
+/BaseFont /Helvetica
+/Encoding /WinAnsiEncoding
+/Name /F1
+/Subtype /Type1
+/Type /Font
 >>
 endobj
 7 0 obj
 <<
-/Author (ByteHunter Learning) /CreationDate (D:20260914232814+08'00') /Creator (\(unspecified\)) /Keywords () /ModDate (D:20260914232814+08'00') /Producer (ReportLab PDF Library - \(opensource\)) 
-  /Subject (SUBJECT_NAME - CATEGORY_NAME) /Title (LESSON_TITLE) /Trapped /False
+/BaseFont /Helvetica-Bold
+/Encoding /WinAnsiEncoding
+/Name /F2
+/Subtype /Type1
+/Type /Font
 >>
 endobj
 8 0 obj
 <<
-/Count 2 /Kids [ 4 0 R 5 0 R ] /Type /Pages
+/Contents 9 0 R
+/MediaBox [ 0 0 595.2756 841.8898 ]
+/Parent 2 0 R
+/Resources <<
+/Font 5 0 R
+/ProcSet [ /PDF /Text /ImageB /ImageC /ImageI ]
+>>
+/Rotate 0
+/Trans <<
+>>
+/Type /Page
 >>
 endobj
 9 0 obj
 <<
-/Filter [ /ASCII85Decode /FlateDecode ] /Length 764
+/Length 3886
 >>
 stream
-Gatm895iNL&AI`dk*SVL]<grhP/tm8Pjhcb3CO&diWr'^:8:GWnJrQYC_YAlAD&KZc@5B0[kiZPl+u@@>le15q!f!u"b\n/@L>F<P0j']@U*$3&K%uP8Qnu:/mu#!Xc(Z^CF6,@+:WC\9+RKtoCE`Kd6hdtZt2;=p*DCqZ/hR?@Rqa7\7h_#&6<annMcBXDsJrlTGo8JFh1lZI),0*6%:\YB'D--1Alu%(r*@p&=t&8+/94hPZ,/MhOc>C@-tm_;QYu3P*"do.;t:nC-(]!/$G>jg?/tGP=cs1<q6*LA3r6^mE2f"N#1sgacI=J+f`0,a-WA8dTQZ4MP'(=Mf5F,=p+BneN"dqM29]IRp:R!Fh9a99$+`]Hp>hGrqhd^O*`#f69"-;HT/X=]isg#CE_Qm;g-kKl*NO<n)1u%ZeX4SrHcF&aJp7`!O>Nh(6t<>SFe4&ZJB%J]'DM4S'XkZQ;+"#/<+.EUAb3#.AClcYo:X6j^]8QHV1cOI='2dC`21pc(;uj@2ZQ/QSluoVJk3Mko.KSdaW)2.k+7d91_tq>4iVEGp\cXdMe)uDNi95d-LU%TFI6YOBgTNmu.35*fVt`4DsD3VG<i9EXnJ1Y>E$9UWFZeGX^BUc$!51)Q'el@8r8Zg+I<2q6>.gmhFj@8FC4(-mboXqqOK)H6Z%h7Tj++^#>2&bm>XMO6)[S\Qtmek%^O]2sEAm4>*ZAM6f$3Bl2=\Rn^1JK2I$@ip)Xq,HC2T\1in62J>DB+.X`O1]~>endstream
+1 0 0 1 0 0 cm  BT /F1 12 Tf 14.4 TL ET
+q
+.027451 .078431 .14902 rg
+n 0 0 595.2756 36.85039 re f*
+1 1 1 rg
+BT /F1 7.5 Tf 9 TL ET
+BT 1 0 0 1 51.02362 14.17323 Tm (ByteSmith  |  Learn. Build. Level Up.) Tj T* ET
+BT 1 0 0 1 520.4845 14.17323 Tm (Page 2) Tj T* ET
+Q
+q
+1 0 0 1 51.02362 685.8661 cm
+q
+.917647 .968627 .984314 rg
+n 0 99 493.2283 -99 re f*
+0 0 0 rg
+BT /F1 10 Tf 12 TL ET
+q
+1 0 0 1 9 77 cm
+q
+.05098 .470588 .627451 rg
+BT 1 0 0 1 0 4 Tm /F2 13 Tf 17 TL (LEARNING OBJECTIVES) Tj T* ET
+Q
+Q
+q
+1 0 0 1 9 53 cm
+q
+.070588 .137255 .2 rg
+BT 1 0 0 1 0 4.5 Tm /F1 9.5 Tf 14 TL (- Replace this with a measurable objective) Tj T* ET
+Q
+Q
+q
+1 0 0 1 9 29 cm
+q
+.070588 .137255 .2 rg
+BT 1 0 0 1 0 4.5 Tm /F1 9.5 Tf 14 TL (- Add the next objective) Tj T* ET
+Q
+Q
+q
+1 0 0 1 9 5 cm
+q
+.070588 .137255 .2 rg
+BT 1 0 0 1 0 4.5 Tm /F1 9.5 Tf 14 TL (- Connect the lesson to its activity and quiz) Tj T* ET
+Q
+Q
+q
+1 J
+1 j
+.070588 .658824 .780392 RG
+.75 w
+n 0 99 m 493.2283 99 l S
+n 0 0 m 493.2283 0 l S
+n 0 0 m 0 99 l S
+n 493.2283 0 m 493.2283 99 l S
+Q
+Q
+Q
+q
+1 0 0 1 57.02362 677.8661 cm
+Q
+q
+1 0 0 1 57.02362 643.8661 cm
+q
+.027451 .078431 .14902 rg
+BT 1 0 0 1 0 4 Tm /F2 20 Tf 24 TL (1. First concept) Tj T* ET
+Q
+Q
+q
+1 0 0 1 57.02362 621.8661 cm
+q
+.070588 .137255 .2 rg
+BT 1 0 0 1 0 4.5 Tm /F1 9.5 Tf 14 TL (Replace this paragraph with the first explanation. Use short sections, examples, and clear terminology.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 57.02362 587.8661 cm
+q
+.027451 .078431 .14902 rg
+BT 1 0 0 1 0 4 Tm /F2 20 Tf 24 TL (2. Second concept) Tj T* ET
+Q
+Q
+q
+1 0 0 1 57.02362 565.8661 cm
+q
+.070588 .137255 .2 rg
+BT 1 0 0 1 0 4.5 Tm /F1 9.5 Tf 14 TL (Add the next concept. Include a diagram or comparison table when it materially improves understanding.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 57.02362 531.8661 cm
+q
+.027451 .078431 .14902 rg
+BT 1 0 0 1 0 4 Tm /F2 20 Tf 24 TL (3. Practice connection) Tj T* ET
+Q
+Q
+q
+1 0 0 1 57.02362 509.8661 cm
+q
+.070588 .137255 .2 rg
+BT 1 0 0 1 0 4.5 Tm /F1 9.5 Tf 14 TL (Explain how the student will apply the ideas in the activity and what the quiz will check.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 57.02362 475.8661 cm
+q
+.027451 .078431 .14902 rg
+BT 1 0 0 1 0 4 Tm /F2 20 Tf 24 TL (Quick reference) Tj T* ET
+Q
+Q
+q
+1 0 0 1 51.02362 360.8661 cm
+q
+.027451 .078431 .14902 rg
+n 0 107 493.2283 -29 re f*
+1 1 1 rg
+n 0 78 493.2283 -26 re f*
+.917647 .968627 .984314 rg
+n 0 52 493.2283 -26 re f*
+1 1 1 rg
+n 0 26 493.2283 -26 re f*
+1 1 1 rg
+BT /F1 10 Tf 12 TL ET
+q
+1 0 0 1 6 84 cm
+q
+.05098 .470588 .627451 rg
+BT 1 0 0 1 0 4 Tm /F2 13 Tf 17 TL (Concept) Tj T* ET
+Q
+Q
+q
+1 0 0 1 142.063 84 cm
+q
+.05098 .470588 .627451 rg
+BT 1 0 0 1 0 4 Tm /F2 13 Tf 17 TL (Meaning) Tj T* ET
+Q
+Q
+0 0 0 rg
+q
+1 0 0 1 6 58 cm
+q
+.070588 .137255 .2 rg
+BT 1 0 0 1 0 4.5 Tm /F1 9.5 Tf 14 TL (Key term) Tj T* ET
+Q
+Q
+q
+1 0 0 1 142.063 58 cm
+q
+.070588 .137255 .2 rg
+BT 1 0 0 1 0 4.5 Tm /F1 9.5 Tf 14 TL (Replace with a concise definition.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 6 32 cm
+q
+.070588 .137255 .2 rg
+BT 1 0 0 1 0 4.5 Tm /F1 9.5 Tf 14 TL (Process) Tj T* ET
+Q
+Q
+q
+1 0 0 1 142.063 32 cm
+q
+.070588 .137255 .2 rg
+BT 1 0 0 1 0 4.5 Tm /F1 9.5 Tf 14 TL (Replace with the important sequence or method.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 6 6 cm
+q
+.070588 .137255 .2 rg
+BT 1 0 0 1 0 4.5 Tm /F1 9.5 Tf 14 TL (Check) Tj T* ET
+Q
+Q
+q
+1 0 0 1 142.063 6 cm
+q
+.070588 .137255 .2 rg
+BT 1 0 0 1 0 4.5 Tm /F1 9.5 Tf 14 TL (Replace with a safe troubleshooting or verification step.) Tj T* ET
+Q
+Q
+q
+1 J
+1 j
+.713725 .811765 .854902 RG
+.5 w
+n 0 107 m 493.2283 107 l S
+n 0 0 m 493.2283 0 l S
+n 0 0 m 0 107 l S
+n 493.2283 0 m 493.2283 107 l S
+n 0 78 m 493.2283 78 l S
+n 0 52 m 493.2283 52 l S
+n 0 26 m 493.2283 26 l S
+n 136.063 0 m 136.063 107 l S
+Q
+Q
+Q
+q
+1 0 0 1 57.02362 350.8661 cm
+Q
+q
+1 0 0 1 57.02362 330.8661 cm
+q
+.070588 .137255 .2 rg
+BT 1 0 0 1 0 4.5 Tm /F1 9.5 Tf 14 TL (Continue online for flashcards, practice questions, the interactive quiz, and the next lesson.) Tj T* ET
+Q
+Q
+ 
+
+endstream
 endobj
 10 0 obj
 <<
-/Filter [ /ASCII85Decode /FlateDecode ] /Length 1337
+/Author (ByteSmith)
+/CreationDate (D\07220260914232814\05308\04700\047)
+/Creator (\050unspecified\051)
+/Keywords ()
+/ModDate (D\07220260914232814\05308\04700\047)
+/Producer (ReportLab PDF Library \055 \050opensource\051)
+/Subject (SUBJECT\137NAME \055 CATEGORY\137NAME)
+/Title (LESSON\137TITLE)
+/Trapped (\057False)
 >>
-stream
-Gatm;>BcPr&:XAWR)cS3<KTNP*h/[qRr5[(Mq`FjjB*i:!na[Mm#U%d!#m:\m'G[G`'i$-QZ#@NN%'#HU$b"a!D]Q^l%/tJ0V&4R8-%*h31iqe-cBL=i"UtpU;4es%:YAaF[%VKD'!c8":r<Z8]3bVL.];Kr</DE#K8aSJoIbPmM+\6m<mh+D>59\G,au!&(;Ln:=kL%@pp9U_3L1KdH2M.?YC5YXt,ns3`-#=Q7@OU-$]aE#FN5TWh"D\L]Y;krEA&.@"UCU0[s_FKb5\0(fH%.+q[`c"p.=87No*6$V8W3&]YI$5%-#5iFCZ\i&R?4(oZU/AfH,EUG3&%g$uQg7mI.7nHbaqRt+NEh'=VWJUG$ofR0Sp=Ht78kFZ\-?%2YPJ"M0Q5FZ!Y35=4)nn,ofpNr*p/a<_`3=to>SBYF/@Yic<;HG+k+5p7cR7n;OF'Z[U2fk(B.p4MTq(krGr-V>.X/1-]&JgGdaQGBK-PREj]/e"b+2dAH@16=[Q8;OmKn6*$h:,h*FK(`e8<^pN6N=C4Q*9uWYk9-WD\`<b&RHaf[pLIME*2cJQ>^OI<uKe9[rAS?m;.,R\Uh\?2)e=8iM+'h6>Z)*IY#9V?BQ,h@Xmo'G99qF,pdN(X1EkX0Sq9K(GiNXcKL;Ys.@?&+tdFQmjhPdgN'`jSN4a?Dj3#_d04R;pKBjG0<,4k>A8ej5G3PN9<<^U0'>f\C^%mg\MclWgoniYOE`%j_NPSA;i#"24J4gt,6>As)*@]u/kqK\;M>OAC(#"k7>7X",-KbHEKm_s.t]bdEf&F_R:U0\H!(kT<Pu\L$<)NF@S8Zb:S3Z$Vn_U\2BpU^r<O4PGU-,3D>e/No4$gsXW%Dl1g$VX#-ocl.(cT[UgHAI]@^PceQfOVAa-.A/X`[#f+C7PJr^)rbsEemYX?]8V6DX[[bZ.:5P0uAD/#&W@aKtbZ[p';LhJ1LFs7/P4D4Otg<khjYDF5;!^_]p&VbhB"1Og*N-M$\Nj6?`[):Q1A"1#A(`\UnIKTRKCIb<.K,_^1h\<Yq`j1t$dSJCe)ss*0Mf.H<bhhd'F]B\H;B-*g$sPg03Yoh1Ci7\Rrq<k+(Y+[kY*sWu^(ttgG$iNG-QS.l"@Gs?>g""F!*-;>/qg@?B^F%T%!mbIBVlHpplTYu\M*r"PS;=O+;%%#Ytsf?ac:E?,\JQ@0SA'?;7#%YE;qUN<.krE35JUEJ2B/D^f>l7Ho3n!<I7"$Q^pS">3c.V%D=_ZqV6FGD"N-oUn3BYLM9q"ELKQ?,[ARF/<f`hO]@9k=P:0"XPp`0dp.1Q+.',j[b\/.fet'J43Be41JIcM(Iab!~>endstream
 endobj
 xref
 0 11
 0000000000 65535 f 
-0000000061 00000 n 
-0000000102 00000 n 
-0000000209 00000 n 
-0000000321 00000 n 
-0000000524 00000 n 
-0000000728 00000 n 
-0000000796 00000 n 
-0000001094 00000 n 
-0000001159 00000 n 
-0000002013 00000 n 
+0000000015 00000 n 
+0000000083 00000 n 
+0000000148 00000 n 
+0000000347 00000 n 
+0000001881 00000 n 
+0000001922 00000 n 
+0000002029 00000 n 
+0000002141 00000 n 
+0000002340 00000 n 
+0000006278 00000 n 
 trailer
 <<
-/ID 
-[<3312752109f57534f5ded217d900181b><3312752109f57534f5ded217d900181b>]
-% ReportLab generated PDF document -- digest (opensource)
-
-/Info 7 0 R
-/Root 6 0 R
 /Size 11
+/Root 1 0 R
+/Info 10 0 R
+/ID [ <3312752109f57534f5ded217d900181b> <3312752109f57534f5ded217d900181b> ]
 >>
 startxref
-3442
+6616
 %%EOF
