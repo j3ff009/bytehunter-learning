@@ -43,7 +43,7 @@
     try {
       const lessons = (await getLessons()).filter((lesson) => visibility.evaluate(lesson.resources.lesson).status === "published");
       const newest = [...lessons].sort((a, b) => b.publishedDate.localeCompare(a.publishedDate));
-      latestHost.innerHTML = newest.slice(0, 6).map(lessonCard).join("");
+      latestHost.innerHTML = newest.slice(0, 6).map(lessonCard).join("") || '<p class="empty">No lessons are published yet.</p>';
 
       const popularHost = document.querySelector("#popular-lessons");
       if (popularHost) popularHost.innerHTML = lessons.filter((lesson) => lesson.popular).map(lessonCard).join("") || '<p class="empty">No popular lessons yet.</p>';

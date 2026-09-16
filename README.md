@@ -15,8 +15,6 @@ The main learning flow is:
 |-- index.html                      Homepage, search, latest and popular content
 |-- subjects/                       JSON-powered subject pages
 |-- lessons/
-|   |-- windows-booting-process/    12-page sample lesson
-|   |-- esp32-introduction/         11-page sample lesson
 |   `-- _template/                  Copy-ready lesson template
 |-- data/                           Central lesson, subject, product and site settings
 |-- css/                            Shared, lesson and quiz styles
