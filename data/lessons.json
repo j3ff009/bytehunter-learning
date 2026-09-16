@@ -1,1 +1,27 @@
-[]
+[
+  {
+    "id": "introduction-to-it-in-business",
+    "title": "Lesson 1: Introduction to IT in Business",
+    "shortTitle": "Introduction to IT in Business",
+    "subject": "IT Application Tools in Business",
+    "subjectId": "accountancy",
+    "subjectIds": ["accountancy"],
+    "category": "Lesson 1",
+    "description": "Learn how information technology supports business operations and modern accountancy.",
+    "keywords": ["information technology", "business", "accountancy", "Excel", "QuickBooks", "SAP", "Xero", "FreshBooks"],
+    "slug": "introduction-to-it-in-business",
+    "publishedDate": "2026-09-16",
+    "updatedDate": "2026-09-16",
+    "readingTime": "25 min",
+    "popular": true,
+    "featured": true,
+    "productIds": [],
+    "resources": {
+      "lesson": {"status": "published"},
+      "pdf": {"status": "published", "file": "lesson.pdf"},
+      "reviewer": {"status": "published"},
+      "quiz": {"status": "published"},
+      "activity": {"status": "published"}
+    }
+  }
+]

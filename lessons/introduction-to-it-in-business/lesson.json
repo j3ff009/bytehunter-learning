@@ -1,0 +1,69 @@
+{
+  "id": "introduction-to-it-in-business",
+  "title": "Lesson 1: Introduction to IT in Business",
+  "subject": "IT Application Tools in Business",
+  "category": "Accountancy",
+  "description": "Learn how information technology supports business operations and modern accountancy.",
+  "estimatedMinutes": 25,
+  "pdf": "lesson.pdf",
+  "reviewer": "reviewer.html",
+  "quiz": "quiz.html",
+  "activity": "activity.html",
+  "learningObjectives": [
+    "Define information technology and identify its six core components",
+    "Explain how IT supports business operations, communication, decisions, competitiveness, and security",
+    "Describe how IT improves transaction recording, reporting, auditing, taxation, analysis, accuracy, and compliance in accountancy",
+    "Identify common business and accounting-specific IT tools"
+  ],
+  "pages": [
+    {
+      "id": "definition-of-it",
+      "title": "Definition of IT",
+      "type": "definition",
+      "showAdAfter": false,
+      "content": "<p><strong>Information Technology (IT)</strong> refers to the use of computers, software, networks, and other electronic systems to collect, process, store, protect, and share information.</p><p>IT includes hardware such as computers, servers, and networking devices, as well as software such as applications, databases, and accounting systems. Together, these resources help individuals and organizations manage data and make better decisions.</p><div class=\"notice\"><strong>Key idea:</strong> IT is not only computers. It is a complete system of technology, information, people, and procedures.</div>"
+    },
+    {
+      "id": "components-of-it",
+      "title": "Components of Information Technology",
+      "type": "comparison",
+      "showAdAfter": true,
+      "content": "<p>Six connected components allow an information system to work effectively.</p><div class=\"table-scroll\"><table><thead><tr><th>Component</th><th>Meaning</th><th>Examples</th></tr></thead><tbody><tr><td><strong>Hardware</strong></td><td>Physical parts of a computer system</td><td>Computers, servers, keyboards, printers, storage devices</td></tr><tr><td><strong>Software</strong></td><td>Programs that tell hardware what to do</td><td>Excel, QuickBooks, SAP, accounting systems</td></tr><tr><td><strong>Data</strong></td><td>Raw facts processed into useful information</td><td>Sales numbers, financial records, customer lists</td></tr><tr><td><strong>People</strong></td><td>Users who perform tasks and make decisions</td><td>Accountants, auditors, managers, IT staff</td></tr><tr><td><strong>Processes</strong></td><td>Rules and procedures for using IT</td><td>Entering, processing, storing, and reporting financial data</td></tr><tr><td><strong>Networks and communication</strong></td><td>Systems that connect computers and share information</td><td>Internet, intranets, Wi-Fi, cloud computing</td></tr></tbody></table></div>"
+    },
+    {
+      "id": "it-in-business",
+      "title": "Role of IT in Business",
+      "type": "content",
+      "showAdAfter": false,
+      "content": "<p>IT has become a backbone of modern business and supports organizations in almost every area.</p><dl class=\"definition-list\"><dt>Automation of processes</dt><dd>Reduces manual work and speeds up operations, such as automated payroll and online banking.</dd><dt>Efficient communication</dt><dd>Connects departments and clients through email, messaging, video conferencing, and collaboration tools.</dd><dt>Data storage and management</dt><dd>Stores and organizes large amounts of information, including company files and financial records.</dd><dt>Decision-making support</dt><dd>Provides timely reports and dashboards, such as profit and loss trends.</dd><dt>Competitive advantage</dt><dd>Supports digital marketing, e-commerce, online customer service, and innovation.</dd><dt>Security of information</dt><dd>Protects sensitive information through controls such as encryption and access restrictions.</dd></dl>"
+    },
+    {
+      "id": "it-in-accountancy",
+      "title": "Role of IT in Accountancy",
+      "type": "content",
+      "showAdAfter": true,
+      "content": "<p>For accountants, IT is essential to modern practice because it makes financial processes faster, more accurate, and more reliable.</p><dl class=\"definition-list\"><dt>Recording transactions</dt><dd>Systems can automatically enter and classify sales, expenses, and payroll transactions.</dd><dt>Financial reporting</dt><dd>Accounting software can generate balance sheets, income statements, and cash flow statements.</dd><dt>Auditing and assurance</dt><dd>Audit tools such as ACL or IDEA help identify errors, unusual patterns, and possible fraud.</dd><dt>Taxation</dt><dd>Electronic tools simplify tax computation and filing, including eBIR forms in the Philippines.</dd><dt>Data analysis and decision-making</dt><dd>Tools such as Excel pivot tables help accountants analyze expenses and support business strategy.</dd><dt>Accuracy and error reduction</dt><dd>Automated formulas reduce mistakes caused by repeated manual calculations.</dd><dt>Compliance and regulations</dt><dd>Enterprise systems help organizations track requirements under standards such as GAAP or IFRS.</dd></dl>"
+    },
+    {
+      "id": "general-business-tools",
+      "title": "General Business IT Tools",
+      "type": "example",
+      "showAdAfter": false,
+      "content": "<p>Businesses use different tools for documents, analysis, communication, data storage, and security.</p><ul><li><strong>Microsoft Office:</strong> Word for reports, Excel for analysis and computations, and PowerPoint for presentations.</li><li><strong>Email and communication:</strong> Outlook, Gmail, Microsoft Teams, Zoom, and Slack.</li><li><strong>Databases:</strong> Microsoft Access, MySQL, and Oracle Database.</li><li><strong>Cloud services:</strong> Google Drive, OneDrive, and Dropbox for storage and collaboration.</li><li><strong>Cybersecurity tools:</strong> Antivirus software, firewalls, and multi-factor authentication.</li></ul>"
+    },
+    {
+      "id": "accounting-tools",
+      "title": "Five Accounting-Specific IT Tools",
+      "type": "comparison",
+      "showAdAfter": false,
+      "content": "<p>Accounting tools serve different needs, from spreadsheet analysis to integrated enterprise operations.</p><div class=\"table-scroll\"><table><thead><tr><th>Tool</th><th>Primary use</th></tr></thead><tbody><tr><td><strong>Microsoft Excel</strong></td><td>Financial analysis, budgeting, forecasting, and financial statements</td></tr><tr><td><strong>QuickBooks</strong></td><td>Bookkeeping, payroll, invoicing, and expense tracking for small and medium businesses</td></tr><tr><td><strong>SAP</strong></td><td>Enterprise accounting integrated with finance, human resources, and supply chain operations</td></tr><tr><td><strong>Xero</strong></td><td>Cloud-based invoicing, bank reconciliation, and expense management</td></tr><tr><td><strong>FreshBooks</strong></td><td>Invoicing, expense tracking, and reporting for small businesses and freelancers</td></tr></tbody></table></div>"
+    },
+    {
+      "id": "summary",
+      "title": "Lesson Summary",
+      "type": "summary",
+      "showAdAfter": false,
+      "content": "<p>Information technology brings together hardware, software, data, people, processes, and networks. Businesses use these components to automate work, communicate, manage information, support decisions, compete, and protect data.</p><ul class=\"summary-checks\"><li>IT supports the complete accounting cycle, from recording transactions to reporting and compliance.</li><li>General business tools support documents, communication, databases, cloud collaboration, and security.</li><li>Excel, QuickBooks, SAP, Xero, and FreshBooks address different accounting needs.</li><li>The right tool depends on the task, organization size, workflow, and control requirements.</li></ul><p><strong>Next step:</strong> Download the lesson PDF, use the reviewer, complete the activity, and take the quiz.</p>"
+    }
+  ]
+}

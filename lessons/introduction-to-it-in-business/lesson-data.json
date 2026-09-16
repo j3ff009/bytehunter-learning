@@ -1,0 +1,52 @@
+{
+  "reviewer": {
+    "quickReview": [
+      {"term":"Information Technology","summary":"The use of computers, software, networks, and electronic systems to collect, process, store, protect, and share information."},
+      {"term":"Hardware","summary":"The physical parts of a computer system, such as computers, servers, printers, and storage devices."},
+      {"term":"Software","summary":"Programs and applications that direct hardware and help users perform tasks."},
+      {"term":"Data","summary":"Raw facts and figures that are processed into meaningful information."},
+      {"term":"Processes","summary":"Rules, methods, and procedures for using information technology effectively."},
+      {"term":"Networks","summary":"Systems that connect computers and allow information to be shared."},
+      {"term":"IT in accountancy","summary":"Technology used to record transactions, prepare reports, support audits, compute taxes, analyze data, reduce errors, and maintain compliance."}
+    ],
+    "flashcards": [
+      {"front":"What are the six components of IT?","back":"Hardware, software, data, people, processes, and networks and communication."},
+      {"front":"How does IT support business decisions?","back":"It provides managers with timely data, dashboards, and reports."},
+      {"front":"How does IT reduce accounting errors?","back":"Automated formulas and systems reduce repeated manual calculations and data-entry mistakes."},
+      {"front":"Which tool is commonly used for pivot tables?","back":"Microsoft Excel."},
+      {"front":"Which accounting tool is popular with small and medium businesses?","back":"QuickBooks."},
+      {"front":"Which system integrates accounting with HR and supply chain operations?","back":"SAP."},
+      {"front":"What is Xero?","back":"Cloud-based accounting software for invoicing, bank reconciliation, and expense management."},
+      {"front":"Name three cybersecurity controls from the lesson.","back":"Antivirus software, firewalls, and multi-factor authentication."}
+    ],
+    "identification": [
+      {"question":"The physical parts of a computer system:","acceptedAnswers":["hardware"]},
+      {"question":"Raw facts and figures processed into meaningful information:","acceptedAnswers":["data"]},
+      {"question":"The Microsoft tool used for financial analysis, budgeting, and forecasting:","acceptedAnswers":["Microsoft Excel","Excel"]},
+      {"question":"The enterprise system that integrates accounting with other business functions:","acceptedAnswers":["SAP"]},
+      {"question":"Cloud-based accounting software used for invoicing and bank reconciliation:","acceptedAnswers":["Xero"]}
+    ],
+    "trueFalse": [
+      {"question":"Information technology consists only of computer hardware.","answer":false,"explanation":"IT also includes software, data, people, processes, and networks."},
+      {"question":"IT can automate payroll and other business processes.","answer":true,"explanation":"Automation reduces manual work and speeds up operations."},
+      {"question":"Excel pivot tables can support expense analysis.","answer":true,"explanation":"Pivot tables help accountants summarize and examine financial data."},
+      {"question":"QuickBooks is used only by large corporations.","answer":false,"explanation":"QuickBooks is especially popular with small and medium businesses."},
+      {"question":"Multi-factor authentication is a cybersecurity control.","answer":true,"explanation":"It adds an additional verification step before access is granted."},
+      {"question":"IT has no role in accounting compliance.","answer":false,"explanation":"Enterprise systems can help track requirements under financial standards and laws."}
+    ]
+  },
+  "quiz": [
+    {"type":"multiple-choice","question":"Which statement best defines information technology?","choices":["The use of electronic systems to manage and share information","The manual preparation of financial statements","The physical parts of a computer only","A collection of printed business records"],"answer":"The use of electronic systems to manage and share information","explanation":"IT uses computers, software, networks, and related systems to collect, process, store, protect, and share information."},
+    {"type":"multiple-choice","question":"Which IT component includes accountants, auditors, managers, and IT staff?","choices":["People","Data","Hardware","Networks"],"answer":"People","explanation":"People are the users who operate systems, perform tasks, and make decisions."},
+    {"type":"multiple-choice","question":"Which is an example of IT supporting business decisions?","choices":["A sales dashboard showing profit and loss trends","A handwritten attendance sheet","A filing cabinet with paper receipts","A calculator without stored data"],"answer":"A sales dashboard showing profit and loss trends","explanation":"Dashboards turn current data into information managers can use for decisions."},
+    {"type":"multiple-choice","question":"Which tool is used for financial analysis, budgeting, and forecasting?","choices":["Microsoft Excel","Zoom","Dropbox","Norton"],"answer":"Microsoft Excel","explanation":"Excel supports calculations, models, pivot tables, charts, budgets, and forecasts."},
+    {"type":"multiple-choice","question":"Which software integrates accounting with finance, HR, and supply chain operations?","choices":["SAP","FreshBooks","Gmail","Microsoft Word"],"answer":"SAP","explanation":"SAP is an enterprise system that connects accounting with other business functions."},
+    {"type":"multiple-choice","question":"Which control helps protect accounts by requiring an additional verification step?","choices":["Multi-factor authentication","A pivot table","A presentation","An invoice template"],"answer":"Multi-factor authentication","explanation":"Multi-factor authentication strengthens access security by requiring more than one form of verification."},
+    {"type":"identification","question":"Identify the cloud-based accounting software used for invoicing and bank reconciliation.","acceptedAnswers":["Xero"],"explanation":"Xero supports invoicing, bank reconciliation, and expense management in the cloud."},
+    {"type":"identification","question":"Identify the component that contains raw sales numbers and financial records.","acceptedAnswers":["Data"],"explanation":"Data consists of raw facts and figures that can be processed into useful information."},
+    {"type":"true-false","question":"Automated accounting systems can reduce errors from repeated manual calculations.","answer":true,"explanation":"Automation and formulas improve consistency and reduce manual computation errors."},
+    {"type":"true-false","question":"Networks and communication tools prevent computers from sharing information.","answer":false,"explanation":"Networks connect computers and enable information sharing."},
+    {"type":"true-false","question":"IT can support auditing by helping identify inconsistent data.","answer":true,"explanation":"Audit tools can examine records for errors, unusual patterns, and possible fraud."},
+    {"type":"true-false","question":"FreshBooks is described as a tool only for large multinational corporations.","answer":false,"explanation":"FreshBooks focuses on small businesses and freelancers."}
+  ]
+}

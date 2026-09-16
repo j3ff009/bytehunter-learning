@@ -15,7 +15,8 @@ The main learning flow is:
 |-- index.html                      Homepage, search, latest and popular content
 |-- subjects/                       JSON-powered subject pages
 |-- lessons/
-|   `-- _template/                  Copy-ready lesson template
+|   |-- introduction-to-it-in-business/  Accountancy Lesson 1
+|   `-- _template/                       Copy-ready lesson template
 |-- data/                           Central lesson, subject, product and site settings
 |-- css/                            Shared, lesson and quiz styles
 |-- js/                             Rendering, visibility, search, reviewer and quiz logic
