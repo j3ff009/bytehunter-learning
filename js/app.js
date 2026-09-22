@@ -6,13 +6,14 @@
   const page = document.body.dataset.page || "";
 
   const url = (path = "") => new URL(path, root).href;
+  const icon = (name, className = "icon") => `<svg class="${className}" aria-hidden="true" focusable="false"><use href="${url(`assets/icons/ui.svg#${name}`)}"></use></svg>`;
   const fetchJSON = async (path) => {
     const response = await fetch(url(path), { cache: "no-cache" });
     if (!response.ok) throw new Error(`Request failed: ${response.status}`);
     return response.json();
   };
 
-  window.ByteHunter = { root, url, fetchJSON };
+  window.ByteHunter = { root, url, icon, fetchJSON };
 
   function applyTheme(value) {
     const choice = value || localStorage.getItem("bytehunter-theme") || "dark";
@@ -26,12 +27,12 @@
   applyTheme();
 
   const navItems = [
-    ["Lessons", "index.html#latest", "home"],
-    ["Reviewers", "index.html#reviewers", "reviewers"],
-    ["Quizzes", "index.html#quizzes", "quizzes"],
-    ["Subjects", "index.html#subjects", "subjects"],
-    ["Search", "index.html#search", "search"],
-    ["About", "about.html", "about"]
+    ["Lessons", "index.html#latest", "home", "book"],
+    ["Reviewers", "index.html#reviewers", "reviewers", "cards"],
+    ["Quizzes", "index.html#quizzes", "quizzes", "quiz"],
+    ["Subjects", "index.html#subjects", "subjects", "grid"],
+    ["Search", "index.html#search", "search", "search"],
+    ["About", "about.html", "about", "info"]
   ];
 
   function renderHeader() {
@@ -42,12 +43,12 @@
       <a class="skip-link" href="#main-content">Skip to content</a>
       <div class="nav-wrap">
         <a class="brand" href="${url("index.html")}" aria-label="ByteSmith home">
-          <span class="brand-mark" aria-hidden="true">BS</span>
+          <span class="brand-mark" aria-hidden="true">${icon("code")}</span>
           <span>ByteSmith</span>
         </a>
-        <button class="menu-button" type="button" aria-expanded="false" aria-controls="primary-nav">Menu</button>
+        <button class="menu-button" type="button" aria-expanded="false" aria-controls="primary-nav">${icon("menu")}<span>Menu</span></button>
         <nav class="nav-links" id="primary-nav" aria-label="Primary navigation">
-          ${navItems.map(([label, href, key]) => `<a href="${url(href)}"${page === key ? ' aria-current="page"' : ""}>${label}</a>`).join("")}
+          ${navItems.map(([label, href, key, symbol]) => `<a href="${url(href)}"${page === key ? ' aria-current="page"' : ""}>${icon(symbol)}<span>${label}</span></a>`).join("")}
           <label class="sr-only" for="theme-select">Color theme</label>
           <select class="theme-select" id="theme-select" aria-label="Color theme">
             <option value="dark">Dark</option>
@@ -85,7 +86,7 @@
     host.className = "site-footer";
     host.innerHTML = `
       <div class="container footer-grid">
-        <div><a class="brand" href="${url("index.html")}"><span class="brand-mark" aria-hidden="true">BS</span><span>ByteSmith</span></a><p class="copyright">Learn concepts, build practical skills, and level up one lesson at a time.</p></div>
+        <div><a class="brand" href="${url("index.html")}"><span class="brand-mark" aria-hidden="true">${icon("code")}</span><span>ByteSmith</span></a><p class="copyright">Learn concepts, build practical skills, and level up one lesson at a time.</p></div>
         <nav class="footer-links" aria-label="Footer navigation">
           <a href="${url("about.html")}">About</a><a href="${url("privacy.html")}">Privacy Policy</a><a href="${url("terms.html")}">Terms</a><a href="${url("affiliate-disclosure.html")}">Affiliate Disclosure</a><a href="${url("contact.html")}">Contact</a>
         </nav>

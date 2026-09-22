@@ -3,6 +3,7 @@
   const host = document.querySelector("#quiz-app");
   const lessonId = document.body.dataset.lessonId;
   if (!host || !lessonId) return;
+  const icon = window.ByteHunter.icon;
 
   let lesson;
   let questions = [];
@@ -33,7 +34,7 @@
   function renderQuestion() {
     submitted = false;
     const q = questions[index];
-    host.innerHTML = `<div class="progress-wrap"><div class="progress-meta"><span>Question ${index + 1} of ${questions.length}</span><span>${Math.round((index / questions.length) * 100)}% complete</span></div><div class="progress-track" role="progressbar" aria-label="Quiz progress" aria-valuemin="0" aria-valuemax="${questions.length}" aria-valuenow="${index}"><div class="progress-bar" style="width:${(index / questions.length) * 100}%"></div></div></div><section class="quiz-card"><span class="question-type">${q.type.replace("-", " ")}</span><h2>${q.question}</h2>${answerField(q)}<div id="quiz-feedback" aria-live="polite"></div><div class="button-row"><button class="button" id="submit-answer" type="button">Submit Answer</button><button class="button" id="next-question" type="button" hidden>${index === questions.length - 1 ? "Finish Quiz" : "Next Question"}</button></div></section>`;
+    host.innerHTML = `<div class="progress-wrap"><div class="progress-meta"><span>Question ${index + 1} of ${questions.length}</span><span>${Math.round((index / questions.length) * 100)}% complete</span></div><div class="progress-track" role="progressbar" aria-label="Quiz progress" aria-valuemin="0" aria-valuemax="${questions.length}" aria-valuenow="${index}"><div class="progress-bar" style="width:${(index / questions.length) * 100}%"></div></div></div><section class="quiz-card"><span class="question-type">${icon("quiz")}${q.type.replace("-", " ")}</span><h2>${q.question}</h2>${answerField(q)}<div id="quiz-feedback" aria-live="polite"></div><div class="button-row"><button class="button" id="submit-answer" type="button">${icon("check")}Submit Answer</button><button class="button" id="next-question" type="button" hidden>${index === questions.length - 1 ? "Finish Quiz" : "Next Question"}${icon("arrow-right")}</button></div></section>`;
     host.querySelector("#submit-answer").addEventListener("click", submitAnswer);
   }
 
@@ -64,7 +65,7 @@
     const score = answers.filter((answer) => answer.correct).length;
     const percent = Math.round((score / questions.length) * 100);
     const label = percent >= 90 ? "Excellent" : percent >= 75 ? "Cleared" : percent >= 60 ? "Developing" : "Train and retry";
-    host.innerHTML = `<section class="quiz-card"><span class="eyebrow">Quiz Complete</span><div class="result-score">${percent}%</div><h2>${score} / ${questions.length} — ${label}</h2><p>${percent >= 75 ? "You cleared this challenge." : "Review the explanations, then try the challenge again."}</p><div class="button-row"><button class="button secondary" id="review-answers" type="button">Review Answers</button><button class="button" id="retake-quiz" type="button">Retake Quiz</button><a class="button secondary" href="index.html">Return to Lesson</a></div><div class="review-list" id="answer-review" hidden>${answers.map((item, i) => `<article class="review-item"><strong>${i + 1}. ${item.question.question}</strong><p>Your answer: ${item.value === "true" ? "True" : item.value === "false" ? "False" : item.value}</p><p class="${item.correct ? "good" : "bad"}">${item.correct ? "Correct" : `Correct answer: ${item.question.answer ?? item.question.acceptedAnswers?.[0]}`}</p><p>${item.question.explanation || ""}</p></article>`).join("")}</div></section>`;
+    host.innerHTML = `<section class="quiz-card"><span class="eyebrow">${icon("check")}Quiz Complete</span><div class="result-score">${percent}%</div><h2>${score} / ${questions.length} — ${label}</h2><p>${percent >= 75 ? "You cleared this challenge." : "Review the explanations, then try the challenge again."}</p><div class="button-row"><button class="button secondary" id="review-answers" type="button">Review Answers</button><button class="button" id="retake-quiz" type="button">${icon("rotate")}Retake Quiz</button><a class="button secondary" href="index.html">${icon("book")}Return to Lesson</a></div><div class="review-list" id="answer-review" hidden>${answers.map((item, i) => `<article class="review-item"><strong>${i + 1}. ${item.question.question}</strong><p>Your answer: ${item.value === "true" ? "True" : item.value === "false" ? "False" : item.value}</p><p class="${item.correct ? "good" : "bad"}">${item.correct ? "Correct" : `Correct answer: ${item.question.answer ?? item.question.acceptedAnswers?.[0]}`}</p><p>${item.question.explanation || ""}</p></article>`).join("")}</div></section>`;
     host.querySelector("#review-answers").addEventListener("click", (event) => { const review = host.querySelector("#answer-review"); review.hidden = !review.hidden; event.target.textContent = review.hidden ? "Review Answers" : "Hide Review"; });
     host.querySelector("#retake-quiz").addEventListener("click", () => { index = 0; answers = []; questions = prepare(questions); renderQuestion(); });
   }

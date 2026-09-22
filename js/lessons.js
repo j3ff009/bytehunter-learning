@@ -5,24 +5,26 @@
   const visibility = window.ByteHunterVisibility;
   const friendlyDate = (value) => new Intl.DateTimeFormat("en", { dateStyle: "medium" }).format(new Date(`${value}T00:00:00`));
   const resourceLabel = { lesson: "Lesson", pdf: "PDF", reviewer: "Reviewer", quiz: "Quiz", activity: "Activity" };
+  const resourceIcon = { lesson: "book", pdf: "file", reviewer: "cards", quiz: "quiz", activity: "check" };
 
   function resourceBadges(resources) {
     return Object.entries(resources || {}).map(([type, value]) => {
       const state = visibility.evaluate(value);
       if (!state.visible) return "";
       const symbol = state.status === "locked" ? "Locked" : "Ready";
-      return `<span class="badge ${state.status === "locked" ? "locked" : "available"}">${resourceLabel[type] || type}: ${symbol}</span>`;
+      return `<span class="badge ${state.status === "locked" ? "locked" : "available"}">${app.icon(resourceIcon[type] || "check")}${resourceLabel[type] || type}: ${symbol}</span>`;
     }).join("");
   }
 
   function lessonCard(lesson) {
     const lessonUrl = app.url(`lessons/${lesson.slug}/index.html`);
     return `<article class="card lesson-card" data-search-type="lesson">
+      <span class="lesson-card-icon" aria-hidden="true">${app.icon("book")}</span>
       <div class="meta"><span>${lesson.subject}</span><span>${lesson.category}</span></div>
       <h3><a href="${lessonUrl}">${lesson.title}</a></h3>
       <p>${lesson.description}</p>
       <div class="resource-badges" aria-label="Available resources">${resourceBadges(lesson.resources)}</div>
-      <div class="meta" style="margin-top:1rem"><span>Updated ${friendlyDate(lesson.updatedDate)}</span><span>${lesson.readingTime}</span></div>
+      <div class="meta lesson-card-footer"><span>${app.icon("calendar")}Updated ${friendlyDate(lesson.updatedDate)}</span><span>${app.icon("clock")}${lesson.readingTime}</span></div>
     </article>`;
   }
 
@@ -46,18 +48,22 @@
       latestHost.innerHTML = newest.slice(0, 6).map(lessonCard).join("") || '<p class="empty">No lessons are published yet.</p>';
 
       const popularHost = document.querySelector("#popular-lessons");
-      if (popularHost) popularHost.innerHTML = lessons.filter((lesson) => lesson.popular).map(lessonCard).join("") || '<p class="empty">No popular lessons yet.</p>';
+      if (popularHost) {
+        const popular = lessons.filter((lesson) => lesson.popular);
+        if (lessons.length < 2 || !popular.length) popularHost.closest("section")?.remove();
+        else popularHost.innerHTML = popular.map(lessonCard).join("");
+      }
 
       const reviewerHost = document.querySelector("#latest-reviewers");
       if (reviewerHost) {
         const published = newest.filter((lesson) => visibility.evaluate(lesson.resources.reviewer).status === "published");
-        reviewerHost.innerHTML = published.map((lesson) => `<article class="card"><span class="eyebrow">Quick review + flashcards</span><h3>${lesson.title}</h3><p>${lesson.description}</p><a class="button small" href="${app.url(`lessons/${lesson.slug}/reviewer.html`)}">Open Reviewer</a></article>`).join("") || '<p class="empty">No reviewers are published yet.</p>';
+        reviewerHost.innerHTML = published.map((lesson) => `<article class="card feature-card"><span class="lesson-card-icon" aria-hidden="true">${app.icon("cards")}</span><span class="eyebrow">Quick review + flashcards</span><h3>${lesson.title}</h3><p>${lesson.description}</p><a class="button small" href="${app.url(`lessons/${lesson.slug}/reviewer.html`)}">${app.icon("cards")}Open Reviewer</a></article>`).join("") || '<p class="empty">No reviewers are published yet.</p>';
       }
 
       const quizHost = document.querySelector("#quiz-list");
       if (quizHost) {
         const published = newest.filter((lesson) => visibility.evaluate(lesson.resources.quiz).status === "published");
-        quizHost.innerHTML = published.map((lesson) => `<article class="card"><span class="eyebrow">Interactive challenge</span><h3>${lesson.title}</h3><p>Test what you know with randomized questions and answer explanations.</p><a class="button small" href="${app.url(`lessons/${lesson.slug}/quiz.html`)}">Take Quiz</a></article>`).join("") || '<p class="empty">No quizzes are published yet.</p>';
+        quizHost.innerHTML = published.map((lesson) => `<article class="card feature-card"><span class="lesson-card-icon" aria-hidden="true">${app.icon("quiz")}</span><span class="eyebrow">Interactive challenge</span><h3>${lesson.title}</h3><p>Test what you know with randomized questions and answer explanations.</p><a class="button small" href="${app.url(`lessons/${lesson.slug}/quiz.html`)}">${app.icon("quiz")}Take Quiz</a></article>`).join("") || '<p class="empty">No quizzes are published yet.</p>';
       }
     } catch (_) { unavailable(latestHost); }
   }
@@ -113,9 +119,13 @@
     const host = document.querySelector("#recommended-products");
     if (!host) return;
     try {
+      const lessons = (await getLessons()).filter((lesson) => visibility.evaluate(lesson.resources.lesson).status === "published");
+      const relevantIds = new Set(lessons.flatMap((lesson) => lesson.productIds || []));
+      if (!relevantIds.size) { host.closest("section")?.remove(); return; }
       const all = await app.fetchJSON("data/products.json");
       const ids = (host.dataset.productIds || "").split(",").filter(Boolean);
-      const products = ids.length ? all.filter((product) => ids.includes(product.id)) : all.slice(0, 3);
+      const products = all.filter((product) => relevantIds.has(product.id) && (!ids.length || ids.includes(product.id)));
+      if (!products.length) { host.closest("section")?.remove(); return; }
       host.innerHTML = products.map((product) => `<article class="card"><div class="product-icon" role="img" aria-label="${product.name} placeholder">${product.icon}</div><span class="badge">Affiliate link</span><h3>${product.name}</h3><p>${product.description}</p><a class="button small" href="${product.affiliateUrl}" target="_blank" rel="nofollow sponsored noopener noreferrer">View Product</a></article>`).join("");
     } catch (_) { unavailable(host); }
   }

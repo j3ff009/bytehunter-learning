@@ -73,7 +73,8 @@
   }
 
   function actionLink(label, href, className = "button secondary") {
-    return `<a class="${className}" href="${escapeHTML(href)}">${escapeHTML(label)}</a>`;
+    const symbol = /PDF/.test(label) ? "download" : /Reviewer/.test(label) ? "cards" : /Quiz/.test(label) ? "quiz" : /Activity/.test(label) ? "check" : "arrow-right";
+    return `<a class="${className}" href="${escapeHTML(href)}">${app.icon(symbol)}${escapeHTML(label)}</a>`;
   }
 
   async function summaryExtras() {
@@ -98,7 +99,7 @@
 
     const progress = readProgress();
     const resourceCard = `<section class="completion-card"><p class="eyebrow">Lesson cleared</p><h3>${escapeHTML(lesson.title)}</h3><p><strong>${progress.viewed.length} / ${lesson.pages.length}</strong> pages viewed on this device</p><p class="completion-line">+ Lesson Completed</p><div class="button-row">${actions.join("")}</div></section>`;
-    const pdfCard = pdfState?.status === "published" ? `<section class="download-card"><span class="download-icon" aria-hidden="true">PDF</span><div><h3>Download this lesson</h3><p>${escapeHTML(lesson.title)} · PDF · Offline copy</p></div><a class="button" href="${escapeHTML(resources.pdf.file || lesson.pdf || "lesson.pdf")}" download>Download PDF</a></section>` : "";
+    const pdfCard = pdfState?.status === "published" ? `<section class="download-card"><span class="download-icon" aria-hidden="true">${app.icon("file")}</span><div><h3>Download this lesson</h3><p>${escapeHTML(lesson.title)} · PDF · Offline copy</p></div><a class="button" href="${escapeHTML(resources.pdf.file || lesson.pdf || "lesson.pdf")}" download>${app.icon("download")}Download PDF</a></section>` : "";
     const pathCard = `<section class="learning-path reader-learning-path"><h3>Your learning path</h3><ol>${path.map((item) => `<li class="${escapeHTML(item.status)}">${item.status === "locked" ? `<span>${escapeHTML(item.label)} — locked</span>` : `<a href="${escapeHTML(item.href)}">${escapeHTML(item.label)}</a>`}</li>`).join("")}</ol></section>`;
 
     let products = "";
@@ -122,7 +123,7 @@
     return lesson.pages.map((page, index) => {
       const isCurrent = index === currentIndex;
       const viewed = progress.viewed.includes(page.id);
-      const symbol = isCurrent ? "●" : viewed ? "✓" : "○";
+      const symbol = app.icon(isCurrent ? "arrow-right" : viewed ? "check" : "book");
       const label = isCurrent ? "current page" : viewed ? "viewed" : "not viewed";
       return `<button type="button" class="contents-item${isCurrent ? " current" : ""}${viewed ? " viewed" : ""}" data-go-page="${escapeHTML(page.id)}"${isCurrent ? ' aria-current="step"' : ""}><span aria-hidden="true">${symbol}</span><span>${index + 1}. ${escapeHTML(page.title)}</span><span class="sr-only">, ${label}</span></button>`;
     }).join("");
@@ -132,7 +133,7 @@
     const completed = progress.viewed.length;
     const lastPage = lesson.pages.find((page) => page.id === progress.lastPageId);
     const resume = lastPage ? `<div class="resume-card"><p class="eyebrow">Continue learning</p><h2>You stopped at Page ${lesson.pages.indexOf(lastPage) + 1} — ${escapeHTML(lastPage.title)}</h2><p>${completed} of ${lesson.pages.length} pages viewed.</p><div class="button-row"><button class="button" type="button" data-go-page="${escapeHTML(lastPage.id)}">Continue Lesson</button><button class="button secondary" type="button" id="restart-lesson">Start From Beginning</button></div></div>` : "";
-    return `<section class="lesson-overview page-enter"><p class="eyebrow">Lesson overview</p><h1>${escapeHTML(lesson.title)}</h1><p class="overview-description">${escapeHTML(lesson.description)}</p><div class="overview-stats"><span><strong>${lesson.pages.length}</strong> lesson pages</span><span><strong>${lesson.estimatedMinutes}</strong> estimated minutes</span><span><strong>${escapeHTML(lesson.subject)}</strong> ${escapeHTML(lesson.category)}</span></div><div class="objectives"><h2>You will learn</h2><ul>${(lesson.learningObjectives || []).map((item) => `<li>${escapeHTML(item)}</li>`).join("")}</ul></div>${resume}<div class="button-row"><button class="button" type="button" data-go-page="${escapeHTML(lesson.pages[0].id)}">${lastPage ? "Restart at Page 1" : "Start Lesson"}</button>${visibleResource(catalogLesson?.resources?.pdf)?.status === "published" ? actionLink("Download PDF", catalogLesson.resources.pdf.file || lesson.pdf || "lesson.pdf") : ""}</div></section>`;
+    return `<section class="lesson-overview page-enter"><p class="eyebrow">Lesson overview</p><h1>${escapeHTML(lesson.title)}</h1><p class="overview-description">${escapeHTML(lesson.description)}</p><div class="overview-stats"><span>${app.icon("book")}<strong>${lesson.pages.length}</strong> lesson pages</span><span>${app.icon("clock")}<strong>${lesson.estimatedMinutes}</strong> estimated minutes</span><span>${app.icon("calculator")}<strong>${escapeHTML(lesson.subject)}</strong> ${escapeHTML(lesson.category)}</span></div><div class="objectives"><h2>${app.icon("spark")}You will learn</h2><ul>${(lesson.learningObjectives || []).map((item) => `<li>${escapeHTML(item)}</li>`).join("")}</ul></div>${resume}<div class="button-row"><button class="button" type="button" data-go-page="${escapeHTML(lesson.pages[0].id)}">${app.icon("book")}${lastPage ? "Restart at Page 1" : "Start Lesson"}</button>${visibleResource(catalogLesson?.resources?.pdf)?.status === "published" ? actionLink("Download PDF", catalogLesson.resources.pdf.file || lesson.pdf || "lesson.pdf") : ""}</div></section>`;
   }
 
   function installCopyButtons(scope) {
@@ -186,9 +187,9 @@
     const finalPdf = visibleResource(catalogLesson?.resources?.pdf)?.status === "published";
     const mainContent = currentIndex < 0
       ? overviewMarkup(progress)
-      : `${progressMarkup(currentIndex)}${pageMarkup(lesson.pages[currentIndex])}<nav class="reader-controls" aria-label="Lesson page navigation"><button class="button secondary" id="reader-previous" type="button"${currentIndex === 0 ? " disabled" : ""} aria-label="Previous lesson page">← Previous</button>${currentIndex === lesson.pages.length - 1 ? `<button class="button" id="reader-next" type="button">${finalPdf ? "Continue to PDF →" : "Finish Lesson"}</button>` : `<button class="button" id="reader-next" type="button" aria-label="Next lesson page">Next →</button>`}</nav><div id="summary-extras"></div>`;
+      : `${progressMarkup(currentIndex)}${pageMarkup(lesson.pages[currentIndex])}<nav class="reader-controls" aria-label="Lesson page navigation"><button class="button secondary" id="reader-previous" type="button"${currentIndex === 0 ? " disabled" : ""} aria-label="Previous lesson page">${app.icon("arrow-left")}Previous</button>${currentIndex === lesson.pages.length - 1 ? `<button class="button" id="reader-next" type="button">${finalPdf ? "Continue to PDF" : "Finish Lesson"}${app.icon("arrow-right")}</button>` : `<button class="button" id="reader-next" type="button" aria-label="Next lesson page">Next${app.icon("arrow-right")}</button>`}</nav><div id="summary-extras"></div>`;
 
-    host.innerHTML = `<button class="contents-toggle button secondary" id="contents-toggle" type="button" aria-expanded="false" aria-controls="lesson-contents">☰ Contents</button><div class="reader-grid"><aside class="contents-panel" id="lesson-contents" aria-label="Lesson contents"><div class="contents-head"><div><p class="eyebrow">Lesson contents</p><strong>${escapeHTML(lesson.title)}</strong></div><button class="contents-close" id="contents-close" type="button" aria-label="Close lesson contents">×</button></div><button class="contents-overview${currentIndex < 0 ? " current" : ""}" type="button" data-go-page="overview"${currentIndex < 0 ? ' aria-current="step"' : ""}>Overview</button>${contentsMarkup(progress)}</aside><button class="drawer-backdrop" id="drawer-backdrop" type="button" aria-label="Close lesson contents" tabindex="-1"></button><div class="reader-stage" id="reader-stage">${mainContent}</div></div><div class="print-all-pages"><h1>${escapeHTML(lesson.title)}</h1><p>${escapeHTML(lesson.subject)} · ${escapeHTML(lesson.category)}</p>${lesson.pages.map((page) => pageMarkup(page, true)).join("")}</div>`;
+    host.innerHTML = `<button class="contents-toggle button secondary" id="contents-toggle" type="button" aria-expanded="false" aria-controls="lesson-contents">${app.icon("menu")}Contents</button><div class="reader-grid"><aside class="contents-panel" id="lesson-contents" aria-label="Lesson contents"><div class="contents-head"><div><p class="eyebrow">Lesson contents</p><strong>${escapeHTML(lesson.title)}</strong></div><button class="contents-close" id="contents-close" type="button" aria-label="Close lesson contents">${app.icon("close")}</button></div><button class="contents-overview${currentIndex < 0 ? " current" : ""}" type="button" data-go-page="overview"${currentIndex < 0 ? ' aria-current="step"' : ""}>${app.icon("grid")}Overview</button>${contentsMarkup(progress)}</aside><button class="drawer-backdrop" id="drawer-backdrop" type="button" aria-label="Close lesson contents" tabindex="-1"></button><div class="reader-stage" id="reader-stage">${mainContent}</div></div><div class="print-all-pages"><h1>${escapeHTML(lesson.title)}</h1><p>${escapeHTML(lesson.subject)} · ${escapeHTML(lesson.category)}</p>${lesson.pages.map((page) => pageMarkup(page, true)).join("")}</div>`;
 
     syncDrawerMode();
     bindControls();

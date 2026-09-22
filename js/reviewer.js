@@ -3,6 +3,7 @@
   const host = document.querySelector("#reviewer-app");
   const lessonId = document.body.dataset.lessonId;
   if (!host || !lessonId) return;
+  const icon = window.ByteHunter.icon;
 
   let data;
   let cards = [];
@@ -37,13 +38,13 @@
     host.innerHTML = `
       <div class="progress-wrap"><div class="progress-meta"><span id="review-progress-text">0 / 0 concepts reviewed</span><span>Session only</span></div><div class="progress-track" role="progressbar" aria-label="Reviewer progress" aria-valuemin="0"><div class="progress-bar" id="review-progress"></div></div></div>
       <div class="review-tabs" role="tablist" aria-label="Reviewer sections">
-        <button class="tab-button" role="tab" aria-selected="true" data-tab="quick">Quick Review</button>
-        <button class="tab-button" role="tab" aria-selected="false" data-tab="cards">Flashcards</button>
-        <button class="tab-button" role="tab" aria-selected="false" data-tab="identification">Identification</button>
-        <button class="tab-button" role="tab" aria-selected="false" data-tab="truefalse">True or False</button>
+        <button class="tab-button" role="tab" aria-selected="true" data-tab="quick">${icon("book")}Quick Review</button>
+        <button class="tab-button" role="tab" aria-selected="false" data-tab="cards">${icon("cards")}Flashcards</button>
+        <button class="tab-button" role="tab" aria-selected="false" data-tab="identification">${icon("search")}Identification</button>
+        <button class="tab-button" role="tab" aria-selected="false" data-tab="truefalse">${icon("check")}True or False</button>
       </div>
       <section class="reviewer-card review-panel" data-panel="quick"><h2>Quick Review</h2><div class="grid grid-2">${data.quickReview.map((item) => `<article><h3>${item.term}</h3><p>${item.summary}</p></article>`).join("")}</div></section>
-      <section class="reviewer-card review-panel" data-panel="cards" hidden><p class="progress-meta"><span id="flashcard-position"></span><span>Tap or click to reveal</span></p><button class="flashcard" id="flashcard" type="button"><span class="side-label" id="flashcard-label"></span><span class="flashcard-text" id="flashcard-text"></span></button><div class="button-row"><button class="button secondary" id="card-prev" type="button">Previous</button><button class="button secondary" id="card-next" type="button">Next</button><button class="button secondary" id="card-shuffle" type="button">Shuffle</button><button class="button secondary" id="card-reset" type="button">Reset</button></div></section>
+      <section class="reviewer-card review-panel" data-panel="cards" hidden><p class="progress-meta"><span id="flashcard-position"></span><span>Tap or click to reveal</span></p><button class="flashcard" id="flashcard" type="button"><span class="side-label" id="flashcard-label"></span><span class="flashcard-text" id="flashcard-text"></span></button><div class="button-row"><button class="button secondary" id="card-prev" type="button">${icon("arrow-left")}Previous</button><button class="button secondary" id="card-next" type="button">Next${icon("arrow-right")}</button><button class="button secondary" id="card-shuffle" type="button">${icon("shuffle")}Shuffle</button><button class="button secondary" id="card-reset" type="button">${icon("rotate")}Reset</button></div></section>
       <section class="reviewer-card review-panel" data-panel="identification" hidden><h2>Identification Practice</h2>${data.identification.map((item, index) => `<div class="practice-question"><label for="id-answer-${index}">${item.question}</label><input class="field" id="id-answer-${index}" autocomplete="off"><button class="button small" type="button" data-id-check="${index}">Check</button><p class="feedback-inline" id="id-feedback-${index}" aria-live="polite"></p></div>`).join("")}</section>
       <section class="reviewer-card review-panel" data-panel="truefalse" hidden><h2>True or False Practice</h2>${data.trueFalse.map((item, index) => `<div class="practice-question"><p>${item.question}</p><div class="button-row"><button class="button secondary" type="button" data-tf="${index}:true">True</button><button class="button secondary" type="button" data-tf="${index}:false">False</button></div><p class="feedback-inline" id="tf-feedback-${index}" aria-live="polite"></p></div>`).join("")}</section>`;
 

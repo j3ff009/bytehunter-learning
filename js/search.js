@@ -16,7 +16,7 @@
     let matches = lessons.filter((lesson) => !query || searchable(lesson).includes(query));
     if (filter !== "all") matches = matches.filter((lesson) => availableFor(lesson, filter));
     results.innerHTML = matches.length
-      ? matches.map((lesson) => `<article class="card lesson-card"><div class="meta"><span>${lesson.subject}</span><span>${lesson.category}</span></div><h3><a href="${window.ByteHunter.url(`lessons/${lesson.slug}/index.html`)}">${lesson.title}</a></h3><p>${lesson.description}</p></article>`).join("")
+      ? matches.map((lesson) => `<article class="card lesson-card"><span class="lesson-card-icon" aria-hidden="true">${window.ByteHunter.icon("book")}</span><div class="meta"><span>${lesson.subject}</span><span>${lesson.category}</span></div><h3><a href="${window.ByteHunter.url(`lessons/${lesson.slug}/index.html`)}">${lesson.title}</a></h3><p>${lesson.description}</p></article>`).join("")
       : '<p class="empty">No matching learning resources. Try a broader search.</p>';
     results.setAttribute("aria-label", `${matches.length} search result${matches.length === 1 ? "" : "s"}`);
   }
