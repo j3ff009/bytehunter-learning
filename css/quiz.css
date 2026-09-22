@@ -38,4 +38,8 @@
 .flashcard:focus-visible, .choice:focus-within { outline: 3px solid var(--warning); outline-offset: 3px; }
 .practice-question .field { margin: .55rem 0; }
 .quiz-card .eyebrow { display: inline-flex; align-items: center; gap: .45rem; }
+@media (max-width: 700px) {
+  .review-tabs { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); overflow: visible; }
+  .tab-button { min-width: 0; width: 100%; justify-content: center; padding-inline: .5rem; border-radius: 12px; font-size: .86rem; }
+}
 @media (max-width: 560px) { .practice-shell { margin-block: 1.5rem; } .quiz-card, .reviewer-card { border-radius: 16px; } .button-row .button { flex: 1 1 auto; } }

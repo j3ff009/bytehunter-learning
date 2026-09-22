@@ -6,7 +6,7 @@
   const page = document.body.dataset.page || "";
 
   const url = (path = "") => new URL(path, root).href;
-  const icon = (name, className = "icon") => `<svg class="${className}" aria-hidden="true" focusable="false"><use href="${url(`assets/icons/ui.svg#${name}`)}"></use></svg>`;
+  const icon = (name, className = "icon") => `<svg class="${className}" aria-hidden="true" focusable="false"><use href="${url(`assets/icons/ui.svg?v=20260922-ui2#${name}`)}"></use></svg>`;
   const fetchJSON = async (path) => {
     const response = await fetch(url(path), { cache: "no-cache" });
     if (!response.ok) throw new Error(`Request failed: ${response.status}`);
