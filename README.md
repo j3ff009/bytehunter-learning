@@ -59,7 +59,7 @@ The same validation runs automatically on GitHub pushes and pull requests.
 8. Add one lesson entry to `data/lessons.json`.
 9. Set resource visibility and confirm the dates.
 10. Run `node scripts/validate.mjs` and test locally.
-11. Commit and push. A connected Cloudflare Pages project redeploys automatically.
+11. Commit and push. GitHub Pages redeploys `main` automatically.
 
 Example:
 
@@ -198,16 +198,20 @@ Search `index.html` for `ANALYTICS`. Add the official Cloudflare Web Analytics o
 
 ## SEO and launch settings
 
-Before public launch, replace every `https://example.com` occurrence with the final HTTPS domain. At minimum, update:
+The current public URL is `https://j3ff009.github.io/bytehunter-learning/`. Public pages, `robots.txt`, and `sitemap.xml` use it. When adding a lesson, replace the `https://example.com` canonical URL in each copied template page. If the site moves to a custom domain, update:
 
 - Canonical and Open Graph URLs in HTML files
 - `robots.txt`
 - Every URL in `sitemap.xml`
-- The placeholder contact email in `contact.html`
+- The public GitHub Issues link in `contact.html` if the feedback destination changes
 
 When adding a public reviewer, quiz, or activity, add its URL to `sitemap.xml`. Do not add hidden or scheduled resources before they are public. Lesson pages include LearningResource and Article structured data; keep their dates and descriptions synchronized with the catalog.
 
-## Deploy with GitHub and Cloudflare Pages
+## Deployment
+
+The current site is published by GitHub Pages from `main`. The normal workflow is edit -> validate -> commit -> push; GitHub Pages rebuilds automatically at `https://j3ff009.github.io/bytehunter-learning/`.
+
+### Optional Cloudflare Pages setup
 
 1. Sign in to Cloudflare and open **Workers & Pages**.
 2. Select **Create application**, then **Pages**, then **Connect to Git**.
@@ -218,7 +222,7 @@ When adding a public reviewer, quiz, or activity, add its URL to `sitemap.xml`. 
 7. Build output directory: `.` (the repository root).
 8. Save and deploy.
 
-After the first deployment, the weekly workflow is simply edit -> validate -> commit -> push. Cloudflare watches `main` and creates a new deployment automatically. Pull requests can receive preview deployments if that option is enabled in the Cloudflare project.
+If a Cloudflare Pages project is connected later, it can also watch `main` and deploy on each push. Pull requests can receive preview deployments if that option is enabled in Cloudflare.
 
 ### Direct upload alternative
 
@@ -226,7 +230,7 @@ For a one-time direct upload, create a ZIP whose top level contains `index.html`
 
 ### Custom domain
 
-Open the deployed Pages project, choose **Custom domains**, add the domain, and follow Cloudflare's DNS prompts. After it is active, replace all `example.com` placeholders as described above and push the update.
+Open the deployed Pages project, choose **Custom domains**, add the domain, and follow Cloudflare's DNS prompts. After it is active, replace the current GitHub Pages URL in canonical links, `robots.txt`, and `sitemap.xml`, then push the update.
 
 ## Settings
 

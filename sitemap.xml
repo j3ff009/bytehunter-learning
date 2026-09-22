@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://example.com/</loc><lastmod>2026-09-14</lastmod></url>
-  <url><loc>https://example.com/about.html</loc><lastmod>2026-09-14</lastmod></url>
-  <url><loc>https://example.com/subjects/it.html</loc><lastmod>2026-09-16</lastmod></url>
-  <url><loc>https://example.com/subjects/cs.html</loc><lastmod>2026-09-16</lastmod></url>
-  <url><loc>https://example.com/subjects/cpe.html</loc><lastmod>2026-09-16</lastmod></url>
-  <url><loc>https://example.com/subjects/accountancy.html</loc><lastmod>2026-09-16</lastmod></url>
-  <url><loc>https://example.com/lessons/introduction-to-it-in-business/</loc><lastmod>2026-09-16</lastmod></url>
-  <url><loc>https://example.com/lessons/introduction-to-it-in-business/reviewer.html</loc><lastmod>2026-09-16</lastmod></url>
-  <url><loc>https://example.com/lessons/introduction-to-it-in-business/quiz.html</loc><lastmod>2026-09-16</lastmod></url>
-  <url><loc>https://example.com/lessons/introduction-to-it-in-business/activity.html</loc><lastmod>2026-09-16</lastmod></url>
+  <url><loc>https://j3ff009.github.io/bytehunter-learning/</loc><lastmod>2026-09-22</lastmod></url>
+  <url><loc>https://j3ff009.github.io/bytehunter-learning/about.html</loc><lastmod>2026-09-14</lastmod></url>
+  <url><loc>https://j3ff009.github.io/bytehunter-learning/contact.html</loc><lastmod>2026-09-22</lastmod></url>
+  <url><loc>https://j3ff009.github.io/bytehunter-learning/subjects/it.html</loc><lastmod>2026-09-16</lastmod></url>
+  <url><loc>https://j3ff009.github.io/bytehunter-learning/subjects/cs.html</loc><lastmod>2026-09-16</lastmod></url>
+  <url><loc>https://j3ff009.github.io/bytehunter-learning/subjects/cpe.html</loc><lastmod>2026-09-16</lastmod></url>
+  <url><loc>https://j3ff009.github.io/bytehunter-learning/subjects/accountancy.html</loc><lastmod>2026-09-16</lastmod></url>
+  <url><loc>https://j3ff009.github.io/bytehunter-learning/lessons/introduction-to-it-in-business/</loc><lastmod>2026-09-16</lastmod></url>
+  <url><loc>https://j3ff009.github.io/bytehunter-learning/lessons/introduction-to-it-in-business/reviewer.html</loc><lastmod>2026-09-16</lastmod></url>
+  <url><loc>https://j3ff009.github.io/bytehunter-learning/lessons/introduction-to-it-in-business/quiz.html</loc><lastmod>2026-09-16</lastmod></url>
+  <url><loc>https://j3ff009.github.io/bytehunter-learning/lessons/introduction-to-it-in-business/activity.html</loc><lastmod>2026-09-16</lastmod></url>
 </urlset>

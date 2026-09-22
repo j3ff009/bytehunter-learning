@@ -71,6 +71,9 @@ for (const lesson of lessons) {
 const attrPattern = /(?:href|src)=["']([^"']+)["']/gi;
 for (const file of files.filter((path) => extname(path) === ".html")) {
   const html = await readFile(file, "utf8");
+  if (!file.includes(join("lessons", "_template")) && /https:\/\/example\.com|mailto:[^"']+@example\.com/i.test(html)) {
+    errors.push(`${file.slice(root.length + 1)}: replace placeholder public URLs before publishing`);
+  }
   let match;
   while ((match = attrPattern.exec(html))) {
     const value = match[1];
@@ -79,6 +82,12 @@ for (const file of files.filter((path) => extname(path) === ".html")) {
     let target = normalize(join(dirname(file), pathname));
     if (pathname.endsWith("/")) target = join(target, "index.html");
     if (!await exists(target)) errors.push(`${file.slice(root.length + 1)}: broken local reference ${value}`);
+  }
+}
+
+for (const name of ["robots.txt", "sitemap.xml"]) {
+  if ((await readFile(join(root, name), "utf8")).includes("https://example.com")) {
+    errors.push(`${name}: replace the placeholder site URL before publishing`);
   }
 }
 
