@@ -16,6 +16,7 @@ The main learning flow is:
 |-- subjects/                       JSON-powered subject pages
 |-- lessons/
 |   |-- introduction-to-it-in-business/  Accountancy Lesson 1
+|   |-- spreadsheet-data-analysis/        Accountancy Lesson 2 presentation + PDF
 |   `-- _template/                       Copy-ready lesson template
 |-- data/                           Central lesson, subject, product and site settings
 |-- css/                            Shared, lesson and quiz styles
@@ -70,6 +71,8 @@ git push
 ```
 
 The homepage, search, latest lessons, popular lessons, reviewer list, quiz list, related lessons, next lesson, and subject pages all read from `data/lessons.json`. Adding a lesson normally requires only its folder plus one catalog entry.
+
+For a standalone interactive presentation, place its `index.html` and `lesson.pdf` in a lesson folder and set `"format": "presentation"` in the catalog entry. The homepage and subject page will link to the presentation and its PDF. Unlike a page-by-page lesson, this format does not need `lesson.json` or `lesson-data.json`; reviewer, quiz, and activity resources can be added separately when available.
 
 ## Page-by-page lesson system
 

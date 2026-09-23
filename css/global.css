@@ -121,6 +121,8 @@ h3 { font-size: 1.18rem; margin: 0 0 .55rem; }
 .badge.locked { color: var(--warning); }
 .lesson-card h3 a { color: var(--text); text-decoration: none; }
 .lesson-card h3 a:hover { color: var(--accent); }
+.lesson-card-actions { margin-top: 1rem; gap: .55rem; }
+.lesson-card-actions .button { margin-top: 0; align-self: auto; }
 .search-panel { max-width: 880px; margin: auto; padding: 1.2rem; border: 1px solid var(--border); border-radius: 22px; background: var(--surface); }
 .search-controls { display: grid; grid-template-columns: 1fr auto; gap: .75rem; }
 .search-input, .field { width: 100%; min-height: 50px; border: 1px solid var(--border); border-radius: 12px; background: var(--bg); color: var(--text); padding: .75rem 1rem; }
@@ -170,6 +172,7 @@ h3 { font-size: 1.18rem; margin: 0 0 .55rem; }
   .section-head { align-items: flex-start; flex-direction: column; }
   .search-controls { grid-template-columns: 1fr; }
   .hero-actions .button { width: 100%; }
+  .lesson-card-actions .button { flex: 1 1 auto; }
 }
 @media (prefers-reduced-motion: reduce) { * { scroll-behavior: auto !important; transition-duration: .01ms !important; animation-duration: .01ms !important; } }
 @media print { .site-header, .site-footer, .ad-slot, .hero-actions, .button-row { display: none !important; } body { background: white; color: black; } main { width: 100%; } }

@@ -1,0 +1,758 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Lesson 2: Spreadsheet Data Analysis | ByteSmith</title>
+  <meta name="description" content="Explore charts and Pivot Tables for business and accounting analysis in this interactive Spreadsheet Data Analysis presentation.">
+  <link rel="canonical" href="https://j3ff009.github.io/bytehunter-learning/lessons/spreadsheet-data-analysis/">
+  <link rel="icon" href="../../assets/icons/favicon.svg" type="image/svg+xml">
+
+  <!-- Chart.js powers the presentation charts. -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+  <style>
+    /* Reset + projector-friendly 16:9 base */
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html,body { height:100%; width:100%; }
+    body {
+      font-family: "Segoe UI", Tahoma, Arial, sans-serif;
+      background: linear-gradient(135deg,#e9f5ec 0%,#ffffff 100%);
+      display:flex; align-items:center; justify-content:center;
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+      height:100vh; overflow:hidden;
+    }
+
+    /* Stage (centered slide area) */
+    .stage { width:100%; height:100%; display:flex; align-items:center; justify-content:center; padding:20px; }
+
+    /* Slide container sized for 16:9 projector (responsive) */
+    .slide {
+      display:none;
+      width:92vw;
+      height:82vh;
+      max-width:1366px;
+      max-height:768px;
+      background: rgba(255,255,255,0.98);
+      border-radius:12px;
+      box-shadow:0 10px 30px rgba(0,0,0,0.12);
+      padding: 68px 40px 40px 40px; /* leave space for ribbon */
+      position:relative;
+      overflow:hidden;
+      flex-direction:column;
+      align-items:center;
+      text-align:center;
+    }
+    .slide.active { display:flex; animation: fadeIn 420ms ease both; }
+    @keyframes fadeIn { from{ opacity:0; transform:translateY(18px)} to{opacity:1; transform:none} }
+
+    /* Ribbon header applied to every slide (injected by JS) */
+    .ribbon {
+      position:absolute; top:0; left:0; right:0; height:56px;
+      background: linear-gradient(90deg,#1f7a46 0%, #16893f 100%);
+      color:#fff; display:flex; align-items:center; padding:8px 20px;
+      border-top-left-radius:12px; border-top-right-radius:12px;
+      box-shadow: inset 0 -2px 0 rgba(255,255,255,0.08);
+      z-index:5;
+    }
+    .ribbon .ribbon-text { font-weight:700; font-size:1.05rem; letter-spacing:0.6px; }
+    .ribbon { justify-content:space-between; gap:12px; }
+    .ribbon-actions { display:flex; flex:0 0 auto; align-items:center; gap:8px; }
+    .ribbon-actions a { color:#fff; text-decoration:none; border:1px solid rgba(255,255,255,.55); border-radius:8px; padding:6px 10px; font-size:.85rem; font-weight:700; white-space:nowrap; }
+    .ribbon-actions a:hover, .ribbon-actions a:focus-visible { background:rgba(255,255,255,.18); }
+    .ribbon-actions a:focus-visible { outline:3px solid #f59e0b; outline-offset:2px; }
+
+    /* subtle Excel grid background behind slides */
+    .excel-grid {
+      position:absolute; inset:0; z-index:-1;
+      background-image:
+        linear-gradient(0deg, transparent 24%, rgba(0,0,0,0.02) 25%, rgba(0,0,0,0.02) 26%, transparent 27%),
+        linear-gradient(90deg, transparent 24%, rgba(0,0,0,0.02) 25%, rgba(0,0,0,0.02) 26%, transparent 27%);
+      background-size:48px 48px; opacity:0.85;
+    }
+
+    /* Headings + definitions */
+    h1 { color:#1b5f3a; font-size:2.2rem; margin:10px 0 6px 0; }
+    .definition { font-style:italic; color:#475569; margin-bottom:12px; font-size:1rem; }
+    h2 { color:#14532d; margin:8px 0; }
+    p, li { color:#222; font-size:1.02rem; line-height:1.45; }
+    ul, ol { margin-left:1.1rem; text-align:left; }
+
+    /* Chart area */
+    .chart-wrap { width:100%; flex:1 1 auto; display:flex; align-items:center; justify-content:center; margin-top:8px; }
+    canvas { max-width:100%; max-height:56vh; display:block; }
+
+    /* Tables */
+    .table-wrap { width:100%; display:flex; align-items:center; justify-content:center; margin-top:12px; }
+    table { border-collapse:collapse; width:100%; max-width:920px; font-size:1rem; }
+    thead th { background:#217346; color:#fff; padding:10px; }
+    td, th { border:1px solid #d1d5db; padding:10px; text-align:center; }
+
+    /* Controls */
+    .controls {
+      position: fixed; bottom:18px; right:18px; display:flex; flex-direction:column; align-items:flex-end; gap:8px; z-index:60;
+    }
+    button {
+      background:#217346; color:#fff; border:0; padding:10px 14px; border-radius:8px; cursor:pointer; font-size:1rem;
+      box-shadow:0 6px 16px rgba(0,0,0,0.08);
+    }
+    button:hover{ background:#175734; }
+    #slideCounter {
+      background:#d9f0e0; color:#0f5132; padding:8px 12px; border-radius:8px; font-weight:600;
+    }
+
+    /* Two-column helper */
+    .two-col { display:flex; gap:22px; width:100%; align-items:flex-start; justify-content:center; flex-wrap:wrap; margin-top:12px; }
+    .col { flex:1 1 44%; min-width:280px; text-align:left; }
+
+    /* Responsive tweaks */
+    @media (max-width:1000px) {
+      .slide { padding:72px 18px 18px 18px; height:86vh; }
+      h1 { font-size:1.6rem; }
+      .ribbon { height:52px; padding:8px 14px; }
+      canvas { max-height:42vh; }
+    }
+
+    /* A scrollable reading surface keeps dense slides intact on every screen. */
+    body { min-height:100vh; min-height:100dvh; }
+    .stage { height:100vh; height:100dvh; padding:16px 16px 76px; }
+    .slide {
+      width:min(100%, 1200px); height:100%; max-height:none;
+      padding:76px clamp(20px, 4vw, 48px) 32px;
+      overflow-x:hidden; overflow-y:auto; overscroll-behavior:contain;
+      scrollbar-gutter:stable;
+    }
+    .slide.active { animation:fadeIn 240ms ease both; }
+    h1 { font-size:clamp(1.65rem, 3vw, 2.25rem); line-height:1.18; max-width:950px; }
+    h2 { line-height:1.25; }
+    .definition { max-width:880px; line-height:1.5; }
+    p, li { line-height:1.55; }
+    li + li { margin-top:0.5rem; }
+    .ribbon { min-height:56px; height:auto; }
+    .ribbon .ribbon-text { line-height:1.25; }
+    .chart-wrap { flex:none; width:100%; height:clamp(260px, 40vh, 410px); min-height:260px; }
+    .chart-wrap canvas { width:100% !important; height:100% !important; max-height:none; }
+    .chart-message { padding:20px; color:#475569; background:#f3f7f4; border-radius:8px; }
+    .table-wrap, .table-scroll { display:block; max-width:100%; overflow-x:auto; -webkit-overflow-scrolling:touch; }
+    table { min-width:480px; }
+    .two-col { align-items:stretch; }
+    .col { min-width:0; }
+    .col > div:has(> canvas) { min-height:250px; }
+    .controls {
+      left:50%; right:auto; bottom:12px; transform:translateX(-50%);
+      width:max-content; max-width:calc(100% - 24px);
+      flex-direction:row; align-items:center; gap:10px;
+      background:rgba(255,255,255,.96); padding:8px;
+      border:1px solid #d4e4d9; border-radius:14px;
+      box-shadow:0 10px 30px rgba(15,61,37,.16);
+    }
+    .controls .button-row { display:flex; gap:6px; }
+    button { min-height:44px; box-shadow:none; white-space:nowrap; font-weight:600; }
+    button:focus-visible { outline:3px solid #f59e0b; outline-offset:2px; }
+    #slideCounter { white-space:nowrap; font-size:.875rem; }
+    .sr-only { position:absolute; width:1px; height:1px; padding:0; margin:-1px; overflow:hidden; clip:rect(0,0,0,0); white-space:nowrap; border:0; }
+
+    @media (max-width:700px) {
+      .stage { padding:0 0 calc(78px + env(safe-area-inset-bottom)); }
+      .slide {
+        width:100%; height:100%; border-radius:0; box-shadow:none;
+        padding:94px 18px 28px; scrollbar-gutter:auto;
+      }
+      .ribbon { border-radius:0; padding:10px 18px; }
+      .ribbon .ribbon-text { font-size:.9rem; letter-spacing:0; }
+      .ribbon-actions { gap:4px; }
+      .ribbon-actions a { padding:6px 7px; font-size:.8rem; }
+      h1 { font-size:clamp(1.45rem, 6vw, 1.85rem); margin:4px 0 10px; }
+      .definition { font-size:1rem; margin-bottom:16px; }
+      p, li { font-size:1rem; }
+      ul, ol { margin-left:1.4rem; padding-right:4px; }
+      .two-col { display:block; margin-top:16px; }
+      .col { width:100%; margin-bottom:18px; }
+      .chart-wrap { height:300px; min-height:300px; margin-top:18px; }
+      .col > div:has(> canvas) { height:300px !important; }
+      .col > div:has(> canvas) canvas { max-height:none; }
+      .workflow { flex-direction:column; }
+      .workflow-arrow { transform:rotate(90deg); line-height:1; }
+      .table-wrap { justify-content:flex-start; }
+      td, th { padding:9px 11px; font-size:.9rem; }
+      .controls { bottom:max(8px, env(safe-area-inset-bottom)); width:calc(100% - 16px); max-width:520px; justify-content:space-between; gap:6px; padding:6px; }
+      .controls .button-row { flex:1; justify-content:flex-end; }
+      button { padding:9px 10px; font-size:.9rem; }
+      #slideCounter { padding:7px 5px; font-size:.8rem; }
+      #fullscreenBtn { width:44px; overflow:hidden; font-size:0; }
+      #fullscreenBtn::before { content:"⛶"; font-size:1.35rem; line-height:1; }
+    }
+    @media (max-width:380px) {
+      .slide { padding-inline:14px; }
+      .controls { width:calc(100% - 8px); }
+      button { padding-inline:7px; }
+    }
+    @media (prefers-reduced-motion:reduce) {
+      .slide.active { animation:none; }
+    }
+  </style>
+</head>
+<body>
+  <div class="excel-grid" aria-hidden="true"></div>
+
+  <main class="stage" id="presentation">
+    <!-- Slides (1..18) -->
+    <!-- Slide 1 -->
+    <section class="slide" data-slide="1">
+      <h1>Spreadsheet Data Analysis</h1>
+      <div class="definition">Definition: Tools and techniques for organizing, computing, and visualizing financial data using spreadsheets.</div>
+      <!-- Excel-style icon -->
+      <div style="display:flex;gap:18px;align-items:center;justify-content:center;margin-top:12px;">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="94" height="94">
+          <path fill="#185C37" d="M8 8h32v32H8z"/>
+          <path fill="#107C41" d="M14 8h26v32H14z"/>
+          <path fill="#33C481" d="M8 8h6v32H8z"/>
+          <text x="18" y="30" font-family="Segoe UI" font-size="16" fill="white" font-weight="700">X</text>
+        </svg>
+      </div>
+      <p style="margin-top:18px;font-weight:600;color:#1a5f3b;">IT Application Tools in Business</p>
+      <p style="margin-top:12px;font-size:1rem;color:#333;">Presented by: <strong>Sir Jeff Vergel F. Falceso</strong></p>
+    </section>
+
+    <!-- Slide 2 -->
+    <section class="slide" data-slide="2">
+      <h1>Learning Outcomes</h1>
+      <div class="definition">Definition: What participants will learn and be able to do after the lesson.</div>
+      <ul style="max-width:880px;">
+        <li>Understand spreadsheet data analysis in business.</li>
+        <li>Apply Excel functions for computation and summarization.</li>
+        <li>Create charts to visualize trends and comparisons.</li>
+        <li>Use Pivot Tables to summarize large datasets.</li>
+        <li>Integrate visuals and pivot summaries for reporting.</li>
+      </ul>
+    </section>
+
+    <!-- Slide 3 -->
+    <section class="slide" data-slide="3">
+      <h1>Overview</h1>
+      <div class="definition">Definition: Why spreadsheets are essential—organize, compute, and visualize financial data.</div>
+      <p style="max-width:920px;">Spreadsheet software like Microsoft Excel or Google Sheets provides tools for analyzing and presenting financial data—sales, expenses, budgets—helping decision-makers interpret and act on results.</p>
+    </section>
+
+    <!-- Slide 4 -->
+    <section class="slide" data-slide="4">
+      <h1>Introduction to Charts</h1>
+      <div class="definition">Definition: Charts turn numbers and tables into visuals that reveal patterns and comparisons quickly.</div>
+      <p style="max-width:920px;">Charts help reveal trends, comparisons, and distributions in business data—essential for reporting and decision-making.</p>
+      <div class="two-col" style="justify-content:center;">
+        <div style="text-align:center;">
+          <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="#217346"><path d="M3 3v18h18" stroke-width="1.6"/></svg>
+          <div style="margin-top:8px;font-weight:600">Column Chart</div>
+        </div>
+        <div style="text-align:center;">
+          <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="#217346"><path d="M3 12h18"/></svg>
+          <div style="margin-top:8px;font-weight:600">Line / Pie / Bar</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Slide 5 -->
+    <section class="slide" data-slide="5">
+      <h1>Column Chart — Comparing Product Sales</h1>
+      <div class="definition">Definition: Compares values across categories (e.g., product quarterly sales).</div>
+      <div class="chart-wrap"><canvas id="columnChart"></canvas></div>
+    </section>
+
+    <!-- Slide 6 -->
+    <section class="slide" data-slide="6">
+      <h1>Line Chart — Revenue Trend</h1>
+      <div class="definition">Definition: Displays changes over time to highlight trends.</div>
+      <div class="chart-wrap"><canvas id="lineChart"></canvas></div>
+    </section>
+
+    <!-- Slide 7 -->
+    <section class="slide" data-slide="7">
+      <h1>Pie Chart — Expense Distribution</h1>
+      <div class="definition">Definition: Shows percentage composition of a whole (e.g., expense categories).</div>
+      <div class="chart-wrap"><canvas id="pieChart"></canvas></div>
+    </section>
+
+    <!-- Slide 8 -->
+    <section class="slide" data-slide="8">
+      <h1>Bar Chart — Branch Sales Comparison</h1>
+      <div class="definition">Definition: Compares quantities across items (useful for branch comparisons).</div>
+      <div class="chart-wrap"><canvas id="barChart"></canvas></div>
+    </section>
+
+    <!-- Slide 9 -->
+    <section class="slide" data-slide="9">
+      <h1>Steps in Creating a Chart</h1>
+      <div class="definition">Definition: Basic actions to convert selected data into a chart.</div>
+      <div class="two-col">
+        <div class="col">
+          <ol>
+            <li>Select the data range.</li>
+            <li>Go to <em>Insert → Charts → Choose Type</em>.</li>
+            <li>Customize titles, labels, colors, and legends.</li>
+            <li>Interpret the visualization for insights.</li>
+          </ol>
+        </div>
+        <div class="col" style="text-align:center;">
+          <p style="font-weight:600;margin-bottom:8px;">Excel-like preview</p>
+          <div style="background:#f7fbf7;padding:12px;border-radius:8px;border:1px solid #d1d5db;">
+            <canvas id="excelPreviewChart"></canvas>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Slide 10 -->
+    <section class="slide" data-slide="10">
+      <h1>Example: Monthly Sales Analysis</h1>
+      <div class="definition">Definition: Use charts to identify best-performing months and guide decisions.</div>
+      <div class="table-wrap" style="margin-top:8px;">
+        <table style="max-width:720px;">
+          <thead><tr><th>Month</th><th>Sales (₱)</th></tr></thead>
+          <tbody>
+            <tr><td>January</td><td>50,000</td></tr>
+            <tr><td>February</td><td>65,000</td></tr>
+            <tr><td>March</td><td>80,000</td></tr>
+            <tr><td>April</td><td>95,000</td></tr>
+            <tr><td>May</td><td>70,000</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="chart-wrap" style="margin-top:10px;"><canvas id="salesChart"></canvas></div>
+      <p style="margin-top:10px;background:#f3f5f7;padding:10px;border-radius:8px;max-width:900px;">💡 Insight: April recorded the highest sales (₱95,000); consider focusing marketing on high-performing months.</p>
+    </section>
+
+    <!-- Slide 11 -->
+    <section class="slide" data-slide="11">
+      <h1>Pivot Tables — Summarizing Business Data</h1>
+      <div class="definition">Definition: Pivot Tables reorganize and summarize large datasets without changing the raw data.</div>
+      <p style="max-width:880px;">Pivot Tables allow dynamic grouping, aggregation (sum, avg), and quick exploration using fields for Rows, Columns, Values, and Filters.</p>
+      <div class="chart-wrap" style="margin-top:10px;"><canvas id="pivotChart"></canvas></div>
+    </section>
+
+    <!-- Slide 12 -->
+    <section class="slide" data-slide="12">
+      <h1>Pivot Tables — Key Components</h1>
+      <div class="definition">Definition: Rows, Columns, Values, and Filters — these areas determine how data is summarized.</div>
+      <div class="two-col">
+        <div class="col">
+          <h2 style="font-size:1.05rem;color:#14532d;margin-bottom:8px;">Components</h2>
+          <ul>
+            <li><strong>Rows:</strong> Categories (e.g., Branch)</li>
+            <li><strong>Columns:</strong> Time periods or product lines</li>
+            <li><strong>Values:</strong> Summarized data (e.g., total sales)</li>
+            <li><strong>Filters:</strong> Refine the view (e.g., show only 2024)</li>
+          </ul>
+          <div style="font-size:0.95rem;color:#475569;margin-top:8px;"><em>Filter applied: Year = 2024</em></div>
+        </div>
+
+        <div class="col" style="text-align:center;">
+          <div style="background:#fff;border:1px solid #d1d5db;padding:10px;border-radius:8px;">
+            <table>
+              <thead><tr><th>Branch</th><th>Q1 2024</th><th>Q2 2024</th><th>Total (₱)</th></tr></thead>
+              <tbody>
+                <tr><td>Batangas</td><td>100,000</td><td>120,000</td><td>220,000</td></tr>
+                <tr><td>Lipa</td><td>80,000</td><td>95,000</td><td>175,000</td></tr>
+                <tr><td>Tanauan</td><td>70,000</td><td>90,000</td><td>160,000</td></tr>
+                <tr style="background:#eaf4ec;font-weight:700;"><td colspan="3">Grand Total</td><td>555,000</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+      <div class="chart-wrap" style="margin-top:12px;"><canvas id="pivotComponentsChart"></canvas></div>
+      <p style="margin-top:12px;background:#f3f5f7;padding:10px;border-radius:8px;max-width:900px;">💡 Insight: Batangas branch leads in total sales for Q1–Q2 2024.</p>
+    </section>
+
+    <!-- Slide 13 -->
+    <section class="slide" data-slide="13">
+      <h1>Steps to Create a Pivot Table</h1>
+      <div class="definition">Definition: Procedure to build a Pivot Table and generate a quick summary from raw data.</div>
+
+      <div class="two-col" style="margin-top:12px;">
+        <div class="col">
+          <ol>
+            <li><strong>Select</strong> the data range.</li>
+            <li><strong>Go to</strong> <em>Insert → Pivot Table</em>.</li>
+            <li><strong>Drag fields</strong> (e.g., <em>Branch → Rows</em>, <em>Sales → Values</em>).</li>
+            <li><strong>Use filters</strong> and sorting options to explore trends.</li>
+          </ol>
+
+          <p style="margin-top:8px;background:#f3f5f7;padding:10px;border-radius:8px;">💡 <strong>Tip:</strong> Pivot Tables update automatically when your source data changes — ideal for quick business insights.</p>
+        </div>
+
+        <div class="col" style="text-align:center;">
+          <div style="background:#fff;border:1px solid #d1d5db;padding:12px;border-radius:8px;">
+            <div style="font-weight:700;background:#217346;color:#fff;padding:8px;border-radius:6px;">PivotTable Fields</div>
+            <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:8px;">
+              <div style="background:#e6f4ea;padding:8px;border-radius:6px;"><strong>Field List</strong><br>Branch<br>Product<br>Sales<br>Year</div>
+              <div style="display:flex;flex-direction:column;gap:8px;">
+                <div style="background:#fff9db;padding:8px;border-radius:6px;">Filters → Year = 2024</div>
+                <div style="background:#dbeafe;padding:8px;border-radius:6px;">Rows → Branch</div>
+                <div style="background:#dcfce7;padding:8px;border-radius:6px;">Values → Sum of Sales</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div style="background:#ffffff;border:1px solid #cfd8dc;border-radius:8px;padding:10px;margin-top:18px;width:85%;max-width:800px;">
+        <table style="width:100%;border-collapse:collapse;font-size:0.95rem;">
+          <thead style="background:#217346;color:white;"><tr><th>Branch (Row)</th><th>Q1 2024</th><th>Q2 2024</th><th>Total Sales (₱)</th></tr></thead>
+          <tbody>
+            <tr><td>Batangas</td><td>₱100,000</td><td>₱120,000</td><td>₱220,000</td></tr>
+            <tr><td>Lipa</td><td>₱80,000</td><td>₱95,000</td><td>₱175,000</td></tr>
+            <tr><td>Tanauan</td><td>₱70,000</td><td>₱90,000</td><td>₱160,000</td></tr>
+            <tr style="background:#eaf4ec;font-weight:bold;"><td colspan="3" style="text-align:right;">Grand Total</td><td>₱555,000</td></tr>
+          </tbody>
+        </table>
+        <div style="text-align:right;font-size:0.9em;margin-top:6px;color:#555;"><em>Filter Applied: Year = 2024</em></div>
+      </div>
+
+      <div class="chart-wrap" style="margin-top:14px;"><canvas id="pivotStepsChart"></canvas></div>
+    </section>
+
+    <!-- Slide 14 -->
+    <section class="slide" data-slide="14">
+      <h1>Example: Pivot Table in Accounting</h1>
+      <div class="definition">Definition: Summarize sales by region to compare performance and attribute contributions to total revenue.</div>
+      <div class="two-col" style="align-items:flex-start;">
+        <div class="col">
+          <div style="background:#fff;border:1px solid #d1d5db;padding:12px;border-radius:8px;">
+            <table>
+              <thead><tr><th>Region</th><th>Q1</th><th>Q2</th><th>Total</th></tr></thead>
+              <tbody>
+                <tr><td>Luzon</td><td>250,000</td><td>270,000</td><td>520,000</td></tr>
+                <tr><td>Visayas</td><td>180,000</td><td>200,000</td><td>380,000</td></tr>
+                <tr><td>Mindanao</td><td>220,000</td><td>240,000</td><td>460,000</td></tr>
+                <tr style="background:#eaf4ec;font-weight:700;"><td colspan="3">Grand Total</td><td>1,360,000</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <div class="col" style="display:flex;align-items:center;justify-content:center;">
+          <div style="width:100%;height:45vh;"><canvas id="pivotExampleChart"></canvas></div>
+        </div>
+      </div>
+      <p style="margin-top:12px;background:#f3f5f7;padding:10px;border-radius:8px;width:90%;">💡 Insight: Luzon contributes the highest sales overall — focus strategy accordingly.</p>
+    </section>
+
+    <!-- Slide 15 -->
+    <section class="slide" data-slide="15">
+      <h1>Example Workflow: Raw → Pivot → Chart</h1>
+      <div class="definition">Definition: Typical steps that transform raw records into summarized visuals for stakeholders.</div>
+      <div class="workflow" style="display:flex;gap:18px;align-items:center;justify-content:center;margin-top:14px;flex-wrap:wrap;">
+        <div style="background:#fef3c7;padding:16px;border-radius:10px;min-width:220px;text-align:center;border:2px solid #facc15;">
+          <h2 style="margin:0;color:#92400e">Raw Data</h2>
+          <p style="margin-top:8px;">Collected records (e.g., sales ledger)</p>
+        </div>
+        <div class="workflow-arrow" style="font-size:2rem;color:#64748b" aria-hidden="true">➡️</div>
+        <div style="background:#e0f2fe;padding:16px;border-radius:10px;min-width:220px;text-align:center;border:2px solid #3b82f6;">
+          <h2 style="margin:0;color:#1d4ed8">Pivot Table</h2>
+          <p style="margin-top:8px;">Summarize & group data</p>
+        </div>
+        <div class="workflow-arrow" style="font-size:2rem;color:#64748b" aria-hidden="true">➡️</div>
+        <div style="background:#dcfce7;padding:16px;border-radius:10px;min-width:220px;text-align:center;border:2px solid #16a34a;">
+          <h2 style="margin:0;color:#166534">Chart</h2>
+          <p style="margin-top:8px;">Visual report for stakeholders</p>
+        </div>
+      </div>
+      <p style="margin-top:14px;background:#f3f5f7;padding:10px;border-radius:8px;width:88%;">💡 Insight: This workflow automates reporting and speeds up decisions by converting raw numbers into clear visuals.</p>
+    </section>
+
+    <!-- Slide 16 -->
+    <section class="slide" data-slide="16">
+      <h1>Integrating Charts & Pivot Tables for Financial Analysis</h1>
+      <div class="definition">Definition: Pivot Charts visualize summarized pivot data — ideal for dashboards and audits.</div>
+      <div class="two-col">
+        <div class="col">
+          <div style="background:#fff;border:1px solid #d1d5db;padding:10px;border-radius:8px;">
+            <table>
+              <thead><tr><th>Month</th><th>Revenue (₱)</th><th>Expense (₱)</th><th>Profit (₱)</th></tr></thead>
+              <tbody>
+                <tr><td>January</td><td>300,000</td><td>200,000</td><td>100,000</td></tr>
+                <tr><td>February</td><td>280,000</td><td>180,000</td><td>100,000</td></tr>
+                <tr><td>March</td><td>320,000</td><td>210,000</td><td>110,000</td></tr>
+                <tr style="background:#eaf4ec;font-weight:700;"><td>Total</td><td>900,000</td><td>590,000</td><td>310,000</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <div class="col" style="display:flex;align-items:center;justify-content:center;">
+          <div style="width:100%;height:45vh;"><canvas id="pivotIntegrationChart"></canvas></div>
+        </div>
+      </div>
+      <p style="margin-top:12px;background:#f3f5f7;padding:10px;border-radius:8px;width:88%;">💡 Insight: Pivot Charts are central to dashboards — they present aggregated KPIs visually for quick review.</p>
+    </section>
+
+    <!-- Slide 17 -->
+    <section class="slide" data-slide="17">
+      <h1>Real-World Accounting Application</h1>
+      <div class="definition">Definition: Practical ways accountants apply charts and pivots to everyday reporting tasks.</div>
+      <ul style="max-width:820px;text-align:left;">
+        <li>Prepare management reports and auditing summaries.</li>
+        <li>Visualize budget vs actual performance.</li>
+        <li>Detect anomalies and seasonal trends.</li>
+        <li>Present findings in board meetings and client reports.</li>
+      </ul>
+      <div class="chart-wrap" style="margin-top:12px;"><canvas id="realWorldChart"></canvas></div>
+      <p style="margin-top:12px;background:#f3f5f7;padding:10px;border-radius:8px;width:88%;">💡 Reference: Friedlob & Schleifer (2003) — financial analysis is interpretation, not just computation.</p>
+    </section>
+
+    <!-- Slide 18 -->
+    <section class="slide" data-slide="18">
+      <h1>Conclusion & Recap</h1>
+      <div class="definition">Definition: Closing summary — core skills gained from spreadsheet data analysis.</div>
+      <ul style="max-width:820px;text-align:left;">
+        <li>Analyze data efficiently.</li>
+        <li>Visualize trends effectively.</li>
+        <li>Present findings clearly to management or clients.</li>
+      </ul>
+      <p style="margin-top:14px;background:#f3f5f7;padding:10px;border-radius:8px;width:88%;">💡 Final Thought: Mastering charts and pivot tables bridges the gap between data and decision-making — a vital skill for modern accountants.</p>
+      <p style="margin-top:18px;font-weight:700;color:#14532d;">🙏 Thank you — Presented by: Sir Jeff Vergel F. Falceso</p>
+    </section>
+
+  </main> <!-- .stage -->
+
+  <!-- Controls -->
+  <nav class="controls" aria-label="Presentation controls">
+    <div id="slideCounter" role="status" aria-live="polite">Slide 1 of 18</div>
+    <div class="button-row">
+      <button id="prevBtn" type="button" aria-label="Previous slide">◀ Prev</button>
+      <button id="nextBtn" type="button" aria-label="Next slide">Next ▶</button>
+      <button id="fullscreenBtn" type="button" aria-label="Enter fullscreen" aria-pressed="false">⛶ Fullscreen</button>
+    </div>
+  </nav>
+
+  <script>
+    // Chart creation helper (keeps instances per canvas)
+    function createChart(id, config) {
+      const el = document.getElementById(id);
+      if (!el) return null;
+      // if instance exists, destroy
+      if (el._chartInstance) {
+        try { el._chartInstance.destroy(); } catch(e) {}
+        el._chartInstance = null;
+      }
+      const ctx = el.getContext('2d');
+      el._chartInstance = new Chart(ctx, config);
+      return el._chartInstance;
+    }
+
+    // initialize all charts
+    function initCharts() {
+      if (typeof Chart === 'undefined') {
+        document.querySelectorAll('canvas').forEach(canvas => {
+          const message = document.createElement('p');
+          message.textContent = 'Chart unavailable. Connect to the internet to load the chart library.';
+          message.className = 'chart-message';
+          canvas.replaceWith(message);
+        });
+        return;
+      }
+      // Slide 5: Column
+      createChart("columnChart", {
+        type: "bar",
+        data: {
+          labels: ["Q1","Q2","Q3","Q4"],
+          datasets: [
+            { label: "Product A", data: [12000,15000,13000,17000], backgroundColor: "#217346" },
+            { label: "Product B", data: [10000,12000,11500,14000], backgroundColor: "#4CAF50" }
+          ]
+        },
+        options: { responsive:true, maintainAspectRatio:false, plugins:{legend:{position:"bottom"}}, scales:{y:{beginAtZero:true}} }
+      });
+
+      // Slide 6: Line
+      createChart("lineChart", {
+        type: "line",
+        data: {
+          labels:["Jan","Feb","Mar","Apr","May","Jun"],
+          datasets:[{ label:"Revenue (₱)", data:[25000,27000,30000,32000,31000,34000], borderColor:"#217346", backgroundColor:"rgba(33,115,70,0.12)", tension:0.3, fill:true }]
+        },
+        options:{ responsive:true, maintainAspectRatio:false, plugins:{legend:{position:"bottom"}} }
+      });
+
+      // Slide 7: Pie
+      createChart("pieChart", {
+        type: "pie",
+        data: { labels:["Marketing","Salaries","Utilities","Rent","Misc"], datasets:[{ data:[35,25,15,20,5], backgroundColor:["#217346","#4CAF50","#A5D6A7","#C8E6C9","#81C784"] }] },
+        options:{ responsive:true, maintainAspectRatio:false, plugins:{legend:{position:"bottom"}} }
+      });
+
+      // Slide 8: Bar (horizontal)
+      createChart("barChart", {
+        type: "bar",
+        data: { labels:["Manila","Cebu","Davao","Batangas","Baguio"], datasets:[{ label:"Branch Sales (₱ thousands)", data:[50,42,48,39,45], backgroundColor:["#217346","#4CAF50","#81C784","#A5D6A7","#C8E6C9"] }] },
+        options:{ indexAxis:"y", responsive:true, maintainAspectRatio:false, plugins:{legend:{position:"bottom"}} }
+      });
+
+      // Slide 9: Excel preview
+      createChart("excelPreviewChart", {
+        type: "bar",
+        data:{ labels:["Jan","Feb","Mar","Apr","May"], datasets:[{ data:[12000,15000,10000,18000,22000], backgroundColor:"#107c41" }] },
+        options:{ responsive:true, maintainAspectRatio:false, plugins:{legend:{display:false}}, scales:{ y:{ beginAtZero:true } } }
+      });
+
+      // Slide 10: Sales chart
+      createChart("salesChart", {
+        type:"bar",
+        data:{ labels:["January","February","March","April","May"], datasets:[{ label:"Monthly Sales (₱)", data:[50000,65000,80000,95000,70000], backgroundColor:["#7fb6ff","#5aa9ff","#79d2a6","#3b9bd9","#107c41"] }] },
+        options:{ responsive:true, maintainAspectRatio:false, plugins:{legend:{display:false}}, scales:{ y:{ beginAtZero:true, ticks:{ callback: v => '₱' + v.toLocaleString() } } } }
+      });
+
+      // Slide 11: Pivot donut
+      createChart("pivotChart", {
+        type:"doughnut",
+        data:{ labels:["Luzon","Visayas","Mindanao"], datasets:[{ data:[250000,180000,220000], backgroundColor:["#4e79a7","#f28e2b","#76b7b2"] }] },
+        options:{ responsive:true, maintainAspectRatio:false, plugins:{legend:{position:"bottom"}} }
+      });
+
+      // Slide 12: Pivot components
+      createChart("pivotComponentsChart", {
+        type:"bar",
+        data:{ labels:["Batangas","Lipa","Tanauan"], datasets:[
+          { label:"Q1 2024", data:[100000,80000,70000], backgroundColor:"#4e79a7" },
+          { label:"Q2 2024", data:[120000,95000,90000], backgroundColor:"#76b7b2" }
+        ]},
+        options:{ responsive:true, maintainAspectRatio:false, plugins:{legend:{position:"bottom"}}, scales:{ y:{ beginAtZero:true, ticks:{ callback: v => '₱' + v.toLocaleString() } } } }
+      });
+
+      // Slide 13: Pivot steps chart
+      createChart("pivotStepsChart", {
+        type:"bar",
+        data:{ labels:["Batangas","Lipa","Tanauan"], datasets:[
+          { label:"Q1 2024", data:[100000,80000,70000], backgroundColor:"#4e79a7" },
+          { label:"Q2 2024", data:[120000,95000,90000], backgroundColor:"#76b7b2" }
+        ]},
+        options:{ responsive:true, maintainAspectRatio:false, plugins:{legend:{position:"bottom"}}, scales:{ y:{ beginAtZero:true, ticks:{ callback: v => '₱' + v.toLocaleString() } } } }
+      });
+
+      // Slide 14: pivot example chart
+      createChart("pivotExampleChart", {
+        type:"bar",
+        data:{ labels:["Luzon","Visayas","Mindanao"], datasets:[
+          { label:"Q1 2024", data:[250000,180000,220000], backgroundColor:"#4e79a7" },
+          { label:"Q2 2024", data:[270000,200000,240000], backgroundColor:"#76b7b2" }
+        ]},
+        options:{ responsive:true, maintainAspectRatio:false, plugins:{legend:{position:"bottom"}}, scales:{ y:{ beginAtZero:true, ticks:{ callback: v => '₱' + v.toLocaleString() } } } }
+      });
+
+      // Slide 16: pivot integration
+      createChart("pivotIntegrationChart", {
+        type:"line",
+        data:{ labels:["January","February","March"], datasets:[
+          { label:"Revenue", data:[300000,280000,320000], borderColor:"#217346", backgroundColor:"rgba(33,115,70,0.12)", tension:0.3, fill:true },
+          { label:"Expense", data:[200000,180000,210000], borderColor:"#f28e2b", backgroundColor:"rgba(242,142,43,0.12)", tension:0.3, fill:true },
+          { label:"Profit", data:[100000,100000,110000], borderColor:"#4e79a7", backgroundColor:"rgba(78,121,167,0.12)", tension:0.3, fill:true }
+        ]},
+        options:{ responsive:true, maintainAspectRatio:false, plugins:{legend:{position:"bottom"}}, scales:{ y:{ ticks:{ callback: v => '₱' + v.toLocaleString() } } } }
+      });
+
+      // Slide 17: real-world chart
+      createChart("realWorldChart", {
+        type:"line",
+        data:{ labels:["Q1","Q2","Q3","Q4"], datasets:[
+          { label:"Budget (₱)", data:[500000,520000,540000,560000], borderColor:"#4e79a7", tension:0.25, fill:false },
+          { label:"Actual (₱)", data:[480000,510000,530000,590000], borderColor:"#f28e2b", tension:0.25, fill:false }
+        ]},
+        options:{ responsive:true, maintainAspectRatio:false, plugins:{legend:{position:"bottom"}}, scales:{ y:{ ticks:{ callback: v => '₱' + v.toLocaleString() } } } }
+      });
+    }
+
+    // Insert ribbon on each slide to keep theme
+    function injectRibbon() {
+      document.querySelectorAll('.slide').forEach(s => {
+        if (!s.querySelector('.ribbon')) {
+          const r = document.createElement('div');
+          r.className = 'ribbon';
+          r.innerHTML = `<div class="ribbon-text">Lesson 2 · Spreadsheet Data Analysis</div><nav class="ribbon-actions" aria-label="Lesson links"><a href="../../index.html" aria-label="Back to ByteSmith home">Home</a><a href="lesson.pdf" download="Spreadsheet-Data-Analysis.pdf" aria-label="Download Spreadsheet Data Analysis PDF">PDF ↓</a></nav>`;
+          s.prepend(r);
+          // add a little top padding to ensure content doesn't overlap ribbon (already in CSS)
+        }
+      });
+    }
+
+    // Navigation, keyboard, fullscreen, counter
+    document.addEventListener('DOMContentLoaded', () => {
+      injectRibbon();
+      // Give wide tables their own horizontal scroll area on narrow screens.
+      document.querySelectorAll('.slide table').forEach(table => {
+        if (table.parentElement.classList.contains('table-scroll')) return;
+        const wrapper = document.createElement('div');
+        wrapper.className = 'table-scroll';
+        wrapper.setAttribute('role', 'region');
+        wrapper.setAttribute('aria-label', 'Scrollable data table');
+        wrapper.tabIndex = 0;
+        table.parentNode.insertBefore(wrapper, table);
+        wrapper.appendChild(table);
+      });
+      initCharts();
+
+      const slides = Array.from(document.querySelectorAll('.slide'));
+      const total = slides.length;
+      const counterEl = document.getElementById('slideCounter');
+      const nextBtn = document.getElementById('nextBtn');
+      const prevBtn = document.getElementById('prevBtn');
+      const fsBtn = document.getElementById('fullscreenBtn');
+
+      let current = 0;
+      function show(i) {
+        current = (i + slides.length) % slides.length;
+        slides.forEach((s, idx) => {
+          s.classList.toggle('active', idx === current);
+          s.setAttribute('aria-hidden', idx !== current ? 'true' : 'false');
+        });
+        slides[current].scrollTop = 0;
+        counterEl.textContent = `Slide ${current+1} of ${total}`;
+        // trigger chart resize for visible canvas
+        const canvases = slides[current].querySelectorAll('canvas');
+        requestAnimationFrame(() => canvases.forEach(c => {
+          if (c._chartInstance && typeof c._chartInstance.resize === 'function') c._chartInstance.resize();
+        }));
+      }
+
+      nextBtn.addEventListener('click', () => show(current+1));
+      prevBtn.addEventListener('click', () => show(current-1));
+      function toggleFullscreen() {
+        if (!document.fullscreenElement && document.documentElement.requestFullscreen) {
+          document.documentElement.requestFullscreen().catch(() => {});
+        } else if (document.fullscreenElement && document.exitFullscreen) {
+          document.exitFullscreen().catch(() => {});
+        }
+      }
+      fsBtn.addEventListener('click', toggleFullscreen);
+      document.addEventListener('fullscreenchange', () => {
+        const active = !!document.fullscreenElement;
+        fsBtn.setAttribute('aria-pressed', String(active));
+        fsBtn.setAttribute('aria-label', active ? 'Exit fullscreen' : 'Enter fullscreen');
+        fsBtn.textContent = active ? '⛶ Exit fullscreen' : '⛶ Fullscreen';
+      });
+
+      document.addEventListener('keydown', (e) => {
+        if (e.altKey || e.ctrlKey || e.metaKey || /^(INPUT|TEXTAREA|SELECT)$/.test(e.target.tagName)) return;
+        if (e.key === 'ArrowRight') { e.preventDefault(); show(current+1); }
+        if (e.key === 'ArrowLeft') { e.preventDefault(); show(current-1); }
+        if (e.key.toLowerCase() === 'f') {
+          toggleFullscreen();
+        }
+        if (e.key.toLowerCase() === 'c') { // toggle counter visibility
+          counterEl.style.display = (counterEl.style.display === 'none') ? 'block' : 'none';
+        }
+      });
+
+      // show first slide
+      show(0);
+
+      // ensure charts resize when window changes
+      let resizeTimer = null;
+      window.addEventListener('resize', () => {
+        clearTimeout(resizeTimer);
+        resizeTimer = setTimeout(() => {
+          document.querySelectorAll('canvas').forEach(c => { if (c._chartInstance) c._chartInstance.resize(); });
+        }, 120);
+      });
+    });
+  </script>
+</body>
+</html>

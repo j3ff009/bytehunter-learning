@@ -30,12 +30,14 @@ const lessons = JSON.parse(await readFile(join(root, "data", "lessons.json"), "u
 const allowedPageTypes = new Set(["content", "definition", "comparison", "diagram", "example", "code", "summary"]);
 for (const lesson of lessons) {
   const dir = join(root, "lessons", lesson.slug);
-  for (const required of ["index.html", "lesson.json", "lesson-data.json"]) {
+  const isPresentation = lesson.format === "presentation";
+  if (lesson.format && !isPresentation) errors.push(`${lesson.id}: unsupported lesson format ${lesson.format}`);
+  for (const required of isPresentation ? ["index.html"] : ["index.html", "lesson.json", "lesson-data.json"]) {
     if (!await exists(join(dir, required))) errors.push(`${lesson.id}: missing ${required}`);
   }
 
   const lessonPath = join(dir, "lesson.json");
-  if (await exists(lessonPath)) {
+  if (!isPresentation && await exists(lessonPath)) {
     try {
       const readerLesson = JSON.parse(await readFile(lessonPath, "utf8"));
       if (readerLesson.id !== lesson.id) errors.push(`${lesson.id}: lesson.json id must match the catalog id`);

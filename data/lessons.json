@@ -23,5 +23,28 @@
       "quiz": {"status": "published"},
       "activity": {"status": "published"}
     }
+  },
+  {
+    "id": "spreadsheet-data-analysis",
+    "title": "Lesson 2: Spreadsheet Data Analysis",
+    "shortTitle": "Spreadsheet Data Analysis",
+    "subject": "IT Application Tools in Business",
+    "subjectId": "accountancy",
+    "subjectIds": ["accountancy"],
+    "category": "Lesson 2",
+    "description": "Explore charts and Pivot Tables for business and accounting analysis in an interactive 18-slide presentation.",
+    "keywords": ["spreadsheet", "Excel", "Google Sheets", "charts", "Pivot Tables", "financial analysis", "accounting"],
+    "slug": "spreadsheet-data-analysis",
+    "format": "presentation",
+    "publishedDate": "2026-09-23",
+    "updatedDate": "2026-09-23",
+    "readingTime": "18 slides",
+    "popular": false,
+    "featured": true,
+    "productIds": [],
+    "resources": {
+      "lesson": {"status": "published"},
+      "pdf": {"status": "published", "file": "lesson.pdf"}
+    }
   }
 ]

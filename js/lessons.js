@@ -7,23 +7,28 @@
   const resourceLabel = { lesson: "Lesson", pdf: "PDF", reviewer: "Reviewer", quiz: "Quiz", activity: "Activity" };
   const resourceIcon = { lesson: "book", pdf: "file", reviewer: "cards", quiz: "quiz", activity: "check" };
 
-  function resourceBadges(resources) {
+  function resourceBadges(resources, format) {
     return Object.entries(resources || {}).map(([type, value]) => {
       const state = visibility.evaluate(value);
       if (!state.visible) return "";
       const symbol = state.status === "locked" ? "Locked" : "Ready";
-      return `<span class="badge ${state.status === "locked" ? "locked" : "available"}">${app.icon(resourceIcon[type] || "check")}${resourceLabel[type] || type}: ${symbol}</span>`;
+      const label = type === "lesson" && format === "presentation" ? "Presentation" : resourceLabel[type] || type;
+      return `<span class="badge ${state.status === "locked" ? "locked" : "available"}">${app.icon(type === "lesson" && format === "presentation" ? "cards" : resourceIcon[type] || "check")}${label}: ${symbol}</span>`;
     }).join("");
   }
 
   function lessonCard(lesson) {
     const lessonUrl = app.url(`lessons/${lesson.slug}/index.html`);
+    const isPresentation = lesson.format === "presentation";
+    const pdfAction = visibility.evaluate(lesson.resources.pdf).status === "published" ? `<a class="button secondary small" href="${app.url(`lessons/${lesson.slug}/${lesson.resources.pdf.file || "lesson.pdf"}`)}" download="${lesson.slug}.pdf">${app.icon("download")}Download PDF</a>` : "";
+    const presentationActions = isPresentation ? `<div class="button-row lesson-card-actions"><a class="button small" href="${lessonUrl}">${app.icon("cards")}Open Presentation</a>${pdfAction}</div>` : "";
     return `<article class="card lesson-card" data-search-type="lesson">
-      <span class="lesson-card-icon" aria-hidden="true">${app.icon("book")}</span>
+      <span class="lesson-card-icon" aria-hidden="true">${app.icon(isPresentation ? "cards" : "book")}</span>
       <div class="meta"><span>${lesson.subject}</span><span>${lesson.category}</span></div>
       <h3><a href="${lessonUrl}">${lesson.title}</a></h3>
       <p>${lesson.description}</p>
-      <div class="resource-badges" aria-label="Available resources">${resourceBadges(lesson.resources)}</div>
+      <div class="resource-badges" aria-label="Available resources">${resourceBadges(lesson.resources, lesson.format)}</div>
+      ${presentationActions}
       <div class="meta lesson-card-footer"><span>${app.icon("calendar")}Updated ${friendlyDate(lesson.updatedDate)}</span><span>${app.icon("clock")}${lesson.readingTime}</span></div>
     </article>`;
   }
